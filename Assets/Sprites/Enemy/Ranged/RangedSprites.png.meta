@@ -364,35 +364,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RangedSprites_0
+      name: Ranged_Attack_Up_2
       rect:
         serializedVersion: 2
-        x: 407
-        y: 266
-        width: 48
-        height: 142
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 075607bcb96ce6180800000000000000
-      internalID: -9120133822943304336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_1
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 0
-        width: 137
-        height: 408
+        x: 130
+        y: 235
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,13 +408,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_3
+      name: Ranged_Attack_Down_3
       rect:
         serializedVersion: 2
-        x: 317
-        y: 192
-        width: 41
-        height: 204
+        x: 303
+        y: 235
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,50 +425,6 @@ TextureImporter:
       bones: []
       spriteID: f1fe7ee8c6cb2b310800000000000000
       internalID: 1419404007015182111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_4
-      rect:
-        serializedVersion: 2
-        x: 347
-        y: 386
-        width: 12
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63bd8b27c501d2a10800000000000000
-      internalID: 1886181808185858870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_5
-      rect:
-        serializedVersion: 2
-        x: 457
-        y: 368
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91505653c21eceb10800000000000000
-      internalID: 2012230713518392601
       vertices: []
       indices: 
       edges: []
@@ -518,79 +452,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_7
+      name: Ranged_Attack_Down_0
       rect:
         serializedVersion: 2
-        x: 315
-        y: 368
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3490ef0efbeec9590800000000000000
-      internalID: -7665989957810517693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_8
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 369
-        width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6659de1bdf04fcfd0800000000000000
-      internalID: -2319563824716475034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_9
-      rect:
-        serializedVersion: 2
-        x: 475
-        y: 322
-        width: 9
-        height: 61
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f016f07adedfd2890800000000000000
-      internalID: -7481044208840646385
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_10
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 313
-        width: 16
-        height: 23
+        x: 205
+        y: 235
+        width: 31
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -848,28 +716,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_22
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 197
-        width: 28
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c21259a28e998ff0800000000000000
-      internalID: -33321238204902713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Ranged_Idle_Right_0
       rect:
         serializedVersion: 2
@@ -936,13 +782,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_26
+      name: Ranged_Attack_Up_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 234
-        width: 22
-        height: 40
+        x: 97
+        y: 235
+        width: 33
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -958,13 +804,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_27
+      name: Ranged_Attack_Up_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 204
-        width: 122
-        height: 74
+        x: 61
+        y: 235
+        width: 36
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -980,13 +826,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_28
+      name: Ranged_Attack_Up_3
       rect:
         serializedVersion: 2
         x: 162
-        y: 234
+        y: 235
         width: 35
-        height: 54
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1002,13 +848,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_29
+      name: Ranged_Attack_Down_1
       rect:
         serializedVersion: 2
         x: 236
-        y: 217
-        width: 46
-        height: 69
+        y: 235
+        width: 34
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,13 +870,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_30
+      name: Ranged_Attack_Down_2
       rect:
         serializedVersion: 2
         x: 270
-        y: 217
-        width: 65
-        height: 70
+        y: 235
+        width: 33
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1046,13 +892,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_31
+      name: Ranged_Attack_Left_0
       rect:
         serializedVersion: 2
-        x: 341
-        y: 215
-        width: 43
-        height: 69
+        x: 343
+        y: 235
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1068,13 +914,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_32
+      name: Ranged_Attack_Left_1
       rect:
         serializedVersion: 2
-        x: 372
-        y: 215
-        width: 48
-        height: 72
+        x: 375
+        y: 235
+        width: 33
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1090,13 +936,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_33
+      name: Ranged_Attack_Left_2
       rect:
         serializedVersion: 2
         x: 408
-        y: 215
-        width: 44
-        height: 72
+        y: 235
+        width: 35
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1112,13 +958,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_34
+      name: Ranged_Attack_Left_3
       rect:
         serializedVersion: 2
-        x: 440
-        y: 215
-        width: 33
-        height: 72
+        x: 443
+        y: 235
+        width: 30
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1134,13 +980,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_35
+      name: Ranged_Attack_Right_0
       rect:
         serializedVersion: 2
         x: 484
-        y: 215
-        width: 38
-        height: 69
+        y: 235
+        width: 34
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1156,13 +1002,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_36
+      name: Ranged_Attack_Right_1
       rect:
         serializedVersion: 2
-        x: 515
-        y: 214
-        width: 39
-        height: 73
+        x: 518
+        y: 235
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1178,13 +1024,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_37
+      name: Ranged_Attack_Right_2
       rect:
         serializedVersion: 2
-        x: 547
-        y: 214
-        width: 41
-        height: 70
+        x: 550
+        y: 235
+        width: 30
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1200,13 +1046,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_38
+      name: Ranged_Attack_Right_3
       rect:
         serializedVersion: 2
-        x: 579
-        y: 215
-        width: 33
-        height: 72
+        x: 580
+        y: 235
+        width: 31
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1217,50 +1063,6 @@ TextureImporter:
       bones: []
       spriteID: 2145da056f4da3c80800000000000000
       internalID: -8342121205369842670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_39
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 130
-        width: 35
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 55a2f407ec44c9770800000000000000
-      internalID: 8618839440318474837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RangedSprites_40
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 44
-        width: 34
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 869d15871ce112e30800000000000000
-      internalID: 4476893320879135080
       vertices: []
       indices: 
       edges: []
@@ -1288,13 +1090,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_42
+      name: Ranged_Hurt_Up_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 66
-        width: 53
-        height: 85
+        x: 60
+        y: 96
+        width: 38
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1332,13 +1134,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_44
+      name: Ranged_Hurt_Up_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 68
-        width: 51
-        height: 80
+        x: 98
+        y: 96
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1376,13 +1178,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_46
+      name: Ranged_Hurt_Up_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 63
-        width: 36
-        height: 83
+        x: 131
+        y: 96
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1420,13 +1222,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_48
+      name: Ranged_Hurt_Up_3
       rect:
         serializedVersion: 2
-        x: 156
-        y: 86
-        width: 40
-        height: 64
+        x: 164
+        y: 96
+        width: 32
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1464,13 +1266,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_50
+      name: Ranged_Hurt_Down_0
       rect:
         serializedVersion: 2
-        x: 204
-        y: 100
-        width: 33
-        height: 47
+        x: 206
+        y: 96
+        width: 31
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1508,13 +1310,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_52
+      name: Ranged_Hurt_Down_1
       rect:
         serializedVersion: 2
-        x: 238
-        y: 100
-        width: 32
-        height: 45
+        x: 237
+        y: 96
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1535,7 +1337,7 @@ TextureImporter:
         serializedVersion: 2
         x: 271
         y: 167
-        width: 34
+        width: 33
         height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1552,13 +1354,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_54
+      name: Ranged_Hurt_Down_2
       rect:
         serializedVersion: 2
         x: 270
-        y: 66
-        width: 66
-        height: 87
+        y: 96
+        width: 36
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1577,9 +1379,9 @@ TextureImporter:
       name: Ranged_Move_Down_3
       rect:
         serializedVersion: 2
-        x: 305
+        x: 304
         y: 167
-        width: 32
+        width: 30
         height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1596,13 +1398,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_56
+      name: Ranged_Die_Down_3
       rect:
         serializedVersion: 2
-        x: 321
-        y: 118
+        x: 305
+        y: 21
         width: 30
-        height: 77
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1618,13 +1420,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_57
+      name: Ranged_Hurt_Left_0
       rect:
         serializedVersion: 2
-        x: 341
-        y: 66
-        width: 44
-        height: 82
+        x: 343
+        y: 96
+        width: 32
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1684,13 +1486,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_60
+      name: Ranged_Hurt_Left_1
       rect:
         serializedVersion: 2
-        x: 373
-        y: 57
-        width: 49
-        height: 91
+        x: 375
+        y: 96
+        width: 36
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1728,13 +1530,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_62
+      name: Ranged_Hurt_Left_2
       rect:
         serializedVersion: 2
         x: 411
-        y: 54
-        width: 44
-        height: 92
+        y: 96
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1772,13 +1574,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_64
+      name: Ranged_Hurt_Left_3
       rect:
         serializedVersion: 2
-        x: 441
-        y: 81
+        x: 444
+        y: 96
         width: 32
-        height: 67
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1794,13 +1596,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_65
+      name: Ranged_Die_Right_3
       rect:
         serializedVersion: 2
-        x: 443
-        y: 0
-        width: 62
-        height: 201
+        x: 575
+        y: 21
+        width: 36
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1838,13 +1640,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_67
+      name: Ranged_Hurt_Right_0
       rect:
         serializedVersion: 2
-        x: 483
-        y: 68
-        width: 47
-        height: 80
+        x: 484
+        y: 96
+        width: 34
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1882,13 +1684,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_69
+      name: Ranged_Hurt_Right_1
       rect:
         serializedVersion: 2
-        x: 516
-        y: 63
-        width: 46
-        height: 83
+        x: 518
+        y: 96
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1904,13 +1706,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_70
+      name: Ranged_Hurt_Right_2
       rect:
         serializedVersion: 2
-        x: 545
-        y: 55
-        width: 50
-        height: 91
+        x: 551
+        y: 96
+        width: 28
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1970,13 +1772,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_73
+      name: Ranged_Hurt_Right_3
       rect:
         serializedVersion: 2
-        x: 578
-        y: 55
-        width: 34
-        height: 93
+        x: 579
+        y: 96
+        width: 31
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1992,13 +1794,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_74
+      name: Ranged_Die_Up_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 10
-        width: 23
-        height: 56
+        x: 164
+        y: 21
+        width: 33
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2014,13 +1816,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_75
+      name: Ranged_Die_Up_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 0
-        width: 54
-        height: 75
+        x: 60
+        y: 22
+        width: 37
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2036,13 +1838,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_76
+      name: Ranged_Die_Up_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 0
-        width: 40
-        height: 70
+        x: 97
+        y: 22
+        width: 33
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2058,13 +1860,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_77
+      name: Ranged_Die_Up_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 0
-        width: 69
-        height: 66
+        x: 130
+        y: 21
+        width: 34
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2080,13 +1882,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_78
+      name: Ranged_Die_Down_0
       rect:
         serializedVersion: 2
         x: 205
-        y: 23
+        y: 21
         width: 32
-        height: 47
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2102,13 +1904,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_79
+      name: Ranged_Die_Down_1
       rect:
         serializedVersion: 2
-        x: 238
-        y: 23
-        width: 34
-        height: 44
+        x: 237
+        y: 21
+        width: 35
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2124,13 +1926,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_80
+      name: Ranged_Die_Down_2
       rect:
         serializedVersion: 2
-        x: 273
-        y: 15
-        width: 38
-        height: 47
+        x: 272
+        y: 21
+        width: 33
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2146,13 +1948,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_81
+      name: Ranged_Hurt_Down_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 65
-        height: 120
+        x: 306
+        y: 96
+        width: 28
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2168,13 +1970,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_82
+      name: Ranged_Die_Left_0
       rect:
         serializedVersion: 2
         x: 344
-        y: 0
-        width: 39
-        height: 69
+        y: 21
+        width: 32
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2190,13 +1992,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_83
+      name: Ranged_Die_Left_1
       rect:
         serializedVersion: 2
-        x: 373
-        y: 0
-        width: 36
-        height: 66
+        x: 376
+        y: 21
+        width: 33
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2212,13 +2014,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_84
+      name: Ranged_Die_Left_2
       rect:
         serializedVersion: 2
-        x: 401
-        y: 0
-        width: 47
-        height: 60
+        x: 409
+        y: 21
+        width: 33
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2234,13 +2036,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_85
+      name: Ranged_Die_Left_3
       rect:
         serializedVersion: 2
-        x: 440
-        y: 26
-        width: 36
-        height: 26
+        x: 442
+        y: 21
+        width: 35
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2256,13 +2058,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_86
+      name: Ranged_Die_Right_0
       rect:
         serializedVersion: 2
         x: 483
-        y: 0
-        width: 36
-        height: 70
+        y: 21
+        width: 33
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2278,13 +2080,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_87
+      name: Ranged_Die_Right_1
       rect:
         serializedVersion: 2
-        x: 513
-        y: 0
-        width: 36
-        height: 67
+        x: 516
+        y: 21
+        width: 28
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2300,13 +2102,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_88
+      name: Ranged_Die_Right_2
       rect:
         serializedVersion: 2
-        x: 543
-        y: 0
-        width: 69
-        height: 58
+        x: 544
+        y: 21
+        width: 31
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2336,62 +2138,63 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       RangedSprites_0: -9120133822943304336
-      RangedSprites_1: 6385636684173306994
-      RangedSprites_10: 6085313833229142809
+      RangedSprites_1: -875370534
       RangedSprites_22: -33321238204902713
-      RangedSprites_26: -1361663816386460609
-      RangedSprites_27: 2660991005625077963
-      RangedSprites_28: 5404776230269642016
-      RangedSprites_29: -4740125936311124792
-      RangedSprites_3: 1419404007015182111
-      RangedSprites_30: -1523161256932921215
-      RangedSprites_31: -5781468330449108904
-      RangedSprites_32: -5227429920388850733
-      RangedSprites_33: 8629700874051241318
-      RangedSprites_34: 2258827605113064646
-      RangedSprites_35: -2237236510630073857
-      RangedSprites_36: 3045933623248166901
-      RangedSprites_37: -3051176102489618022
-      RangedSprites_38: -8342121205369842670
       RangedSprites_39: 8618839440318474837
       RangedSprites_4: 1886181808185858870
       RangedSprites_40: 4476893320879135080
-      RangedSprites_42: 9197384830343337245
-      RangedSprites_44: -3124624540274113442
-      RangedSprites_46: -8466950651020730584
-      RangedSprites_48: 7251793842675937127
       RangedSprites_5: 2012230713518392601
-      RangedSprites_50: 8120863616879138854
-      RangedSprites_52: -6857906731244012801
-      RangedSprites_54: -2927768793973659085
-      RangedSprites_56: 809396947549954058
-      RangedSprites_57: -5491674920430583996
-      RangedSprites_60: 2990927028610031521
-      RangedSprites_62: 4478250876532581404
-      RangedSprites_64: 7989260616260998095
-      RangedSprites_65: 3225944249959435229
-      RangedSprites_67: -7003676861594419865
-      RangedSprites_69: -2547496366656077256
       RangedSprites_7: -7665989957810517693
-      RangedSprites_70: 1189263809162799692
-      RangedSprites_73: -7107204042365440954
-      RangedSprites_74: 2681424357690701842
-      RangedSprites_75: 5456479254544581739
-      RangedSprites_76: 6409741941907885890
-      RangedSprites_77: -1235223998320818569
-      RangedSprites_78: -5484128291588890850
-      RangedSprites_79: -4429930498506223759
       RangedSprites_8: -2319563824716475034
-      RangedSprites_80: -3909836684196024869
-      RangedSprites_81: -883905581464830810
-      RangedSprites_82: -6595410488156692763
-      RangedSprites_83: -8771480257430524436
-      RangedSprites_84: 9146730564456725899
-      RangedSprites_85: 8329127208415330129
-      RangedSprites_86: -2075459183511976726
-      RangedSprites_87: 3855180310149773683
-      RangedSprites_88: -6665466640975883243
       RangedSprites_9: -7481044208840646385
+      Ranged_Attack_Down_0: 6085313833229142809
+      Ranged_Attack_Down_1: -4740125936311124792
+      Ranged_Attack_Down_2: -1523161256932921215
+      Ranged_Attack_Down_3: 1419404007015182111
+      Ranged_Attack_Left_0: -5781468330449108904
+      Ranged_Attack_Left_1: -5227429920388850733
+      Ranged_Attack_Left_2: 8629700874051241318
+      Ranged_Attack_Left_3: 2258827605113064646
+      Ranged_Attack_Right_0: -2237236510630073857
+      Ranged_Attack_Right_1: 3045933623248166901
+      Ranged_Attack_Right_2: -3051176102489618022
+      Ranged_Attack_Right_3: -8342121205369842670
+      Ranged_Attack_Up_0: 2660991005625077963
+      Ranged_Attack_Up_1: -1361663816386460609
+      Ranged_Attack_Up_2: 6385636684173306994
+      Ranged_Attack_Up_3: 5404776230269642016
+      Ranged_Die_Down_0: -5484128291588890850
+      Ranged_Die_Down_1: -4429930498506223759
+      Ranged_Die_Down_2: -3909836684196024869
+      Ranged_Die_Down_3: 809396947549954058
+      Ranged_Die_Left_0: -6595410488156692763
+      Ranged_Die_Left_1: -8771480257430524436
+      Ranged_Die_Left_2: 9146730564456725899
+      Ranged_Die_Left_3: 8329127208415330129
+      Ranged_Die_Right_0: -2075459183511976726
+      Ranged_Die_Right_1: 3855180310149773683
+      Ranged_Die_Right_2: -6665466640975883243
+      Ranged_Die_Right_3: 3225944249959435229
+      Ranged_Die_Up_0: 5456479254544581739
+      Ranged_Die_Up_1: 6409741941907885890
+      Ranged_Die_Up_2: -1235223998320818569
+      Ranged_Die_Up_3: 2681424357690701842
+      Ranged_Hurt_Down_0: 8120863616879138854
+      Ranged_Hurt_Down_1: -6857906731244012801
+      Ranged_Hurt_Down_2: -2927768793973659085
+      Ranged_Hurt_Down_3: -883905581464830810
+      Ranged_Hurt_Left_0: -5491674920430583996
+      Ranged_Hurt_Left_1: 2990927028610031521
+      Ranged_Hurt_Left_2: 4478250876532581404
+      Ranged_Hurt_Left_3: 7989260616260998095
+      Ranged_Hurt_Right_0: -7003676861594419865
+      Ranged_Hurt_Right_1: -2547496366656077256
+      Ranged_Hurt_Right_2: 1189263809162799692
+      Ranged_Hurt_Right_3: -7107204042365440954
+      Ranged_Hurt_Up_0: 9197384830343337245
+      Ranged_Hurt_Up_1: -3124624540274113442
+      Ranged_Hurt_Up_2: -8466950651020730584
+      Ranged_Hurt_Up_3: 7251793842675937127
       Ranged_Idle_Down_0: -508954984410691685
       Ranged_Idle_Down_1: -2222402600384839440
       Ranged_Idle_Down_2: 4954408311477788774

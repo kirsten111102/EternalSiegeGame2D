@@ -43,5 +43,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 4125251457
+    locked: 0
+  - name: GroundDetails
+    uniqueID: 1962337133
+    locked: 0
+  - name: Decorations
+    uniqueID: 3473726103
+    locked: 0
+  - name: Border
+    uniqueID: 3368813615
+    locked: 0
+  - name: GameObjects
+    uniqueID: 3012285419
+    locked: 0
   m_RenderingLayers:
   - Default
