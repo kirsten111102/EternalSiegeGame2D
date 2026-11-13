@@ -367,12 +367,12 @@ TextureImporter:
       name: RangedSprites_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 191
-        height: 408
+        x: 407
+        y: 266
+        width: 48
+        height: 142
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -389,12 +389,12 @@ TextureImporter:
       name: RangedSprites_1
       rect:
         serializedVersion: 2
-        x: 152
+        x: 44
         y: 0
         width: 137
         height: 408
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -408,15 +408,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_2
+      name: Ranged_Idle_Right_3
       rect:
         serializedVersion: 2
-        x: 246
-        y: 283
-        width: 366
-        height: 125
+        x: 579
+        y: 304
+        width: 31
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,7 +438,7 @@ TextureImporter:
         width: 41
         height: 204
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,7 +460,7 @@ TextureImporter:
         width: 12
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,7 +482,7 @@ TextureImporter:
         width: 13
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -496,15 +496,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_6
+      name: Ranged_Idle_Up_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 369
-        width: 17
-        height: 14
+        x: 129
+        y: 304
+        width: 34
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,7 +526,7 @@ TextureImporter:
         width: 12
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -548,7 +548,7 @@ TextureImporter:
         width: 11
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -570,7 +570,7 @@ TextureImporter:
         width: 9
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -592,7 +592,7 @@ TextureImporter:
         width: 16
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -606,15 +606,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_11
+      name: Ranged_Idle_Up_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 278
-        width: 55
-        height: 78
+        x: 60
+        y: 304
+        width: 35
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -628,15 +628,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_12
+      name: Ranged_Idle_Up_1
       rect:
         serializedVersion: 2
         x: 95
-        y: 286
-        width: 77
-        height: 70
+        y: 304
+        width: 34
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -650,15 +650,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_13
+      name: Ranged_Idle_Up_3
       rect:
         serializedVersion: 2
         x: 163
-        y: 303
+        y: 304
         width: 32
-        height: 52
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -672,7 +672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_14
+      name: Ranged_Idle_Down_0
       rect:
         serializedVersion: 2
         x: 206
@@ -680,7 +680,7 @@ TextureImporter:
         width: 31
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -694,15 +694,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_15
+      name: Ranged_Idle_Down_1
       rect:
         serializedVersion: 2
-        x: 236
-        y: 306
-        width: 33
-        height: 46
+        x: 237
+        y: 304
+        width: 32
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -716,15 +716,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_16
+      name: Ranged_Idle_Down_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 306
-        width: 35
-        height: 46
+        x: 269
+        y: 304
+        width: 33
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -738,15 +738,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_17
+      name: Ranged_Idle_Down_3
       rect:
         serializedVersion: 2
         x: 302
-        y: 306
+        y: 304
         width: 31
-        height: 46
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -760,15 +760,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_18
+      name: Ranged_Idle_Left_0
       rect:
         serializedVersion: 2
         x: 343
-        y: 306
+        y: 304
         width: 30
-        height: 46
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -782,15 +782,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_19
+      name: Ranged_Idle_Left_1
       rect:
         serializedVersion: 2
-        x: 363
-        y: 280
-        width: 55
-        height: 72
+        x: 373
+        y: 304
+        width: 34
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -804,15 +804,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_20
+      name: Ranged_Idle_Left_2
       rect:
         serializedVersion: 2
         x: 407
-        y: 283
-        width: 43
-        height: 71
+        y: 304
+        width: 34
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -826,15 +826,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_21
+      name: Ranged_Idle_Left_3
       rect:
         serializedVersion: 2
-        x: 440
-        y: 292
-        width: 36
-        height: 62
+        x: 441
+        y: 304
+        width: 35
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -856,7 +856,7 @@ TextureImporter:
         width: 28
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -870,15 +870,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_23
+      name: Ranged_Idle_Right_0
       rect:
         serializedVersion: 2
-        x: 482
-        y: 281
-        width: 37
-        height: 73
+        x: 484
+        y: 305
+        width: 32
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -892,15 +892,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_24
+      name: Ranged_Idle_Right_1
       rect:
         serializedVersion: 2
-        x: 515
-        y: 283
-        width: 36
-        height: 71
+        x: 516
+        y: 305
+        width: 32
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -914,15 +914,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_25
+      name: Ranged_Idle_Right_2
       rect:
         serializedVersion: 2
-        x: 547
-        y: 281
-        width: 36
-        height: 71
+        x: 548
+        y: 305
+        width: 31
+        height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -944,7 +944,7 @@ TextureImporter:
         width: 22
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -962,11 +962,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 214
+        y: 204
         width: 122
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -988,7 +988,7 @@ TextureImporter:
         width: 35
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1010,7 +1010,7 @@ TextureImporter:
         width: 46
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1032,7 +1032,7 @@ TextureImporter:
         width: 65
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1054,7 +1054,7 @@ TextureImporter:
         width: 43
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1076,7 +1076,7 @@ TextureImporter:
         width: 48
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1098,7 +1098,7 @@ TextureImporter:
         width: 44
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1120,7 +1120,7 @@ TextureImporter:
         width: 33
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1142,7 +1142,7 @@ TextureImporter:
         width: 38
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1164,7 +1164,7 @@ TextureImporter:
         width: 39
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1186,7 +1186,7 @@ TextureImporter:
         width: 41
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1208,7 +1208,7 @@ TextureImporter:
         width: 33
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1230,7 +1230,7 @@ TextureImporter:
         width: 35
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1252,7 +1252,7 @@ TextureImporter:
         width: 34
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1266,15 +1266,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_41
+      name: Ranged_Move_Up_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 145
-        width: 56
-        height: 73
+        x: 60
+        y: 166
+        width: 35
+        height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1296,7 +1296,7 @@ TextureImporter:
         width: 53
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1310,15 +1310,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_43
+      name: Ranged_Move_Up_1
       rect:
         serializedVersion: 2
         x: 95
-        y: 145
-        width: 45
-        height: 75
+        y: 165
+        width: 35
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1340,7 +1340,7 @@ TextureImporter:
         width: 51
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1354,15 +1354,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_45
+      name: Ranged_Move_Up_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 143
-        width: 33
-        height: 75
+        x: 130
+        y: 165
+        width: 32
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1384,7 +1384,7 @@ TextureImporter:
         width: 36
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1398,15 +1398,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_47
+      name: Ranged_Move_Up_3
       rect:
         serializedVersion: 2
-        x: 151
-        y: 143
-        width: 46
-        height: 75
+        x: 162
+        y: 165
+        width: 35
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1428,7 +1428,7 @@ TextureImporter:
         width: 40
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1442,15 +1442,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_49
+      name: Ranged_Move_Down_0
       rect:
         serializedVersion: 2
-        x: 204
+        x: 206
         y: 167
-        width: 33
+        width: 31
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1472,7 +1472,7 @@ TextureImporter:
         width: 33
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1486,15 +1486,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_51
+      name: Ranged_Move_Down_1
       rect:
         serializedVersion: 2
-        x: 238
-        y: 144
-        width: 45
-        height: 76
+        x: 237
+        y: 167
+        width: 34
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1516,7 +1516,7 @@ TextureImporter:
         width: 32
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1530,15 +1530,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_53
+      name: Ranged_Move_Down_2
       rect:
         serializedVersion: 2
-        x: 270
-        y: 144
-        width: 45
-        height: 76
+        x: 271
+        y: 167
+        width: 34
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1555,12 +1555,12 @@ TextureImporter:
       name: RangedSprites_54
       rect:
         serializedVersion: 2
-        x: 271
-        y: 60
+        x: 270
+        y: 66
         width: 66
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1574,15 +1574,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_55
+      name: Ranged_Move_Down_3
       rect:
         serializedVersion: 2
-        x: 302
-        y: 144
-        width: 35
-        height: 76
+        x: 305
+        y: 167
+        width: 32
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1604,7 +1604,7 @@ TextureImporter:
         width: 30
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1626,7 +1626,7 @@ TextureImporter:
         width: 44
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1640,15 +1640,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_58
+      name: Ranged_Move_Left_0
       rect:
         serializedVersion: 2
         x: 342
-        y: 145
+        y: 167
         width: 31
-        height: 73
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1662,15 +1662,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_59
+      name: Ranged_Move_Left_1
       rect:
         serializedVersion: 2
-        x: 363
-        y: 143
-        width: 54
-        height: 75
+        x: 373
+        y: 167
+        width: 36
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1692,7 +1692,7 @@ TextureImporter:
         width: 49
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1706,15 +1706,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_61
+      name: Ranged_Move_Left_2
       rect:
         serializedVersion: 2
-        x: 406
-        y: 143
-        width: 46
-        height: 75
+        x: 409
+        y: 167
+        width: 35
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1736,7 +1736,7 @@ TextureImporter:
         width: 44
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1750,15 +1750,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_63
+      name: Ranged_Move_Left_3
       rect:
         serializedVersion: 2
-        x: 440
-        y: 145
-        width: 33
-        height: 73
+        x: 444
+        y: 167
+        width: 30
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1780,7 +1780,7 @@ TextureImporter:
         width: 32
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1802,7 +1802,7 @@ TextureImporter:
         width: 62
         height: 201
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1816,15 +1816,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_66
+      name: Ranged_Move_Right_0
       rect:
         serializedVersion: 2
         x: 483
-        y: 145
+        y: 167
         width: 33
-        height: 73
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1846,7 +1846,7 @@ TextureImporter:
         width: 47
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1860,15 +1860,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_68
+      name: Ranged_Move_Right_1
       rect:
         serializedVersion: 2
-        x: 504
-        y: 142
-        width: 53
-        height: 76
+        x: 516
+        y: 167
+        width: 31
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1890,7 +1890,7 @@ TextureImporter:
         width: 46
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1912,7 +1912,7 @@ TextureImporter:
         width: 50
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1926,15 +1926,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_71
+      name: Ranged_Move_Right_2
       rect:
         serializedVersion: 2
         x: 547
-        y: 143
-        width: 36
-        height: 73
+        y: 167
+        width: 33
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1948,15 +1948,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RangedSprites_72
+      name: Ranged_Move_Right_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 142
-        width: 36
-        height: 76
+        x: 580
+        y: 167
+        width: 30
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1978,7 +1978,7 @@ TextureImporter:
         width: 34
         height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2000,7 +2000,7 @@ TextureImporter:
         width: 23
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2022,7 +2022,7 @@ TextureImporter:
         width: 54
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2044,7 +2044,7 @@ TextureImporter:
         width: 40
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2066,7 +2066,7 @@ TextureImporter:
         width: 69
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2088,7 +2088,7 @@ TextureImporter:
         width: 32
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2110,7 +2110,7 @@ TextureImporter:
         width: 34
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2132,7 +2132,7 @@ TextureImporter:
         width: 38
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2154,7 +2154,7 @@ TextureImporter:
         width: 65
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2176,7 +2176,7 @@ TextureImporter:
         width: 39
         height: 69
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2198,7 +2198,7 @@ TextureImporter:
         width: 36
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2220,7 +2220,7 @@ TextureImporter:
         width: 47
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2242,7 +2242,7 @@ TextureImporter:
         width: 36
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2264,7 +2264,7 @@ TextureImporter:
         width: 36
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2286,7 +2286,7 @@ TextureImporter:
         width: 36
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2308,7 +2308,7 @@ TextureImporter:
         width: 69
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2325,7 +2325,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f4c8fef770d03495fa355666eedad8c7
     internalID: 0
     vertices: []
     indices: 
@@ -2338,22 +2338,7 @@ TextureImporter:
       RangedSprites_0: -9120133822943304336
       RangedSprites_1: 6385636684173306994
       RangedSprites_10: 6085313833229142809
-      RangedSprites_11: 747365639505469575
-      RangedSprites_12: -4494119103709764458
-      RangedSprites_13: 5480872484136148336
-      RangedSprites_14: -508954984410691685
-      RangedSprites_15: -2222402600384839440
-      RangedSprites_16: 4954408311477788774
-      RangedSprites_17: -604158245641727439
-      RangedSprites_18: 2530371599800270029
-      RangedSprites_19: -8971176164437781940
-      RangedSprites_2: -2440630160269096154
-      RangedSprites_20: 7602194828237997811
-      RangedSprites_21: -1924791210250515830
       RangedSprites_22: -33321238204902713
-      RangedSprites_23: 4378016858934849408
-      RangedSprites_24: -5399229025368407801
-      RangedSprites_25: -6267304913215528194
       RangedSprites_26: -1361663816386460609
       RangedSprites_27: 2660991005625077963
       RangedSprites_28: 5404776230269642016
@@ -2371,41 +2356,24 @@ TextureImporter:
       RangedSprites_39: 8618839440318474837
       RangedSprites_4: 1886181808185858870
       RangedSprites_40: 4476893320879135080
-      RangedSprites_41: 7762653735902309442
       RangedSprites_42: 9197384830343337245
-      RangedSprites_43: 1555274695211325624
       RangedSprites_44: -3124624540274113442
-      RangedSprites_45: -4277616274042659353
       RangedSprites_46: -8466950651020730584
-      RangedSprites_47: -5847679474194057368
       RangedSprites_48: 7251793842675937127
-      RangedSprites_49: 8031105491645533317
       RangedSprites_5: 2012230713518392601
       RangedSprites_50: 8120863616879138854
-      RangedSprites_51: 2191935134671570144
       RangedSprites_52: -6857906731244012801
-      RangedSprites_53: -8963604060085683381
       RangedSprites_54: -2927768793973659085
-      RangedSprites_55: 7000550669297793942
       RangedSprites_56: 809396947549954058
       RangedSprites_57: -5491674920430583996
-      RangedSprites_58: 2837511895584409495
-      RangedSprites_59: -2918001782471261096
-      RangedSprites_6: 2553951676480461944
       RangedSprites_60: 2990927028610031521
-      RangedSprites_61: 5694622268573507259
       RangedSprites_62: 4478250876532581404
-      RangedSprites_63: -2135511471769548667
       RangedSprites_64: 7989260616260998095
       RangedSprites_65: 3225944249959435229
-      RangedSprites_66: 3123043013024249949
       RangedSprites_67: -7003676861594419865
-      RangedSprites_68: 2613191980138928353
       RangedSprites_69: -2547496366656077256
       RangedSprites_7: -7665989957810517693
       RangedSprites_70: 1189263809162799692
-      RangedSprites_71: 6458392899899049036
-      RangedSprites_72: 4528199202573989618
       RangedSprites_73: -7107204042365440954
       RangedSprites_74: 2681424357690701842
       RangedSprites_75: 5456479254544581739
@@ -2424,6 +2392,38 @@ TextureImporter:
       RangedSprites_87: 3855180310149773683
       RangedSprites_88: -6665466640975883243
       RangedSprites_9: -7481044208840646385
+      Ranged_Idle_Down_0: -508954984410691685
+      Ranged_Idle_Down_1: -2222402600384839440
+      Ranged_Idle_Down_2: 4954408311477788774
+      Ranged_Idle_Down_3: -604158245641727439
+      Ranged_Idle_Left_0: 2530371599800270029
+      Ranged_Idle_Left_1: -8971176164437781940
+      Ranged_Idle_Left_2: 7602194828237997811
+      Ranged_Idle_Left_3: -1924791210250515830
+      Ranged_Idle_Right_0: 4378016858934849408
+      Ranged_Idle_Right_1: -5399229025368407801
+      Ranged_Idle_Right_2: -6267304913215528194
+      Ranged_Idle_Right_3: -2440630160269096154
+      Ranged_Idle_Up_0: 747365639505469575
+      Ranged_Idle_Up_1: -4494119103709764458
+      Ranged_Idle_Up_2: 2553951676480461944
+      Ranged_Idle_Up_3: 5480872484136148336
+      Ranged_Move_Down_0: 8031105491645533317
+      Ranged_Move_Down_1: 2191935134671570144
+      Ranged_Move_Down_2: -8963604060085683381
+      Ranged_Move_Down_3: 7000550669297793942
+      Ranged_Move_Left_0: 2837511895584409495
+      Ranged_Move_Left_1: -2918001782471261096
+      Ranged_Move_Left_2: 5694622268573507259
+      Ranged_Move_Left_3: -2135511471769548667
+      Ranged_Move_Right_0: 3123043013024249949
+      Ranged_Move_Right_1: 2613191980138928353
+      Ranged_Move_Right_2: 6458392899899049036
+      Ranged_Move_Right_3: 4528199202573989618
+      Ranged_Move_Up_0: 7762653735902309442
+      Ranged_Move_Up_1: 1555274695211325624
+      Ranged_Move_Up_2: -4277616274042659353
+      Ranged_Move_Up_3: -5847679474194057368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

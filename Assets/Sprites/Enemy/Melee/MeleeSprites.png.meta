@@ -397,9 +397,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 194
-        height: 408
+        height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,15 +413,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_1
+      name: Melee_Idle_Up_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 290
-        width: 51
-        height: 68
+        x: 62
+        y: 310
+        width: 33
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,15 +435,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_2
+      name: Melee_Idle_Up_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 292
-        width: 41
-        height: 66
+        x: 95
+        y: 310
+        width: 34
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,15 +457,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_3
+      name: Melee_Idle_Up_2
       rect:
         serializedVersion: 2
         x: 129
-        y: 292
-        width: 38
-        height: 66
+        y: 310
+        width: 33
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,12 +482,12 @@ TextureImporter:
       name: MeleeSprites_4
       rect:
         serializedVersion: 2
-        x: 161
+        x: 0
         y: 0
-        width: 64
+        width: 60
         height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -501,15 +501,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_5
+      name: Melee_Idle_Up_3
       rect:
         serializedVersion: 2
-        x: 161
-        y: 292
-        width: 35
-        height: 66
+        x: 162
+        y: 310
+        width: 34
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -531,7 +531,7 @@ TextureImporter:
         width: 42
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -545,15 +545,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_7
+      name: Melee_Idle_Down_0
       rect:
         serializedVersion: 2
         x: 203
-        y: 292
-        width: 42
-        height: 69
+        y: 310
+        width: 33
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -575,7 +575,7 @@ TextureImporter:
         width: 93
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -589,15 +589,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_9
+      name: Melee_Idle_Down_1
       rect:
         serializedVersion: 2
-        x: 235
-        y: 292
-        width: 42
-        height: 66
+        x: 236
+        y: 310
+        width: 33
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -611,15 +611,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_10
+      name: Melee_Idle_Down_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 292
-        width: 42
-        height: 69
+        x: 269
+        y: 310
+        width: 32
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -633,15 +633,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_11
+      name: Melee_Idle_Down_3
       rect:
         serializedVersion: 2
-        x: 299
-        y: 289
-        width: 37
-        height: 72
+        x: 301
+        y: 309
+        width: 30
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -663,7 +663,7 @@ TextureImporter:
         width: 39
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -677,15 +677,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_13
+      name: Melee_Idle_Left_0
       rect:
         serializedVersion: 2
-        x: 340
-        y: 287
-        width: 43
-        height: 71
+        x: 341
+        y: 310
+        width: 31
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -707,7 +707,7 @@ TextureImporter:
         width: 31
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -729,7 +729,7 @@ TextureImporter:
         width: 109
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -743,15 +743,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_16
+      name: Melee_Idle_Left_1
       rect:
         serializedVersion: 2
-        x: 371
-        y: 286
-        width: 44
-        height: 72
+        x: 372
+        y: 310
+        width: 32
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -765,15 +765,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_17
+      name: Melee_Idle_Left_2
       rect:
         serializedVersion: 2
-        x: 403
-        y: 287
-        width: 44
-        height: 71
+        x: 404
+        y: 310
+        width: 31
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -787,15 +787,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_18
+      name: Melee_Idle_Left_3
       rect:
         serializedVersion: 2
-        x: 433
-        y: 292
+        x: 435
+        y: 310
         width: 32
-        height: 66
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -809,15 +809,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_19
+      name: Melee_Idle_Right_3
       rect:
         serializedVersion: 2
-        x: 452
-        y: 268
-        width: 35
-        height: 119
+        x: 574
+        y: 310
+        width: 31
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -839,7 +839,7 @@ TextureImporter:
         width: 35
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -853,15 +853,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_21
+      name: Melee_Idle_Right_0
       rect:
         serializedVersion: 2
         x: 481
-        y: 289
-        width: 38
-        height: 68
+        y: 310
+        width: 34
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -883,7 +883,7 @@ TextureImporter:
         width: 114
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -897,15 +897,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_23
+      name: Melee_Idle_Right_1
       rect:
         serializedVersion: 2
-        x: 513
-        y: 290
-        width: 36
-        height: 66
+        x: 515
+        y: 310
+        width: 30
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -919,15 +919,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_24
+      name: Melee_Idle_Right_2
       rect:
         serializedVersion: 2
-        x: 543
-        y: 287
-        width: 38
-        height: 69
+        x: 545
+        y: 310
+        width: 29
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -949,7 +949,7 @@ TextureImporter:
         width: 22
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -971,7 +971,7 @@ TextureImporter:
         width: 25
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -993,7 +993,7 @@ TextureImporter:
         width: 38
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1015,7 +1015,7 @@ TextureImporter:
         width: 31
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1029,15 +1029,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_29
+      name: Melee_Move_Up_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 149
-        width: 53
-        height: 81
+        x: 60
+        y: 181
+        width: 35
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1059,7 +1059,7 @@ TextureImporter:
         width: 51
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1081,7 +1081,7 @@ TextureImporter:
         width: 41
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1095,15 +1095,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_32
+      name: Melee_Move_Up_1
       rect:
         serializedVersion: 2
         x: 95
-        y: 158
-        width: 40
-        height: 72
+        y: 181
+        width: 35
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1125,7 +1125,7 @@ TextureImporter:
         width: 40
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1139,15 +1139,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_34
+      name: Melee_Move_Up_2
       rect:
         serializedVersion: 2
-        x: 129
-        y: 157
-        width: 38
-        height: 73
+        x: 130
+        y: 181
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1169,7 +1169,7 @@ TextureImporter:
         width: 36
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1183,15 +1183,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_36
+      name: Melee_Move_Up_3
       rect:
         serializedVersion: 2
-        x: 161
-        y: 170
-        width: 32
-        height: 59
+        x: 162
+        y: 181
+        width: 31
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1213,7 +1213,7 @@ TextureImporter:
         width: 42
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1227,15 +1227,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_38
+      name: Melee_Move_Down_0
       rect:
         serializedVersion: 2
         x: 203
-        y: 155
-        width: 43
-        height: 75
+        y: 181
+        width: 34
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1257,7 +1257,7 @@ TextureImporter:
         width: 31
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1271,15 +1271,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_40
+      name: Melee_Move_Down_1
       rect:
         serializedVersion: 2
-        x: 235
-        y: 155
-        width: 31
-        height: 75
+        x: 237
+        y: 181
+        width: 30
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1293,15 +1293,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_41
+      name: Melee_Move_Down_2
       rect:
         serializedVersion: 2
-        x: 257
-        y: 155
-        width: 56
-        height: 75
+        x: 267
+        y: 181
+        width: 33
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1323,7 +1323,7 @@ TextureImporter:
         width: 51
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1345,7 +1345,7 @@ TextureImporter:
         width: 39
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1359,15 +1359,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_44
+      name: Melee_Move_Down_3
       rect:
         serializedVersion: 2
-        x: 299
-        y: 158
+        x: 300
+        y: 181
         width: 32
-        height: 72
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1389,7 +1389,7 @@ TextureImporter:
         width: 52
         height: 214
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1411,7 +1411,7 @@ TextureImporter:
         width: 43
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1425,15 +1425,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_47
+      name: Melee_Move_Left_0
       rect:
         serializedVersion: 2
         x: 342
-        y: 154
-        width: 41
-        height: 73
+        y: 181
+        width: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1455,7 +1455,7 @@ TextureImporter:
         width: 42
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1469,15 +1469,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_49
+      name: Melee_Move_Left_1
       rect:
         serializedVersion: 2
-        x: 373
-        y: 153
-        width: 42
-        height: 72
+        x: 374
+        y: 181
+        width: 33
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1499,7 +1499,7 @@ TextureImporter:
         width: 34
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1513,15 +1513,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_51
+      name: Melee_Move_Left_2
       rect:
         serializedVersion: 2
-        x: 405
-        y: 155
-        width: 42
-        height: 70
+        x: 407
+        y: 181
+        width: 30
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1543,7 +1543,7 @@ TextureImporter:
         width: 37
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1565,7 +1565,7 @@ TextureImporter:
         width: 58
         height: 213
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1579,15 +1579,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_54
+      name: Melee_Move_Left_3
       rect:
         serializedVersion: 2
         x: 437
-        y: 164
-        width: 29
-        height: 63
+        y: 181
+        width: 31
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1609,7 +1609,7 @@ TextureImporter:
         width: 40
         height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1623,15 +1623,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_56
+      name: Melee_Move_Right_0
       rect:
         serializedVersion: 2
-        x: 481
-        y: 155
-        width: 38
-        height: 72
+        x: 479
+        y: 181
+        width: 35
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1653,7 +1653,7 @@ TextureImporter:
         width: 46
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1667,15 +1667,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_58
+      name: Melee_Move_Right_1
       rect:
         serializedVersion: 2
-        x: 513
-        y: 155
-        width: 37
-        height: 72
+        x: 514
+        y: 181
+        width: 30
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1689,15 +1689,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_59
+      name: Melee_Move_Right_2
       rect:
         serializedVersion: 2
-        x: 539
-        y: 155
-        width: 43
-        height: 72
+        x: 544
+        y: 181
+        width: 34
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1719,7 +1719,7 @@ TextureImporter:
         width: 35
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1741,7 +1741,7 @@ TextureImporter:
         width: 41
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1755,15 +1755,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_62
+      name: Melee_Move_Right_3
       rect:
         serializedVersion: 2
-        x: 571
-        y: 142
-        width: 41
-        height: 85
+        x: 578
+        y: 181
+        width: 30
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1785,7 +1785,7 @@ TextureImporter:
         width: 23
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1807,7 +1807,7 @@ TextureImporter:
         width: 49
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1824,12 +1824,12 @@ TextureImporter:
       name: MeleeSprites_65
       rect:
         serializedVersion: 2
-        x: 87
-        y: 86
+        x: 85
+        y: 82
         width: 48
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1851,7 +1851,7 @@ TextureImporter:
         width: 34
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1873,7 +1873,7 @@ TextureImporter:
         width: 44
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1895,7 +1895,7 @@ TextureImporter:
         width: 43
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1917,7 +1917,7 @@ TextureImporter:
         width: 43
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1939,7 +1939,7 @@ TextureImporter:
         width: 50
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1961,7 +1961,7 @@ TextureImporter:
         width: 32
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1983,7 +1983,7 @@ TextureImporter:
         width: 39
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2005,7 +2005,7 @@ TextureImporter:
         width: 43
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2027,7 +2027,7 @@ TextureImporter:
         width: 36
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2049,7 +2049,7 @@ TextureImporter:
         width: 29
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2071,7 +2071,7 @@ TextureImporter:
         width: 48
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2093,7 +2093,7 @@ TextureImporter:
         width: 36
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2115,7 +2115,7 @@ TextureImporter:
         width: 38
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2137,7 +2137,7 @@ TextureImporter:
         width: 41
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2159,7 +2159,7 @@ TextureImporter:
         width: 30
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2181,7 +2181,7 @@ TextureImporter:
         width: 54
         height: 92
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2203,7 +2203,7 @@ TextureImporter:
         width: 41
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2225,7 +2225,7 @@ TextureImporter:
         width: 39
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2247,7 +2247,7 @@ TextureImporter:
         width: 37
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2269,7 +2269,7 @@ TextureImporter:
         width: 45
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2291,7 +2291,7 @@ TextureImporter:
         width: 48
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2313,7 +2313,7 @@ TextureImporter:
         width: 46
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2335,7 +2335,7 @@ TextureImporter:
         width: 39
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2357,7 +2357,7 @@ TextureImporter:
         width: 43
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2379,7 +2379,7 @@ TextureImporter:
         width: 11
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2401,7 +2401,7 @@ TextureImporter:
         width: 57
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2423,7 +2423,7 @@ TextureImporter:
         width: 42
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2445,7 +2445,7 @@ TextureImporter:
         width: 37
         height: 68
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2467,7 +2467,7 @@ TextureImporter:
         width: 20
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2489,7 +2489,7 @@ TextureImporter:
         width: 41
         height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2511,7 +2511,7 @@ TextureImporter:
         width: 40
         height: 82
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2533,7 +2533,7 @@ TextureImporter:
         width: 73
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2550,7 +2550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bfb4207ae76d84c109c5aa776d450591
     internalID: 0
     vertices: []
     indices: 
@@ -2561,65 +2561,35 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       MeleeSprites_0: 2993167270627497871
-      MeleeSprites_1: 5510365733314786185
-      MeleeSprites_10: 529749518807774889
-      MeleeSprites_11: 5434174554283149878
       MeleeSprites_12: 1292069544095386492
-      MeleeSprites_13: -5848098877715767665
       MeleeSprites_14: 7741706894177492657
       MeleeSprites_15: 623857391131659110
-      MeleeSprites_16: 4185727108226983800
-      MeleeSprites_17: -8549401214556292948
-      MeleeSprites_18: 6647173533840374975
-      MeleeSprites_19: -5169851584301201111
-      MeleeSprites_2: -8326941257780057394
       MeleeSprites_20: -5542893216846271561
-      MeleeSprites_21: -5736000630905718234
       MeleeSprites_22: 4301955082459980895
-      MeleeSprites_23: -5827352406674538690
-      MeleeSprites_24: 1794688147574647837
       MeleeSprites_25: 6262237426508969952
       MeleeSprites_26: -947396881111834386
       MeleeSprites_27: 8547943275668410815
       MeleeSprites_28: -1270010479666304544
-      MeleeSprites_29: -3088457627385408027
-      MeleeSprites_3: -3686276374879398691
       MeleeSprites_30: 6333969859560673647
       MeleeSprites_31: 6153302774411249366
-      MeleeSprites_32: 7151722080228964956
       MeleeSprites_33: 8714126973693817239
-      MeleeSprites_34: 5342490860159357011
       MeleeSprites_35: -2384283346701610812
-      MeleeSprites_36: 4600736836878107696
       MeleeSprites_37: 2090185784024223474
-      MeleeSprites_38: 229756617853483614
       MeleeSprites_39: 1514584142548273438
       MeleeSprites_4: 719805719106906056
-      MeleeSprites_40: -8998941065565151472
-      MeleeSprites_41: -3955965234202581583
       MeleeSprites_42: 6135205044955317952
       MeleeSprites_43: 8752729670538494027
-      MeleeSprites_44: -7717955525414878361
       MeleeSprites_45: 9167294513418158406
       MeleeSprites_46: -2782229680170295578
-      MeleeSprites_47: 5336213225199761647
       MeleeSprites_48: -53645267451459714
-      MeleeSprites_49: 4717806009864920358
-      MeleeSprites_5: -638265393360255369
       MeleeSprites_50: -373498895938861252
-      MeleeSprites_51: -4731079094749514940
       MeleeSprites_52: -833965271054764202
       MeleeSprites_53: -7507105971845807333
-      MeleeSprites_54: 6845917439388959008
       MeleeSprites_55: -3931360184880282039
-      MeleeSprites_56: 2998757296003186189
       MeleeSprites_57: 3081085601689069036
-      MeleeSprites_58: 5208667955905856604
-      MeleeSprites_59: -4523215164861410394
       MeleeSprites_6: 3133346860027179052
       MeleeSprites_60: -8633983051972336671
       MeleeSprites_61: 3649466205867521299
-      MeleeSprites_62: 3892223510220303095
       MeleeSprites_63: 5178198597727537197
       MeleeSprites_64: 2813545824917559181
       MeleeSprites_65: -7090652947278390917
@@ -2627,7 +2597,6 @@ TextureImporter:
       MeleeSprites_67: 1631869267747618805
       MeleeSprites_68: -2295382431629615607
       MeleeSprites_69: 5927750042241225627
-      MeleeSprites_7: -6150788213059131537
       MeleeSprites_70: 2574987058330532176
       MeleeSprites_71: 5700950317475697459
       MeleeSprites_72: 3151776282713445135
@@ -2649,7 +2618,6 @@ TextureImporter:
       MeleeSprites_87: -7859925644920853033
       MeleeSprites_88: 3321416878639030962
       MeleeSprites_89: 8533309383354605526
-      MeleeSprites_9: -4454313667801753391
       MeleeSprites_90: 6475181353059440889
       MeleeSprites_91: -8299194268347074644
       MeleeSprites_92: 8251790978632330178
@@ -2658,6 +2626,38 @@ TextureImporter:
       MeleeSprites_95: 6612549043637616959
       MeleeSprites_96: 435280071654809169
       MeleeSprites_97: 8980176063981172172
+      Melee_Idle_Down_0: -6150788213059131537
+      Melee_Idle_Down_1: -4454313667801753391
+      Melee_Idle_Down_2: 529749518807774889
+      Melee_Idle_Down_3: 5434174554283149878
+      Melee_Idle_Left_0: -5848098877715767665
+      Melee_Idle_Left_1: 4185727108226983800
+      Melee_Idle_Left_2: -8549401214556292948
+      Melee_Idle_Left_3: 6647173533840374975
+      Melee_Idle_Right_0: -5736000630905718234
+      Melee_Idle_Right_1: -5827352406674538690
+      Melee_Idle_Right_2: 1794688147574647837
+      Melee_Idle_Right_3: -5169851584301201111
+      Melee_Idle_Up_0: 5510365733314786185
+      Melee_Idle_Up_1: -8326941257780057394
+      Melee_Idle_Up_2: -3686276374879398691
+      Melee_Idle_Up_3: -638265393360255369
+      Melee_Move_Down_0: 229756617853483614
+      Melee_Move_Down_1: -8998941065565151472
+      Melee_Move_Down_2: -3955965234202581583
+      Melee_Move_Down_3: -7717955525414878361
+      Melee_Move_Left_0: 5336213225199761647
+      Melee_Move_Left_1: 4717806009864920358
+      Melee_Move_Left_2: -4731079094749514940
+      Melee_Move_Left_3: 6845917439388959008
+      Melee_Move_Right_0: 2998757296003186189
+      Melee_Move_Right_1: 5208667955905856604
+      Melee_Move_Right_2: -4523215164861410394
+      Melee_Move_Right_3: 3892223510220303095
+      Melee_Move_Up_0: -3088457627385408027
+      Melee_Move_Up_1: 7151722080228964956
+      Melee_Move_Up_2: 5342490860159357011
+      Melee_Move_Up_3: 4600736836878107696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
