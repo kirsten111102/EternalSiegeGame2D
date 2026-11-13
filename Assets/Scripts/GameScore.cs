@@ -6,6 +6,8 @@ public class GameScore : MonoBehaviour
     [Header("UI Reference")]
     [SerializeField] private TextMeshProUGUI scoreText; // Your score display text
 
+    int change;
+
     private int score;
     public int Score
     {
@@ -36,4 +38,6 @@ public class GameScore : MonoBehaviour
         if (scoreText != null)
             scoreText.text = "Score: " + score;
     }
+
+
 }
