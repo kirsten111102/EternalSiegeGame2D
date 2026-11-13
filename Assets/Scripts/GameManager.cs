@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
     private bool isGameOver;
-
+    // comment
     private void Start()
     {
         if (gameOverPanel != null)
