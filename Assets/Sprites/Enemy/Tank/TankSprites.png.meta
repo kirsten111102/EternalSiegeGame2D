@@ -1105,7 +1105,7 @@ TextureImporter:
         width: 35
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1127,7 +1127,7 @@ TextureImporter:
         width: 31
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1149,7 +1149,7 @@ TextureImporter:
         width: 34
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1171,7 +1171,7 @@ TextureImporter:
         width: 38
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1180,6 +1180,798 @@ TextureImporter:
       bones: []
       spriteID: 952a2e2a3dc78404996efb04039262c0
       internalID: 1828013611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Up_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 244
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094e91d6383f4417aba05ec0afd9498a
+      internalID: 1090084435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Up_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 244
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725719b258ab64336906c2a3d198a4e4
+      internalID: 759789741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Up_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 243
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e8f927bb41c491fb6ddfbfe3a02746
+      internalID: -352555104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Up_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 244
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbbadbc4ec3c4a7388bf97ee2806b3f
+      internalID: 1638816518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Up_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 102
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bbb3e2b90ee431db1b1b52806e9caf
+      internalID: -1976891825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Up_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 102
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e77b342b5eb47409a721e18bedcd61
+      internalID: -1289771547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Up_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 102
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d68e4bef9794e05b431fa87bf9b16a
+      internalID: -1240073486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Up_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 102
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74563fae3676442f7ac32a7fec0aa5cf
+      internalID: -1072959747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Up_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 33
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b904688f4e9ff474580743f63c368a0b
+      internalID: 1607158001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Up_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 33
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3f52883aff34fb980561d1e757402e
+      internalID: -663320525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Up_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 33
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb2cf9ab140b4379af0eb6715fb6519
+      internalID: 315481035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Up_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 33
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403c23d6f4b8f49d7a3e8b34ecf90fd8
+      internalID: -1510639626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Left_0
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 241
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfda34bf40997446f83faeb37615b999
+      internalID: 1734326361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Left_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 241
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f73f3301d2141a99bc1d3ecf32f91f
+      internalID: -320033241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Left_2
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 240
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14e5939da3a94dd68957d16e4cd2d19
+      internalID: 1367557266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Left_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 241
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de371a0bc313423bb78e7519fa7ab90
+      internalID: -1988609626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Right_0
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 241
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84ac7ad31a8e491a96c480194cadf54
+      internalID: -1312718153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Right_1
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 241
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2513dcf7fb741b9b8aab99ca593214
+      internalID: -1424067843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Right_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 241
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557a63147d2804fc282566db678b0d08
+      internalID: -166514902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Attack_Right_3
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 241
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd205d3d1f3d84b91b0b25eb4625db5b
+      internalID: -107043167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Left_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 102
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd6e1952178b4d98a5a7b5da281491f
+      internalID: 1380126280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Left_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 102
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e165cb460bf4d43a67d5d9ec918386
+      internalID: -1674582081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Left_2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 102
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a34b50d1ac4433cbff43c0536adb73
+      internalID: -184922312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Left_3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 102
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6166fbe6796f74df789462f636422706
+      internalID: 1653776937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Right_0
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 102
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035aa8c6967734d9087373d5519a5418
+      internalID: -140892908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Right_1
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 102
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a22169191c445d08461054c0285f15
+      internalID: 290097720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Right_2
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 102
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557d3cc4ed0794298b6b42588f42d3f6
+      internalID: -1689153337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Hurt_Right_3
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 102
+        width: 29
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb34956b7f644446a0e56fba3d161d9
+      internalID: 1043746865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Left_0
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 33
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306ba3f27a8cd45e5b75299ae6bc48ca
+      internalID: 956637919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Left_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 33
+        width: 30
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b94a94fc51748a68597a37e6113764
+      internalID: 618514442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Left_2
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 33
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fcd3a1f1984407b90fb86af22b99fe
+      internalID: -2002704904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Left_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 33
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32876d0aa3c5442a38bb2564e9e016a4
+      internalID: -1693821684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Right_0
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 33
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae74a7215f3c4fb5bc5b391d3dcc8d0
+      internalID: -747523897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Right_1
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 33
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4798c6d26d4394478b96d29e4aa0ad6b
+      internalID: 199415598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Right_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 33
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a86fedbb1b841c2b4b2fb6895c5e3d
+      internalID: -55589715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tank_Die_Right_3
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 33
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e303443db81dc4db6a02e6e153218e12
+      internalID: -365804138
       vertices: []
       indices: 
       edges: []
@@ -1202,14 +1994,50 @@ TextureImporter:
       Tank_Attack_Down_1: -3674998860032822152
       Tank_Attack_Down_2: 8307546295605886072
       Tank_Attack_Down_3: -3110353185449351110
+      Tank_Attack_Left_0: 1734326361
+      Tank_Attack_Left_1: -320033241
+      Tank_Attack_Left_2: 1367557266
+      Tank_Attack_Left_3: -1988609626
+      Tank_Attack_Right_0: -1312718153
+      Tank_Attack_Right_1: -1424067843
+      Tank_Attack_Right_2: -166514902
+      Tank_Attack_Right_3: -107043167
+      Tank_Attack_Up_0: 1090084435
+      Tank_Attack_Up_1: 759789741
+      Tank_Attack_Up_2: -352555104
+      Tank_Attack_Up_3: 1638816518
       Tank_Die_Down_0: 5001008304573725262
       Tank_Die_Down_1: 5074734438977753575
       Tank_Die_Down_2: -245274275176896229
       Tank_Die_Down_3: 1855622567562502464
+      Tank_Die_Left_0: 956637919
+      Tank_Die_Left_1: 618514442
+      Tank_Die_Left_2: -2002704904
+      Tank_Die_Left_3: -1693821684
+      Tank_Die_Right_0: -747523897
+      Tank_Die_Right_1: 199415598
+      Tank_Die_Right_2: -55589715
+      Tank_Die_Right_3: -365804138
+      Tank_Die_Up_0: 1607158001
+      Tank_Die_Up_1: -663320525
+      Tank_Die_Up_2: 315481035
+      Tank_Die_Up_3: -1510639626
       Tank_Hurt_Down_0: -657909314976011623
       Tank_Hurt_Down_1: -1441794666816637301
       Tank_Hurt_Down_2: -5872070547731294186
       Tank_Hurt_Down_3: 4583790101849181772
+      Tank_Hurt_Left_0: 1380126280
+      Tank_Hurt_Left_1: -1674582081
+      Tank_Hurt_Left_2: -184922312
+      Tank_Hurt_Left_3: 1653776937
+      Tank_Hurt_Right_0: -140892908
+      Tank_Hurt_Right_1: 290097720
+      Tank_Hurt_Right_2: -1689153337
+      Tank_Hurt_Right_3: 1043746865
+      Tank_Hurt_Up_0: -1976891825
+      Tank_Hurt_Up_1: -1289771547
+      Tank_Hurt_Up_2: -1240073486
+      Tank_Hurt_Up_3: -1072959747
       Tank_Idle_Down_0: 4559393881794288264
       Tank_Idle_Down_1: 5522511539195414389
       Tank_Idle_Down_2: 2696312170156581531

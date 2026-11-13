@@ -391,28 +391,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MeleeSprites_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 194
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f87d31f26cdd98920800000000000000
-      internalID: 2993167270627497871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Melee_Idle_Up_0
       rect:
         serializedVersion: 2
@@ -479,28 +457,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 400
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c769a2ec734df900800000000000000
-      internalID: 719805719106906056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Melee_Idle_Up_3
       rect:
         serializedVersion: 2
@@ -523,28 +479,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_6
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 357
-        width: 42
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2071063e52eb7b20800000000000000
-      internalID: 3133346860027179052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Melee_Idle_Down_0
       rect:
         serializedVersion: 2
@@ -562,28 +496,6 @@ TextureImporter:
       bones: []
       spriteID: f6763ff55b204aaa0800000000000000
       internalID: -6150788213059131537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_8
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 356
-        width: 93
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: de4452acd81cca170800000000000000
-      internalID: 8191134637006079213
       vertices: []
       indices: 
       edges: []
@@ -655,28 +567,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_12
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 335
-        width: 39
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7b08e8976a5ee110800000000000000
-      internalID: 1292069544095386492
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Melee_Idle_Left_0
       rect:
         serializedVersion: 2
@@ -694,50 +584,6 @@ TextureImporter:
       bones: []
       spriteID: f8e14662e0167dea0800000000000000
       internalID: -5848098877715767665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_14
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 356
-        width: 31
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1be54a62761107b60800000000000000
-      internalID: 7741706894177492657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_15
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 354
-        width: 109
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 66b87ecedf268a800800000000000000
-      internalID: 623857391131659110
       vertices: []
       indices: 
       edges: []
@@ -831,28 +677,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_20
-      rect:
-        serializedVersion: 2
-        x: 470
-        y: 356
-        width: 35
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7bba4fd9cffa313b0800000000000000
-      internalID: -5542893216846271561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Melee_Idle_Right_0
       rect:
         serializedVersion: 2
@@ -870,28 +694,6 @@ TextureImporter:
       bones: []
       spriteID: 62ab27b11d1a560b0800000000000000
       internalID: -5736000630905718234
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_22
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 286
-        width: 114
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f54a6b1da5d93bb30800000000000000
-      internalID: 4301955082459980895
       vertices: []
       indices: 
       edges: []
@@ -941,94 +743,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_25
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 298
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e7393ab2cfe7e650800000000000000
-      internalID: 6262237426508969952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_26
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 270
-        width: 25
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee024006e8b2ad2f0800000000000000
-      internalID: -947396881111834386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_27
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 204
-        width: 38
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb1976ace1560a670800000000000000
-      internalID: 8547943275668410815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_28
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 164
-        width: 31
-        height: 56
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0e967729234006ee0800000000000000
-      internalID: -1270010479666304544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Melee_Move_Up_0
       rect:
         serializedVersion: 2
@@ -1051,13 +765,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_30
+      name: Melee_Attack_Up_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 226
-        width: 51
-        height: 68
+        x: 62
+        y: 243
+        width: 34
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1073,13 +787,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_31
+      name: Melee_Attack_Up_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 228
-        width: 41
-        height: 66
+        x: 96
+        y: 243
+        width: 33
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1117,13 +831,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_33
+      name: Melee_Attack_Up_2
       rect:
         serializedVersion: 2
-        x: 127
-        y: 228
-        width: 40
-        height: 66
+        x: 129
+        y: 243
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1161,13 +875,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_35
+      name: Melee_Attack_Up_3
       rect:
         serializedVersion: 2
-        x: 160
-        y: 228
-        width: 36
-        height: 65
+        x: 161
+        y: 243
+        width: 35
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1205,13 +919,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_37
+      name: Melee_Attack_Down_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 228
-        width: 42
-        height: 66
+        x: 202
+        y: 243
+        width: 35
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1249,13 +963,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_39
+      name: Melee_Attack_Down_1
       rect:
         serializedVersion: 2
-        x: 235
-        y: 228
+        x: 237
+        y: 243
         width: 31
-        height: 66
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1315,13 +1029,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_42
+      name: Melee_Attack_Down_2
       rect:
         serializedVersion: 2
-        x: 258
-        y: 228
-        width: 51
-        height: 66
+        x: 268
+        y: 243
+        width: 34
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1337,13 +1051,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_43
+      name: Melee_Attack_Down_3
       rect:
         serializedVersion: 2
-        x: 299
-        y: 228
-        width: 39
-        height: 63
+        x: 302
+        y: 243
+        width: 31
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1381,35 +1095,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_45
+      name: Melee_Attack_Left_0
       rect:
         serializedVersion: 2
-        x: 307
-        y: 54
-        width: 52
-        height: 214
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6414daf1ac5c83f70800000000000000
-      internalID: 9167294513418158406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_46
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 222
-        width: 43
-        height: 68
+        x: 342
+        y: 243
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1447,13 +1139,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_48
+      name: Melee_Attack_Left_1
       rect:
         serializedVersion: 2
-        x: 373
-        y: 222
-        width: 42
-        height: 67
+        x: 374
+        y: 243
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1491,13 +1183,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_50
+      name: Melee_Attack_Left_2
       rect:
         serializedVersion: 2
-        x: 405
-        y: 222
-        width: 34
-        height: 68
+        x: 406
+        y: 243
+        width: 30
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1535,13 +1227,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_52
+      name: Melee_Attack_Left_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 224
-        width: 37
-        height: 67
+        x: 436
+        y: 243
+        width: 33
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1552,28 +1244,6 @@ TextureImporter:
       bones: []
       spriteID: 657b4c721092d64f0800000000000000
       internalID: -833965271054764202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_53
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 52
-        width: 58
-        height: 213
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b13cae894e661d790800000000000000
-      internalID: -7507105971845807333
       vertices: []
       indices: 
       edges: []
@@ -1601,13 +1271,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_55
+      name: Melee_Attack_Right_0
       rect:
         serializedVersion: 2
-        x: 472
-        y: 225
-        width: 40
-        height: 66
+        x: 481
+        y: 243
+        width: 31
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1645,13 +1315,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_57
+      name: Melee_Attack_Right_1
       rect:
         serializedVersion: 2
-        x: 503
-        y: 224
-        width: 46
-        height: 68
+        x: 512
+        y: 243
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1711,13 +1381,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_60
+      name: Melee_Attack_Right_2
       rect:
         serializedVersion: 2
-        x: 542
-        y: 224
-        width: 35
-        height: 67
+        x: 544
+        y: 243
+        width: 31
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1733,13 +1403,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_61
+      name: Melee_Attack_Right_3
       rect:
         serializedVersion: 2
-        x: 571
-        y: 206
-        width: 41
-        height: 84
+        x: 575
+        y: 243
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1777,35 +1447,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_63
+      name: Melee_Hurt_Up_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 106
-        width: 23
+        x: 60
+        y: 114
+        width: 35
         height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d28c9f97038acd740800000000000000
-      internalID: 5178198597727537197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_64
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 81
-        width: 49
-        height: 79
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1821,13 +1469,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_65
+      name: Melee_Hurt_Up_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 82
-        width: 48
-        height: 74
+        x: 95
+        y: 114
+        width: 35
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1843,13 +1491,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_66
+      name: Melee_Hurt_Up_2
       rect:
         serializedVersion: 2
-        x: 127
-        y: 78
-        width: 34
-        height: 82
+        x: 130
+        y: 114
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1865,13 +1513,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_67
+      name: Melee_Hurt_Up_3
       rect:
         serializedVersion: 2
-        x: 149
-        y: 75
-        width: 44
-        height: 81
+        x: 162
+        y: 114
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1887,13 +1535,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_68
+      name: Melee_Hurt_Down_0
       rect:
         serializedVersion: 2
-        x: 203
-        y: 83
-        width: 43
-        height: 74
+        x: 202
+        y: 114
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1909,13 +1557,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_69
+      name: Melee_Hurt_Down_1
       rect:
         serializedVersion: 2
-        x: 235
-        y: 83
-        width: 43
-        height: 76
+        x: 236
+        y: 114
+        width: 33
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1931,13 +1579,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_70
+      name: Melee_Hurt_Down_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 79
-        width: 50
-        height: 80
+        x: 269
+        y: 114
+        width: 33
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1953,13 +1601,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_71
+      name: Melee_Hurt_Down_3
       rect:
         serializedVersion: 2
-        x: 299
-        y: 95
-        width: 32
-        height: 64
+        x: 302
+        y: 114
+        width: 30
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1975,13 +1623,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_72
+      name: Melee_Hurt_Left_0
       rect:
         serializedVersion: 2
-        x: 345
-        y: 82
-        width: 39
-        height: 74
+        x: 342
+        y: 114
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1997,13 +1645,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_73
+      name: Melee_Hurt_Left_1
       rect:
         serializedVersion: 2
-        x: 372
-        y: 79
-        width: 43
-        height: 78
+        x: 374
+        y: 114
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2019,13 +1667,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_74
+      name: Melee_Hurt_Left_2
       rect:
         serializedVersion: 2
-        x: 403
-        y: 70
-        width: 36
-        height: 87
+        x: 406
+        y: 114
+        width: 30
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2041,13 +1689,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_75
+      name: Melee_Hurt_Left_3
       rect:
         serializedVersion: 2
-        x: 434
+        x: 436
         y: 114
         width: 29
-        height: 45
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2063,13 +1711,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_76
+      name: Melee_Hurt_Right_0
       rect:
         serializedVersion: 2
-        x: 477
-        y: 79
-        width: 48
-        height: 80
+        x: 480
+        y: 114
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2085,13 +1733,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_77
+      name: Melee_Hurt_Right_1
       rect:
         serializedVersion: 2
-        x: 515
-        y: 77
-        width: 36
-        height: 82
+        x: 514
+        y: 114
+        width: 31
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2107,13 +1755,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_78
+      name: Melee_Hurt_Right_2
       rect:
         serializedVersion: 2
-        x: 543
-        y: 68
-        width: 38
-        height: 91
+        x: 545
+        y: 114
+        width: 29
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2129,13 +1777,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_79
+      name: Melee_Hurt_Right_3
       rect:
         serializedVersion: 2
-        x: 571
-        y: 68
-        width: 41
-        height: 91
+        x: 574
+        y: 114
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2151,35 +1799,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_80
+      name: Melee_Die_Up_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 0
-        width: 30
-        height: 78
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c597d636ecf4aa760800000000000000
-      internalID: 7469870679797365084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_81
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 0
-        width: 54
-        height: 92
+        x: 60
+        y: 43
+        width: 37
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2195,13 +1821,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_82
+      name: Melee_Die_Up_1
       rect:
         serializedVersion: 2
-        x: 94
-        y: 0
-        width: 41
-        height: 90
+        x: 97
+        y: 42
+        width: 33
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2217,13 +1843,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_83
+      name: Melee_Die_Up_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 39
-        height: 80
+        x: 130
+        y: 42
+        width: 34
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2239,13 +1865,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_84
+      name: Melee_Die_Up_3
       rect:
         serializedVersion: 2
-        x: 159
-        y: 44
-        width: 37
-        height: 25
+        x: 164
+        y: 42
+        width: 30
+        height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2261,13 +1887,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_85
+      name: Melee_Die_Down_0
       rect:
         serializedVersion: 2
         x: 204
-        y: 0
-        width: 45
-        height: 87
+        y: 42
+        width: 33
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2283,13 +1909,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_86
+      name: Melee_Die_Down_1
       rect:
         serializedVersion: 2
-        x: 233
-        y: 0
-        width: 48
-        height: 87
+        x: 237
+        y: 42
+        width: 31
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2305,13 +1931,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_87
+      name: Melee_Die_Down_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 0
-        width: 46
-        height: 87
+        x: 268
+        y: 42
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2327,13 +1953,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_88
+      name: Melee_Die_Down_3
       rect:
         serializedVersion: 2
-        x: 299
-        y: 0
-        width: 39
-        height: 75
+        x: 300
+        y: 42
+        width: 33
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2349,13 +1975,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_89
+      name: Melee_Die_Left_0
       rect:
         serializedVersion: 2
-        x: 331
-        y: 0
-        width: 43
-        height: 87
+        x: 341
+        y: 43
+        width: 33
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2371,35 +1997,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_90
+      name: Melee_Die_Left_1
       rect:
         serializedVersion: 2
-        x: 332
-        y: 34
-        width: 11
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f8575532277cd950800000000000000
-      internalID: 6475181353059440889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MeleeSprites_91
-      rect:
-        serializedVersion: 2
-        x: 358
-        y: 0
-        width: 57
-        height: 84
+        x: 374
+        y: 43
+        width: 32
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2415,13 +2019,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_92
+      name: Melee_Die_Left_2
       rect:
         serializedVersion: 2
-        x: 405
-        y: 0
-        width: 42
-        height: 73
+        x: 406
+        y: 43
+        width: 29
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2437,13 +2041,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_93
+      name: Melee_Die_Left_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 0
-        width: 37
-        height: 68
+        x: 435
+        y: 43
+        width: 35
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2459,13 +2063,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_94
+      name: Melee_Die_Right_3
       rect:
         serializedVersion: 2
-        x: 465
-        y: 0
-        width: 20
-        height: 54
+        x: 574
+        y: 43
+        width: 31
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2481,13 +2085,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_95
+      name: Melee_Die_Right_0
       rect:
         serializedVersion: 2
-        x: 478
-        y: 0
-        width: 41
-        height: 87
+        x: 481
+        y: 43
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2503,13 +2107,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_96
+      name: Melee_Die_Right_1
       rect:
         serializedVersion: 2
-        x: 511
-        y: 0
-        width: 40
-        height: 82
+        x: 513
+        y: 43
+        width: 29
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2525,13 +2129,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MeleeSprites_97
+      name: Melee_Die_Right_2
       rect:
         serializedVersion: 2
-        x: 539
-        y: 0
-        width: 73
-        height: 70
+        x: 542
+        y: 43
+        width: 32
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2561,6 +2165,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       MeleeSprites_0: 2993167270627497871
+      MeleeSprites_1: 2080711311
       MeleeSprites_12: 1292069544095386492
       MeleeSprites_14: 7741706894177492657
       MeleeSprites_15: 623857391131659110
@@ -2570,62 +2175,62 @@ TextureImporter:
       MeleeSprites_26: -947396881111834386
       MeleeSprites_27: 8547943275668410815
       MeleeSprites_28: -1270010479666304544
-      MeleeSprites_30: 6333969859560673647
-      MeleeSprites_31: 6153302774411249366
-      MeleeSprites_33: 8714126973693817239
-      MeleeSprites_35: -2384283346701610812
-      MeleeSprites_37: 2090185784024223474
-      MeleeSprites_39: 1514584142548273438
       MeleeSprites_4: 719805719106906056
-      MeleeSprites_42: 6135205044955317952
-      MeleeSprites_43: 8752729670538494027
       MeleeSprites_45: 9167294513418158406
-      MeleeSprites_46: -2782229680170295578
-      MeleeSprites_48: -53645267451459714
-      MeleeSprites_50: -373498895938861252
-      MeleeSprites_52: -833965271054764202
       MeleeSprites_53: -7507105971845807333
-      MeleeSprites_55: -3931360184880282039
-      MeleeSprites_57: 3081085601689069036
       MeleeSprites_6: 3133346860027179052
-      MeleeSprites_60: -8633983051972336671
-      MeleeSprites_61: 3649466205867521299
       MeleeSprites_63: 5178198597727537197
-      MeleeSprites_64: 2813545824917559181
-      MeleeSprites_65: -7090652947278390917
-      MeleeSprites_66: -4902074156343189821
-      MeleeSprites_67: 1631869267747618805
-      MeleeSprites_68: -2295382431629615607
-      MeleeSprites_69: 5927750042241225627
-      MeleeSprites_70: 2574987058330532176
-      MeleeSprites_71: 5700950317475697459
-      MeleeSprites_72: 3151776282713445135
-      MeleeSprites_73: 3715941886389128063
-      MeleeSprites_74: 5655178422563526683
-      MeleeSprites_75: 4445328061478272604
-      MeleeSprites_76: -4364619279820182726
-      MeleeSprites_77: -30750993061068016
-      MeleeSprites_78: -5601547020347282517
-      MeleeSprites_79: 3540315301084432769
       MeleeSprites_8: 8191134637006079213
       MeleeSprites_80: 7469870679797365084
-      MeleeSprites_81: 466721961237281002
-      MeleeSprites_82: 61734902765845928
-      MeleeSprites_83: -5936569760247155146
-      MeleeSprites_84: -7240690260402209076
-      MeleeSprites_85: -8349701246439226020
-      MeleeSprites_86: 3369659308811566625
-      MeleeSprites_87: -7859925644920853033
-      MeleeSprites_88: 3321416878639030962
-      MeleeSprites_89: 8533309383354605526
       MeleeSprites_90: 6475181353059440889
-      MeleeSprites_91: -8299194268347074644
-      MeleeSprites_92: 8251790978632330178
-      MeleeSprites_93: 8490611513216236449
-      MeleeSprites_94: 121599393338286505
-      MeleeSprites_95: 6612549043637616959
-      MeleeSprites_96: 435280071654809169
-      MeleeSprites_97: 8980176063981172172
+      Melee_Attack_Down_0: 2090185784024223474
+      Melee_Attack_Down_1: 1514584142548273438
+      Melee_Attack_Down_2: 6135205044955317952
+      Melee_Attack_Down_3: 8752729670538494027
+      Melee_Attack_Left_0: -2782229680170295578
+      Melee_Attack_Left_1: -53645267451459714
+      Melee_Attack_Left_2: -373498895938861252
+      Melee_Attack_Left_3: -833965271054764202
+      Melee_Attack_Right_0: -3931360184880282039
+      Melee_Attack_Right_1: 3081085601689069036
+      Melee_Attack_Right_2: -8633983051972336671
+      Melee_Attack_Right_3: 3649466205867521299
+      Melee_Attack_Up_0: 6333969859560673647
+      Melee_Attack_Up_1: 6153302774411249366
+      Melee_Attack_Up_2: 8714126973693817239
+      Melee_Attack_Up_3: -2384283346701610812
+      Melee_Die_Down_0: -8349701246439226020
+      Melee_Die_Down_1: 3369659308811566625
+      Melee_Die_Down_2: -7859925644920853033
+      Melee_Die_Down_3: 3321416878639030962
+      Melee_Die_Left_0: 8533309383354605526
+      Melee_Die_Left_1: -8299194268347074644
+      Melee_Die_Left_2: 8251790978632330178
+      Melee_Die_Left_3: 8490611513216236449
+      Melee_Die_Right_0: 6612549043637616959
+      Melee_Die_Right_1: 435280071654809169
+      Melee_Die_Right_2: 8980176063981172172
+      Melee_Die_Right_3: 121599393338286505
+      Melee_Die_Up_0: 466721961237281002
+      Melee_Die_Up_1: 61734902765845928
+      Melee_Die_Up_2: -5936569760247155146
+      Melee_Die_Up_3: -7240690260402209076
+      Melee_Hurt_Down_0: -2295382431629615607
+      Melee_Hurt_Down_1: 5927750042241225627
+      Melee_Hurt_Down_2: 2574987058330532176
+      Melee_Hurt_Down_3: 5700950317475697459
+      Melee_Hurt_Left_0: 3151776282713445135
+      Melee_Hurt_Left_1: 3715941886389128063
+      Melee_Hurt_Left_2: 5655178422563526683
+      Melee_Hurt_Left_3: 4445328061478272604
+      Melee_Hurt_Right_0: -4364619279820182726
+      Melee_Hurt_Right_1: -30750993061068016
+      Melee_Hurt_Right_2: -5601547020347282517
+      Melee_Hurt_Right_3: 3540315301084432769
+      Melee_Hurt_Up_0: 2813545824917559181
+      Melee_Hurt_Up_1: -7090652947278390917
+      Melee_Hurt_Up_2: -4902074156343189821
+      Melee_Hurt_Up_3: 1631869267747618805
       Melee_Idle_Down_0: -6150788213059131537
       Melee_Idle_Down_1: -4454313667801753391
       Melee_Idle_Down_2: 529749518807774889

@@ -162,7 +162,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1282681877
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &3447630688406884814
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b99918396e48f140985b2df92b05e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 60
   xpReward: 5
   scoreValue: 10
   gameXP: {fileID: 0}
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 203244703
+  m_SortingLayerID: -1282681877
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -6150788213059131537, guid: ee74ccb94d8b84793acbcf328494eb98, type: 3}
