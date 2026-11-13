@@ -10,14 +10,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Player
   - Enemy
-  - Crystal Core
-  - Turret
-  - Power Up
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -44,19 +44,19 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Ground
-    uniqueID: 3493650439
+    uniqueID: 4125251457
     locked: 0
   - name: GroundDetails
-    uniqueID: 1686847183
+    uniqueID: 1962337133
     locked: 0
   - name: Decorations
-    uniqueID: 364737257
+    uniqueID: 3473726103
     locked: 0
   - name: Border
-    uniqueID: 2296901927
+    uniqueID: 3368813615
     locked: 0
-  - name: Character
-    uniqueID: 203244703
+  - name: GameObjects
+    uniqueID: 3012285419
     locked: 0
   m_RenderingLayers:
   - Default
