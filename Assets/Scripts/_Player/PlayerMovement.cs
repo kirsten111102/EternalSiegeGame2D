@@ -1,43 +1,27 @@
-
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    [Header("Base movement stat (Level 1)")]
+    [SerializeField, Min(0f)] private float moveSpeed = 5f;
     [SerializeField] private Animator animator;
 
     private Rigidbody2D rb;
     private Vector2 direction;
     private Vector2 lastDirection = Vector2.down;
+    private float currentMoveSpeed;
+    private bool statsApplied;
 
-    // PathWalkability reference
-    // [SerializeField] private PathWalkability pathWalkability;
+    public float CurrentMoveSpeed => statsApplied ? currentMoveSpeed : moveSpeed;
 
-    private Vector2 actualMovement;
-
-    private void UpdateAnimation()
+    private void Awake()
     {
-        if (animator == null) return;
+        rb = GetComponent<Rigidbody2D>();
+        if (animator == null) animator = GetComponent<Animator>();
+        if (animator == null) animator = GetComponentInChildren<Animator>();
 
-        if (direction.sqrMagnitude > 0.01f)
-        {
-            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-            {
-                lastDirection = direction.x > 0
-                    ? Vector2.right
-                    : Vector2.left;
-            }
-            else
-            {
-                lastDirection = direction.y > 0
-                    ? Vector2.up
-                    : Vector2.down;
-            }
-        }
-
-        animator.SetFloat("DirectionX", lastDirection.x);
-        animator.SetFloat("DirectionY", lastDirection.y);
-        animator.SetFloat("Speed", direction.magnitude);
+        // Do not overwrite a level bonus that another component applied in Awake.
+        if (!statsApplied) ApplyLevelBonus(0);
     }
 
     private void Update()
@@ -46,46 +30,56 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         direction = new Vector2(horizontal, vertical);
-
-        if (direction.sqrMagnitude > 1f)
-        {
-            direction.Normalize();
-        }
+        if (direction.sqrMagnitude > 1f) direction.Normalize();
 
         UpdateAnimation();
     }
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-
-        if (animator == null)
-            animator = GetComponent<Animator>();
-
-        if (animator == null)
-            animator = GetComponentInChildren<Animator>();
-    }
-
     private void FixedUpdate()
     {
-        actualMovement = Vector2.zero;
-
-        // PathWalkability movement checking
-        // if (pathWalkability == null) return;
+        if (rb == null) return;
 
         Vector2 targetPosition =
-            rb.position + (moveSpeed * Time.fixedDeltaTime * direction);
-
-        // rb.MovePosition(targetPosition);
-
-        // if (pathWalkability.CanMoveTo(targetPosition))
-        // {
-        //     rb.MovePosition(targetPosition);
-        //     actualMovement = direction;
-        // }
-
-        // Temporary movement without PathWalkability
+            rb.position + direction * CurrentMoveSpeed * Time.fixedDeltaTime;
+        
         rb.MovePosition(targetPosition);
-        actualMovement = direction;
     }
+
+    private void UpdateAnimation()
+    {
+        if (animator == null) return;
+
+        if (direction.sqrMagnitude > 0.01f)
+        {
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+                lastDirection = direction.x > 0 ? Vector2.right : Vector2.left;
+            else
+                lastDirection = direction.y > 0 ? Vector2.up : Vector2.down;
+        }
+
+        animator.SetFloat("DirectionX", lastDirection.x);
+        animator.SetFloat("DirectionY", lastDirection.y);
+        animator.SetFloat("Speed", direction.magnitude);
+    }
+
+    // A level adds exactly +1 to Movement Speed.
+    public void ApplyLevelBonus(int bonus)
+    {
+        currentMoveSpeed = moveSpeed + Mathf.Max(0, bonus);
+        statsApplied = true;
+    }
+
+    public void StopMovement()
+    {
+        direction = Vector2.zero;
+        if (animator != null) animator.SetFloat("Speed", 0f);
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+    }
+
+    private void OnDisable()
+    {
+        StopMovement();
+    }
+
+    
 }
