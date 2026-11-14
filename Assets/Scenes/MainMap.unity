@@ -1945,7 +1945,7 @@ RectTransform:
   m_GameObject: {fileID: 311404000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27083334, y: 0.27083334, z: 0.27083334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1282242927}
@@ -2146,6 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
+  gameManager: {fileID: 1194704097}
 --- !u!212 &405312305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3396,7 +3397,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 637596472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1194704097}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &637596472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8081,7 +8094,7 @@ RectTransform:
   m_GameObject: {fileID: 771183045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27083334, y: 0.27083334, z: 0.27083334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1604751679}
@@ -17895,6 +17908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 311404000}
+  gameScore: {fileID: 1194704099}
+  pausePanel: {fileID: 771183045}
+  finalScoreText: {fileID: 0}
+  networkManager: {fileID: 0}
+  player: {fileID: 1466273653}
 --- !u!4 &1194704098
 Transform:
   m_ObjectHideFlags: 0

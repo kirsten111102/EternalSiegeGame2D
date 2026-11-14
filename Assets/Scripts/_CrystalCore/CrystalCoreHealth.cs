@@ -4,6 +4,8 @@ using UnityEngine;
 public class CrystalCoreHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 200f;
+    [SerializeField]
+    private GameManager gameManager;
 
     public float CurrentHealth { get; private set; }
     public bool IsDead { get; private set; }
@@ -36,6 +38,10 @@ public class CrystalCoreHealth : MonoBehaviour
         Debug.Log("GAME OVER - Crystal Core destroyed!");
 
         OnCoreDestroyed?.Invoke();
+
+        if (gameManager != null)
+            gameManager.GameOver();
+
         gameObject.SetActive(false);
 
         Time.timeScale = 0f;
