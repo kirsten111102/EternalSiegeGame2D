@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 76890889602216690}
   - component: {fileID: 1118440675184235827}
   - component: {fileID: 4824446250157926723}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2532922272742224053}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 7845667998316211818}
   - component: {fileID: 696888251754413511}
   - component: {fileID: 7699275510944891238}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: TankEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -193,9 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6259370f02a993b498f8a1dd60e76ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 45
+  damage: 20
   attackInterval: 1
   attackRange: 1
+  animator: {fileID: 0}
 --- !u!50 &8298566448469034037
 Rigidbody2D:
   serializedVersion: 5
@@ -362,7 +363,7 @@ GameObject:
   - component: {fileID: 1232602332226369131}
   - component: {fileID: 1455880608932840695}
   - component: {fileID: 8605549829198573320}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: EnemyHPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +467,7 @@ GameObject:
   - component: {fileID: 7723303220275171582}
   - component: {fileID: 4183250697418231752}
   - component: {fileID: 7804424400615205363}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +568,7 @@ GameObject:
   - component: {fileID: 5084813946896457511}
   - component: {fileID: 8398327659037665343}
   - component: {fileID: 4146845816594096253}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

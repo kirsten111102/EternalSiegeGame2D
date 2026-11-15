@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public enum EnemyState
@@ -5,31 +6,53 @@ public enum EnemyState
     MovingToCore,
     ChasingTurret,
     Attacking,
+    NoTarget,
     Dead
 }
 
 [RequireComponent(
     typeof(EnemyMovement),
-    typeof(EnemyCombat),
     typeof(EnemyHealth)
 )]
 public class EnemyAI : MonoBehaviour
 {
     private EnemyMovement movement;
-    private EnemyCombat combat;
+    private IEnemyCombat combat;
     private EnemyHealth health;
+
     private CrystalCoreHealth crystalCore;
     private TurretHealth aggroTurret;
     private Transform currentTarget;
 
     public EnemyState CurrentState { get; private set; }
-    public bool IsDead => health.IsDead;
+
+    public bool IsDead => health != null && health.IsDead;
 
     private void Awake()
     {
         movement = GetComponent<EnemyMovement>();
-        combat = GetComponent<EnemyCombat>();
         health = GetComponent<EnemyHealth>();
+
+        // Detect which combat component this enemy uses.
+        RangedEnemyCombat rangedCombat =
+            GetComponent<RangedEnemyCombat>();
+
+        EnemyCombat normalCombat =
+            GetComponent<EnemyCombat>();
+
+        combat = rangedCombat != null
+            ? (IEnemyCombat)rangedCombat
+            : normalCombat;
+
+        if (combat == null)
+        {
+            Debug.LogError(
+                $"{name} has no EnemyCombat or RangedEnemyCombat!",
+                this
+            );
+
+            enabled = false;
+        }
     }
 
     public void Initialize(CrystalCoreHealth core)
@@ -40,13 +63,15 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        if (health.IsDead) return;
+        if (health.IsDead)
+            return;
 
         UpdateTarget();
 
         if (currentTarget == null)
         {
             movement.Stop();
+            CurrentState = EnemyState.NoTarget;
             return;
         }
 
@@ -58,6 +83,7 @@ public class EnemyAI : MonoBehaviour
         if (distance <= combat.AttackRange)
         {
             movement.SetMovementEnabled(false);
+
             CurrentState = EnemyState.Attacking;
 
             combat.TryAttack(currentTarget);
@@ -72,25 +98,28 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // gan new target = null
-    // Check aggroTurret con ton tai
-    // Check crystalCore con ton tai
-    // Check khi target thay doi
+    // Update the current target.
     private void UpdateTarget()
     {
         Transform newTarget = null;
 
+        // Prioritize the turret that attacked this enemy.
         if (aggroTurret != null && !aggroTurret.IsDead)
         {
             newTarget = aggroTurret.transform;
         }
-
-        else if (crystalCore != null && !crystalCore.IsDead)
+        else
         {
             aggroTurret = null;
-            newTarget = crystalCore.transform;
+
+            // Return to the Crystal Core if the turret is dead.
+            if (crystalCore != null && !crystalCore.IsDead)
+            {
+                newTarget = crystalCore.transform;
+            }
         }
 
+        // Only update movement when the target changes.
         if (currentTarget != newTarget)
         {
             currentTarget = newTarget;
@@ -98,25 +127,29 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // Check IsDead / attacker null / attacker IsDead
-    // Lock-on turret dau tien tan cong + Debug.Log
+    // Called when a turret attacks this enemy.
     public void OnAttackedByTurret(TurretHealth attacker)
     {
         if (health.IsDead || attacker == null || attacker.IsDead)
             return;
 
+        // Keep the first active turret as the aggro target.
         if (aggroTurret != null && !aggroTurret.IsDead)
             return;
+
         aggroTurret = attacker;
+
         Debug.Log($"{name} aggro: {attacker.name}");
     }
 
     public void OnDead()
     {
         CurrentState = EnemyState.Dead;
+
+        currentTarget = null;
+
         movement.Stop();
+
         enabled = false;
     }
-
-
 }

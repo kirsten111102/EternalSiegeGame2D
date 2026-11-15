@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2907740585898338213}
   - component: {fileID: 1370837813876559786}
   - component: {fileID: 6729911022001153620}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: EnemyHPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 7295095655575671261}
   - component: {fileID: 3447630688406884814}
   - component: {fileID: 5557398899874853661}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,12 +217,12 @@ GameObject:
   - component: {fileID: 4925345945927684600}
   - component: {fileID: 308969581128014439}
   - component: {fileID: 7459586423387744909}
-  - component: {fileID: 8298566448469034037}
   - component: {fileID: 2109849077223222711}
+  - component: {fileID: 8298566448469034037}
   - component: {fileID: 7845667998316211818}
   - component: {fileID: 696888251754413511}
   - component: {fileID: -400084406870342772}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MeleeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -287,9 +287,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6259370f02a993b498f8a1dd60e76ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 5
   attackInterval: 1
   attackRange: 1
+  animator: {fileID: 0}
+--- !u!114 &2109849077223222711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932304715985080070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.5
+  animator: {fileID: 0}
 --- !u!50 &8298566448469034037
 Rigidbody2D:
   serializedVersion: 5
@@ -317,20 +332,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2109849077223222711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4932304715985080070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
-  animator: {fileID: 0}
 --- !u!70 &7845667998316211818
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -456,7 +457,7 @@ GameObject:
   - component: {fileID: 8447824103667782323}
   - component: {fileID: 8441301380017020337}
   - component: {fileID: 386116480859706550}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7934026326546294640}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +568,7 @@ GameObject:
   - component: {fileID: 4785727093467689687}
   - component: {fileID: 1542840312109103808}
   - component: {fileID: 8978962746813199941}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
