@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button continueButton;
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MainMap");
     }
 
     private void UpdateContinueButton()
