@@ -29,11 +29,9 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         isPaused = false;
 
-        if (
-        gameScore != null &&
-        finalScoreText != null &&
-        player != null
-        )
+        if (gameScore != null &&
+            finalScoreText != null &&
+            player != null)
         {
             finalScoreText.SetText("Final Score: {0:0}", gameScore.Score);
             //networkManager.SendScore(player.name, gameScore.Score);
@@ -62,6 +60,7 @@ public class GameManager : MonoBehaviour
 
         if (pausePanel != null) pausePanel.SetActive(true);
     }
+
     public void ResumeGame()
     {
         if (isGameOver || !isPaused) return;
@@ -93,4 +92,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+
 }

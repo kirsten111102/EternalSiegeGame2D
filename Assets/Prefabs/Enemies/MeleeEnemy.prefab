@@ -225,7 +225,7 @@ GameObject:
   m_Layer: 7
   m_Name: MeleeEnemy
   m_TagString: Enemy
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  xpReward: 5
+  xpReward: 1
   scoreValue: 10
   gameXP: {fileID: 0}
   healthBar: {fileID: 0}
@@ -290,20 +290,6 @@ MonoBehaviour:
   damage: 5
   attackInterval: 1
   attackRange: 1
-  animator: {fileID: 0}
---- !u!114 &2109849077223222711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4932304715985080070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
   animator: {fileID: 0}
 --- !u!50 &8298566448469034037
 Rigidbody2D:
@@ -332,6 +318,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &2109849077223222711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932304715985080070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1.5
+  animator: {fileID: 0}
 --- !u!70 &7845667998316211818
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

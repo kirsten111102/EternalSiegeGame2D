@@ -21,7 +21,7 @@ public class UpgradeCardUI : MonoBehaviour
                 SetContent("RAPID FIRE", "+5 Attack Speed (+5%)");
                 break;
             case UpgradeType.LongRange:
-                SetContent("LONG RANGE", "+5 Turret Attack Range");
+                SetContent("LONG RANGE", "+0.5 Turret Attack Range");
                 break;
             case UpgradeType.TurretRepair:
                 SetContent("TURRET REPAIR", "Heal 20% Max HP of living turrets");

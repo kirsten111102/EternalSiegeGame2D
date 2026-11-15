@@ -70,9 +70,12 @@ public class LevelUpPanelUI : MonoBehaviour
             UpgradeType.SharpBullet,
             UpgradeType.RapidFire,
             UpgradeType.LongRange,
-            UpgradeType.TurretRepair,
-            UpgradeType.BonusXp
+            UpgradeType.TurretRepair
         };
+
+        // Lv99 khong nhan them EXP: khong hien the BonusXp vo tac dung.
+        if (gameXP == null || gameXP.CurrentLevel < GameXP.MaxLevel)
+            pool.Add(UpgradeType.BonusXp);
 
         // Partial Fisher-Yates: 3 kết quả ngẫu nhiên, không trùng loại.
         for (int i = 0; i < 3; i++)

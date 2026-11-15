@@ -4,7 +4,8 @@ public class EnemyHealth : MonoBehaviour
 {
     [Header("Enemy Stats")]
     [SerializeField] private float maxHealth = 30f;
-    [SerializeField] private int xpReward = 5;
+    // Gan trong Prefab: Melee=1, Ranged=3, Tank=8.
+    [SerializeField, Min(0)] private int xpReward = 5;
     [SerializeField] private int scoreValue = 10;
 
     [Header("References")]
@@ -30,8 +31,6 @@ public class EnemyHealth : MonoBehaviour
         if (gameScore == null)
             gameScore = FindFirstObjectByType<GameScore>();
 
-        // Không tìm health bar đầu tiên trên toàn Scene:
-        // mỗi Enemy phải dùng health bar của chính prefab đó.
         if (healthBar == null)
             healthBar = GetComponentInChildren<EnemyHealthUI>(true);
     }
@@ -58,26 +57,23 @@ public class EnemyHealth : MonoBehaviour
             return;
         }
 
-        // Enemy vẫn có thể chuyển aggro sang Turret gây sát thương.
         if (attacker != null && enemyAI != null)
             enemyAI.OnAttackedByTurret(attacker);
     }
 
     private void Die()
     {
-        if (IsDead)
-            return; // Không cộng XP/Score hai lần.
+        if (IsDead) return;
 
         IsDead = true;
+        if (enemyAI != null) enemyAI.OnDead();
+        if (gameScore != null) gameScore.AddScore(scoreValue);
 
-        if (enemyAI != null)
-            enemyAI.OnDead();
-
-        if (gameScore != null)
-            gameScore.AddScore(scoreValue);
+        if (gameXP == null)
+            gameXP = FindFirstObjectByType<GameXP>();
 
         if (gameXP != null)
-            gameXP.AddXP(xpReward);
+            gameXP.AddEnemyXP(xpReward); // Co Bonus XP, chi thuong mot lan.
         else
             Debug.LogWarning($"{name}: No GameXP found; XP was not awarded.");
 
