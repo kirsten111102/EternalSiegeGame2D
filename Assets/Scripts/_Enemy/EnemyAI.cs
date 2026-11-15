@@ -107,6 +107,7 @@ public class EnemyAI : MonoBehaviour
 
         if (aggroTurret != null && !aggroTurret.IsDead)
             return;
+            
         aggroTurret = attacker;
         Debug.Log($"{name} aggro: {attacker.name}");
     }

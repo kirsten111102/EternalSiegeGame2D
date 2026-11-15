@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  xpReward: 15
+  xpReward: 8
   scoreValue: 20
   gameXP: {fileID: 0}
   healthBar: {fileID: 0}

@@ -47,7 +47,7 @@ public class TurretUpgradeManager : MonoBehaviour
                     break;
 
                 case UpgradeType.LongRange:
-                    turret.AddRange(5f);
+                    turret.AddRange(0.5f);
                     break;
             }
         }

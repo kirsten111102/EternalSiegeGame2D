@@ -3,32 +3,38 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// EXP dai han: chi TotalXPHundredths la du lieu EXP can luu.
+/// Level, XP trong Level va MaxXP duoc tinh lai tu tong EXP.
+/// 1 EXP = 100 don vi, nen 1.05 EXP = 105 don vi (khong mat phan le).
+
 public class GameXP : MonoBehaviour
 {
+    public const int MaxLevel = 99;
+    private const long XPScale = 100L;
+
     [Header("XP UI")]
     [SerializeField] private TextMeshProUGUI LevelText;
     [SerializeField] private Slider XPSlider;
 
-    [Header("XP Settings")]
-    [SerializeField, Min(1)] private int startingXPRequired = 100;
-    [SerializeField, Min(1f)] private float xpGrowthMultiplier = 1.5f;
-
-    public int XPCount { get; private set; }
-    public int TotalXPEarned { get; private set; }
+    public int XPCount => (int)(XPIntoLevelHundredths / XPScale);
+    public int TotalXPEarned => (int)(TotalXPHundredths / XPScale);
     public int CurrentLevel { get; private set; } = 1;
     public int MaxXP { get; private set; }
     public int BonusXPPercent { get; private set; }
 
-    // Giữ event cũ để các script khác đang lắng nghe không bị ảnh hưởng.
-    public event Action<int> OnLevelUp; //event thong bao cho cac he thong khac rang player level up!!
+    // Nguon EXP duy nhat. Khong luu CurrentLevel/XPCount/MaxXP trong JSON.
+    public long TotalXPHundredths { get; private set; }
+    public long XPIntoLevelHundredths { get; private set; }
 
-    // Lưu phần XP lẻ (đơn vị 1/100 XP), tránh mất bonus ở Enemy ít XP.
-    private int xpRemainderHundredths;
+    public event Action<int> OnLevelUp;
+
+    // Bao cho WaveManager biet EXP GOC cua Enemy da bi giet trong wave.
+    // Khong bao gom BonusXP; phan thuong Wave duoc tinh theo EXP goc.
+    public event Action<int> OnEnemyBaseXPGranted;
 
     private void Awake()
     {
-        // Awake giúp MaxXP sẵn sàng trước khi Enemy có thể cấp XP.
-        MaxXP = Mathf.Max(1, startingXPRequired);
+        RecalculateLevelFromTotalXP();
     }
 
     private void Start()
@@ -36,87 +42,170 @@ public class GameXP : MonoBehaviour
         UpdateXPUI();
     }
 
+    /// Tuong thich voi nhung cho dang goi AddXP() de thuong EXP Enemy.
+    /// WaveManager phai goi AddWaveXP(), khong dung ham nay.
+    
     public void AddXP(int amount)
     {
-        if (amount <= 0)
+        AddEnemyXP(amount);
+    }
+
+    /// EXP Enemy co ap dung Bonus XP: 1 EXP, +5% => +105 don vi.
+    
+    public void AddEnemyXP(int baseAmount)
+    {
+        if (baseAmount <= 0 || CurrentLevel >= MaxLevel)
             return;
 
-        // VD: 5 XP với bonus 5% = 5.25 XP.
-        // 5 XP được nhận ngay; 0.25 XP giữ để cộng dồn cho các lần sau.
-        long scaledXP = (long)amount * (100L + BonusXPPercent)
-                      + xpRemainderHundredths;
-        long wholeXP = scaledXP / 100L;
-        xpRemainderHundredths = (int)(scaledXP % 100L);
+        long scaledAmount = (long)baseAmount * (XPScale + BonusXPPercent);
+        if (GrantScaledXP(scaledAmount))
+            OnEnemyBaseXPGranted?.Invoke(baseAmount);
+    }
 
-        // Giữ public API kiểu int như script gốc.
-        int earnedXP = (int)Math.Min(wholeXP, int.MaxValue - (long)TotalXPEarned);
-        if (earnedXP <= 0)
+    /// EXP Wave KHONG nhan he so Bonus XP.
+    
+    public void AddWaveXP(int amount)
+    {
+        if (amount <= 0 || CurrentLevel >= MaxLevel)
             return;
 
-        XPCount += earnedXP;
-        TotalXPEarned += earnedXP;
+        GrantScaledXP((long)amount * XPScale);
+    }
 
-        // Một lần nhận XP có thể tăng nhiều level; phát event cho từng level.
-        while (XPCount >= MaxXP)
-        {
-            XPCount -= MaxXP;
-            LevelUp();
-        }
+    public void AddXPBonus(int percentagePoints)
+    {
+        if (percentagePoints <= 0 || CurrentLevel >= MaxLevel)
+            return;
 
+        // Tranh overflow so nguyen; khong dat gioi han gameplay 
+        // co dinh cho bonus.
+        BonusXPPercent = (int)Math.Min((long)int.MaxValue,
+            (long)BonusXPPercent + percentagePoints);
+        Debug.Log($"Bonus Enemy XP: +{BonusXPPercent}%");
+    }
+
+    /// Load JSON: KHONG goi OnLevelUp: Level phai duoc tinh tu EXP da luu.
+    /// BonusXPPercent la trang thai PowerUp, khong phai Level.
+    
+    public void RestoreProgress(long savedTotalXPHundredths, int savedBonusXPPercent)
+    {
+        TotalXPHundredths = Math.Max(0L,
+            Math.Min(savedTotalXPHundredths, GetXPNeededForLevel99Hundredths()));
+        BonusXPPercent = Mathf.Max(0, savedBonusXPPercent);
+        RecalculateLevelFromTotalXP();
         UpdateXPUI();
     }
 
-    // Mỗi lần chọn Bonus XP sẽ tăng thêm 5 điểm phần trăm.
-    public void AddXPBonus(int percentagePoints)
+    /// EXP can de len cap tiep theo TU Level hien tai (khong phai EXP tong).
+    
+    public static int GetXPRequiredForLevel(int level)
     {
-        if (percentagePoints <= 0)
-            return;
+        if (level < 1 || level >= MaxLevel)
+            return 0;
 
-        BonusXPPercent += percentagePoints;
-        Debug.Log($"Bonus XP: +{BonusXPPercent}%");
+        if (level <= 10) return 28 + 4 * (level - 1);    // 28..64
+        if (level <= 30) return 68 + 5 * (level - 11);   // 68..163
+        if (level <= 60) return 164 + 3 * (level - 31);  // 164..251
+        return 253 + 2 * (level - 61);                   // 253..327
     }
 
-    private void LevelUp()
+    public static long GetXPNeededForLevel99Hundredths()
     {
-        CurrentLevel++;
-
-        // Không cho yêu cầu XP trở thành 0.
-        MaxXP = Mathf.Max(1, Mathf.RoundToInt(
-            MaxXP * Mathf.Max(1f, xpGrowthMultiplier)));
-
-        Debug.Log($"Level Up! Current Level: {CurrentLevel}");
-        OnLevelUp?.Invoke(CurrentLevel);
+        long sum = 0;
+        for (int level = 1; level < MaxLevel; level++)
+            sum += (long)GetXPRequiredForLevel(level) * XPScale;
+        return sum;
     }
 
-#if UNITY_EDITOR
-    // Trong Play Mode: menu ⋮ của component -> DEBUG / Level Up Once.
-    [ContextMenu("DEBUG/Level Up Once")]
-    private void DebugLevelUpOnce()
+    private bool GrantScaledXP(long scaledAmount)
     {
-        AddXP(Mathf.Max(1, MaxXP - XPCount));
+        if (scaledAmount <= 0 || CurrentLevel >= MaxLevel)
+            return false;
+
+        long remainingCapacity = 
+            GetXPNeededForLevel99Hundredths() - TotalXPHundredths;
+        if (remainingCapacity <= 0)
+            return false;
+
+        long acceptedXP = Math.Min(scaledAmount, remainingCapacity);
+        int previousLevel = CurrentLevel;
+        TotalXPHundredths += acceptedXP;
+        RecalculateLevelFromTotalXP();
+
+        // Co the len nhieu Level tu 1 lan nhan EXP.
+        for (int level = previousLevel + 1; level <= CurrentLevel; level++)
+        {
+            Debug.Log($"Level Up! Current Level: {level}");
+            OnLevelUp?.Invoke(level);
+        }
+
+        UpdateXPUI();
+        return acceptedXP > 0;
     }
 
-    [ContextMenu("DEBUG/Add 1000 XP")]
-    private void DebugAdd1000XP()
+    private void RecalculateLevelFromTotalXP()
     {
-        AddXP(1000);
+        TotalXPHundredths = Math.Max(0L,
+            Math.Min(TotalXPHundredths, GetXPNeededForLevel99Hundredths()));
+
+        long remainingXP = TotalXPHundredths;
+        CurrentLevel = 1;
+
+        while (CurrentLevel < MaxLevel)
+        {
+            long requirement = (long)GetXPRequiredForLevel(CurrentLevel) * XPScale;
+            if (remainingXP < requirement)
+                break;
+
+            remainingXP -= requirement;
+            CurrentLevel++;
+        }
+
+        if (CurrentLevel == MaxLevel)
+        {
+            MaxXP = 0;
+            XPIntoLevelHundredths = 0;
+        }
+        else
+        {
+            MaxXP = GetXPRequiredForLevel(CurrentLevel);
+            XPIntoLevelHundredths = remainingXP;
+        }
     }
-#endif
 
     private void UpdateXPUI()
     {
         if (XPSlider != null)
         {
-            XPSlider.minValue = 0;
-            XPSlider.maxValue = MaxXP;
-            XPSlider.value = XPCount;
+            XPSlider.minValue = 0f;
+            XPSlider.maxValue = CurrentLevel >= MaxLevel ? 1f : MaxXP * XPScale;
+            XPSlider.value = CurrentLevel >= MaxLevel ? 1f : XPIntoLevelHundredths;
         }
 
         if (LevelText != null)
         {
-            LevelText.text = $"Lv. {CurrentLevel} | XP: {XPCount}/{MaxXP}";
+            LevelText.text = CurrentLevel >= MaxLevel
+                ? "Lv. 99 (MAX)"
+                : $"Lv. {CurrentLevel} | XP: {XPIntoLevelHundredths / 100.0:0.##}/{MaxXP}";
         }
     }
 
+#if UNITY_EDITOR
+    [ContextMenu("DEBUG/Level Up Once")]
+    private void DebugLevelUpOnce()
+    {
+        if (CurrentLevel < MaxLevel)
+        {
+            // Chi dung khi test; debug XP nay duoc xem nhu EXP Enemy.
+            int amount = Mathf.Max(1, MaxXP - XPCount);
+            AddEnemyXP(amount);
+        }
+    }
 
+    [ContextMenu("DEBUG/Add 1000 Enemy XP")]
+    private void DebugAdd1000XP()
+    {
+        AddEnemyXP(1000);
+    }
+#endif
 }
