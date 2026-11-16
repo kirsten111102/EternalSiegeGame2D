@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2067232157731174594}
   - component: {fileID: 770533999158309139}
   - component: {fileID: 1060295523149833301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CrystalCore_Sample01
-  m_TagString: Untagged
+  m_TagString: Crystal Core
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045820850542683151}
   - component: {fileID: 6600043830783660118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
