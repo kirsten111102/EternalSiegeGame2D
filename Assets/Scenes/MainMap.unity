@@ -3265,10 +3265,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalCore
       objectReference: {fileID: 0}
-    - target: {fileID: 2602646840220208622, guid: b91fb572fab435947a6d7682a96870c3, type: 3}
-      propertyPath: m_TagString
-      value: Crystal Core
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
