@@ -4875,6 +4875,7 @@ GameObject:
   - component: {fileID: 8797610082445651758}
   - component: {fileID: 9151802673914776424}
   - component: {fileID: 7521421482646212289}
+  - component: {fileID: 6714553301448252341}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Untagged
@@ -4975,6 +4976,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6714553301448252341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2301202607110942277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4cf6ac7397dc9419a87e49e461cae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseAnimator: {fileID: 6787409013222193345}
 --- !u!1 &5109919013514345346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4985,6 +4999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8750078841228221327}
   - component: {fileID: 3913544500730829789}
+  - component: {fileID: 6787409013222193345}
   m_Layer: 0
   m_Name: TurretBase
   m_TagString: Untagged
@@ -5062,6 +5077,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6787409013222193345
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109919013514345346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d010e19b94253c42a6b7b1b3240c2ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7319136363431329559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,7 +5292,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ffd6c8954a93449b28c84ae87aba1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
+  crystalAnimator: {fileID: 7521421482646212289}
+  crystalRenderer: {fileID: 9151802673914776424}
+  destroyedCrystalMaterial: {fileID: 2100000, guid: 8a3862406d14dd046a3d8fc2e2d4acff, type: 2}
+  crystalVisual: {fileID: 4436831442611674550}
+  beamVisual: {fileID: 8393656076616500238}
 --- !u!114 &5231552340416776083
 MonoBehaviour:
   m_ObjectHideFlags: 0
