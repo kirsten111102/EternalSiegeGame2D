@@ -275,6 +275,7 @@ MonoBehaviour:
   gameXP: {fileID: 0}
   healthBar: {fileID: 0}
   gameScore: {fileID: 0}
+  animator: {fileID: -400084406870342772}
 --- !u!114 &7459586423387744909
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class EnemyCombat : MonoBehaviour, IEnemyCombat
     [Header("Attack Animation")]
     [SerializeField] private Animator animator;
 
+    private EnemyHealth enemyHealth;
     private float nextAttackTime;
 
     public float Damage => damage;
@@ -23,15 +24,22 @@ public class EnemyCombat : MonoBehaviour, IEnemyCombat
 
         if (animator == null)
             animator = GetComponentInChildren<Animator>();
+
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     public void TryAttack(Transform target)
     {
-        if (target == null) return;
+        if (enemyHealth != null && enemyHealth.IsDead)
+            return;
+
+        if (target == null)
+            return;
 
         if (Time.time < nextAttackTime) return;
 
-        // Check whether the target can be damaged before playing the attack animation.
+        // Check whether the target can be damaged before
+        // playing the attack animation.
         if (target.TryGetComponent<TurretHealth>(
             out var turretHealth))
         {
@@ -60,7 +68,7 @@ public class EnemyCombat : MonoBehaviour, IEnemyCombat
         }
     }
 
-    // Add this method as an Animation Event at the end of the attack animation.
+    // Animation Event: Called at the end of the attack animation.
     public void EndAttackAnimation()
     {
         if (animator != null)
@@ -72,6 +80,4 @@ public class EnemyCombat : MonoBehaviour, IEnemyCombat
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-
-
 }
