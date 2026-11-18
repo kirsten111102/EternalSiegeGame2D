@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 7845667998316211818}
   - component: {fileID: 696888251754413511}
   - component: {fileID: -400084406870342772}
+  - component: {fileID: -231285151304860052}
   m_Layer: 7
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -292,6 +293,20 @@ MonoBehaviour:
   attackInterval: 1
   attackRange: 1
   animator: {fileID: 0}
+--- !u!114 &2109849077223222711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932304715985080070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1.5
+  animator: {fileID: 0}
 --- !u!50 &8298566448469034037
 Rigidbody2D:
   serializedVersion: 5
@@ -319,20 +334,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2109849077223222711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4932304715985080070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1.5
-  animator: {fileID: 0}
 --- !u!70 &7845667998316211818
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -447,6 +448,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-231285151304860052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932304715985080070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc4044f425614c3384ca84807a90444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyRoot: {fileID: 4932304715985080070}
 --- !u!1 &4946972012276102537
 GameObject:
   m_ObjectHideFlags: 0

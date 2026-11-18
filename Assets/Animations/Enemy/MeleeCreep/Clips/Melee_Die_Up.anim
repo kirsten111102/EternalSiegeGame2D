@@ -22,11 +22,11 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 466721961237281002, guid: ee74ccb94d8b84793acbcf328494eb98, type: 3}
-    - time: 0.1
-      value: {fileID: 61734902765845928, guid: ee74ccb94d8b84793acbcf328494eb98, type: 3}
     - time: 0.2
+      value: {fileID: 61734902765845928, guid: ee74ccb94d8b84793acbcf328494eb98, type: 3}
+    - time: 0.4
       value: {fileID: -5936569760247155146, guid: ee74ccb94d8b84793acbcf328494eb98, type: 3}
-    - time: 0.3
+    - time: 0.6
       value: {fileID: -7240690260402209076, guid: ee74ccb94d8b84793acbcf328494eb98, type: 3}
     attribute: m_Sprite
     path: 
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4
+    m_StopTime: 0.70000005
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,8 +79,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.4
-    functionName: DestroyAfterDeathAnimation
+  - time: 0
+    functionName: TriggerEnemyDeath
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

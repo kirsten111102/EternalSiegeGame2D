@@ -34,6 +34,9 @@ public class EnemyHealth : MonoBehaviour
 
         if (healthBar == null)
             healthBar = GetComponentInChildren<EnemyHealthUI>(true);
+
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -67,6 +70,7 @@ public class EnemyHealth : MonoBehaviour
         if (IsDead) return;
 
         IsDead = true;
+
         if (enemyAI != null) enemyAI.OnDead();
         if (gameScore != null) gameScore.AddScore(scoreValue);
 
