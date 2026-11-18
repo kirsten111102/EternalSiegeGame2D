@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public float MaxHealth => maxHealth;
     public bool IsDead { get; private set; }
     public int XpReward => xpReward;
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {

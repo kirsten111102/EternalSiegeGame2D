@@ -14,9 +14,11 @@ public class RangedEnemyCombat : MonoBehaviour, IEnemyCombat
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
+    private EnemyHealth enemyHealth;
     private float nextAttackTime;
     private Transform currentTarget;
     private bool isAttacking;
+
     public float AttackRange => attackRange;
 
     private void Awake()
@@ -26,18 +28,23 @@ public class RangedEnemyCombat : MonoBehaviour, IEnemyCombat
 
         if (animator == null)
             animator = GetComponentInChildren<Animator>();
+
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     public void TryAttack(Transform target)
     {
+        if (enemyHealth != null && enemyHealth.IsDead)
+            return;
+
         if (target == null || isAttacking)
             return;
 
         if (Time.time < nextAttackTime)
             return;
 
-        if (Vector2.Distance(transform.position,
-            target.position) > attackRange)
+        if (Vector2.Distance(transform.position, target.position)
+            > attackRange)
             return;
 
         currentTarget = target;
@@ -54,8 +61,11 @@ public class RangedEnemyCombat : MonoBehaviour, IEnemyCombat
     // Animation Event: Called when the bow releases the arrow.
     public void ShootArrow()
     {
-        if (currentTarget == null || arrowPrefab == null ||
-            firePoint == null)
+        if (enemyHealth != null && enemyHealth.IsDead)
+            return;
+
+        if (!isAttacking || currentTarget == null ||
+            arrowPrefab == null || firePoint == null)
             return;
 
         Vector2 direction =
