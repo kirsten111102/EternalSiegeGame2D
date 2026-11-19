@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class ArrowProjectile : MonoBehaviour
@@ -21,7 +22,8 @@ public class ArrowProjectile : MonoBehaviour
         rb.linearVelocity = direction.normalized * speed;
 
         float angle = Mathf.Atan2(
-            direction.y, direction.x
+            direction.y,
+            direction.x
         ) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -33,25 +35,48 @@ public class ArrowProjectile : MonoBehaviour
     {
         if (hasHit) return;
 
-        if (other.TryGetComponent<TurretHealth>(
-            out var turret))
+        // Player
+        PlayerHealth player = other.GetComponentInParent<PlayerHealth>();
+
+        if (player != null)
+        {
+            if (!player.IsDead)
+            {
+                hasHit = true;
+                player.TakeDamage(damage);
+            }
+
+            Destroy(gameObject);
+            return;
+        }
+
+        // Turret
+        TurretHealth turret = other.GetComponentInParent<TurretHealth>();
+
+        if (turret != null)
         {
             if (!turret.IsDead)
             {
                 hasHit = true;
                 turret.TakeDamage(damage);
-                Destroy(gameObject);
             }
+
+            Destroy(gameObject);
+            return;
         }
-        else if (other.TryGetComponent<CrystalCoreHealth>(
-            out var core))
+
+        // Crystal Core
+        CrystalCoreHealth core = other.GetComponentInParent<CrystalCoreHealth>();
+
+        if (core != null)
         {
             if (!core.IsDead)
             {
                 hasHit = true;
                 core.TakeDamage(damage);
-                Destroy(gameObject);
             }
+
+            Destroy(gameObject);
         }
     }
 }

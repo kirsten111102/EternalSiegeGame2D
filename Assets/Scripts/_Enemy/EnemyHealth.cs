@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
     public float MaxHealth => maxHealth;
     public bool IsDead { get; private set; }
     public int XpReward => xpReward;
+    [SerializeField] private Animator animator;
 
     private void Awake()
     {
@@ -33,6 +34,9 @@ public class EnemyHealth : MonoBehaviour
 
         if (healthBar == null)
             healthBar = GetComponentInChildren<EnemyHealthUI>(true);
+
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -66,6 +70,7 @@ public class EnemyHealth : MonoBehaviour
         if (IsDead) return;
 
         IsDead = true;
+
         if (enemyAI != null) enemyAI.OnDead();
         if (gameScore != null) gameScore.AddScore(scoreValue);
 

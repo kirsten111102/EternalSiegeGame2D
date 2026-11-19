@@ -5,14 +5,18 @@ using System.Globalization;
 
 public class LeaderboardRow : MonoBehaviour
 {
+    [Header("Leaderboard UI")]
     [SerializeField] private TMP_Text rankText;
     [SerializeField] private TMP_Text achievedAtText;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text levelText;
 
     public void SetData(int rank, LeaderboardEntry entry)
     {
+        // Rank
         rankText.text = rank.ToString();
 
+        // Achieved Date
         if (DateTime.TryParse(
             entry.achievedAt,
             CultureInfo.InvariantCulture,
@@ -27,6 +31,10 @@ public class LeaderboardRow : MonoBehaviour
             achievedAtText.text = entry.achievedAt;
         }
 
+        // Score
         scoreText.text = entry.score.ToString("N0");
+
+        // Level
+        levelText.text = "Lv. " + entry.level.ToString();
     }
 }
