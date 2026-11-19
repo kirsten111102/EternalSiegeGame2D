@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 lastDirection = Vector2.down;
     private float currentMoveSpeed;
     private bool statsApplied;
+    private float lastDiagonalTime;
+    private const float DiagonalGraceTime = 0.08f;
 
     public float CurrentMoveSpeed => statsApplied ? currentMoveSpeed : moveSpeed;
 
@@ -50,12 +52,20 @@ public class PlayerMovement : MonoBehaviour
         if (animator == null) return;
 
         if (direction.sqrMagnitude > 0.01f)
+    {
+        bool isDiagonal = Mathf.Abs(direction.x) > 0.1f && Mathf.Abs(direction.y) > 0.1f;
+
+        if (isDiagonal)
         {
-            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-                lastDirection = direction.x > 0 ? Vector2.right : Vector2.left;
-            else
-                lastDirection = direction.y > 0 ? Vector2.up : Vector2.down;
+            lastDirection = direction;
+            lastDiagonalTime = Time.time;
         }
+        else if (Time.time - lastDiagonalTime > DiagonalGraceTime)
+        {
+            // Chỉ chuyển sang hướng thẳng nếu không vừa mới đi chéo xong
+            lastDirection = direction;
+        }
+    }
 
         animator.SetFloat("DirectionX", lastDirection.x);
         animator.SetFloat("DirectionY", lastDirection.y);
