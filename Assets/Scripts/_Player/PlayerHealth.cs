@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using UnityEngine;
@@ -14,52 +15,72 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Collider2D bodyCollider;
     [SerializeField] private bool hideSpritesWhileDead = true;
 
+    [Header("Death Animation")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private string dieTriggerName = "Die";
+    [SerializeField, Min(0f)] private float dieAnimationDuration = 1f;
+
     private float currentHealth;
     private float effectiveMaxHealth;
     private bool initialized;
     private bool isDead;
-    // Runtime-only; resets when entering Play mode (no persistence).
+
+    // Runtime-only; resets when entering Play mode.
     private int deathCount;
     private float respawnSecondsRemaining;
     private Vector3 initialPosition;
+
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;
     private PlayerCombat playerCombat;
     private PlayerInteraction playerInteraction;
+
     private SpriteRenderer[] spriteRenderers;
     private bool[] spriteEnabledBeforeDeath;
+
     private bool? movementEnabledBeforeDeath;
     private bool? combatEnabledBeforeDeath;
     private bool? interactionEnabledBeforeDeath;
     private bool? colliderEnabledBeforeDeath;
 
     public float CurrentHealth => currentHealth;
-    public float MaxHealth => initialized || effectiveMaxHealth > 0f ? effectiveMaxHealth : maxHealth;
+    public float MaxHealth => initialized || effectiveMaxHealth > 0f
+        ? effectiveMaxHealth
+        : maxHealth;
     public float BaseMaxHealth => maxHealth;
     public bool IsDead => isDead;
     public int DeathCount => deathCount;
     public float RespawnSecondsRemaining => respawnSecondsRemaining;
 
-    // UI can subscribe later; no timer UI required yet.
     public event Action<int> DeathCountChanged;
     public event Action<float> RespawnTimeChanged;
 
     private void Awake()
     {
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+
         initialPosition = transform.position;
+
         rb = GetComponent<Rigidbody2D>();
-        if (bodyCollider == null) bodyCollider = GetComponent<Collider2D>();
+
+        if (bodyCollider == null)
+            bodyCollider = GetComponent<Collider2D>();
+
         playerMovement = GetComponent<PlayerMovement>();
         playerCombat = GetComponent<PlayerCombat>();
         playerInteraction = GetComponent<PlayerInteraction>();
+
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
         spriteEnabledBeforeDeath = new bool[spriteRenderers.Length];
-        if (effectiveMaxHealth <= 0f) effectiveMaxHealth = Mathf.Max(1f, maxHealth);
+
+        if (effectiveMaxHealth <= 0f)
+            effectiveMaxHealth = Mathf.Max(1f, maxHealth);
     }
 
     private void Start()
     {
-        // Test mode: start each Play session with full HP.
+        // Start each Play session with full HP.
         currentHealth = effectiveMaxHealth;
         initialized = true;
         RefreshHealth();
@@ -67,104 +88,151 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (damage <= 0f || !initialized || isDead) return;
+        if (damage <= 0f || !initialized || isDead)
+            return;
 
         currentHealth = Mathf.Max(0f, currentHealth - damage);
         RefreshHealth();
-        if (currentHealth <= 0f) Die();
+
+        if (currentHealth <= 0f)
+            Die();
     }
-
-    // public void Heal(float amount)
-    // {
-    //     if (amount <= 0f || !initialized || isDead) return;
-
-    //     currentHealth = Mathf.Min(effectiveMaxHealth, currentHealth + amount);
-    //     RefreshHealth();
-    // }
 
     public void SetHealth(float health)
     {
-        if (!initialized || isDead) return;
+        if (!initialized || isDead)
+            return;
 
         currentHealth = Mathf.Clamp(health, 0f, effectiveMaxHealth);
         RefreshHealth();
-        if (currentHealth <= 0f) Die();
+
+        if (currentHealth <= 0f)
+            Die();
     }
 
-    // Called by PlayerLevelStats. +1 Maximum HP per level.
+    // Called by PlayerLevelStats.
+    // +1 Maximum HP per level.
     public void ApplyLevelBonus(float bonus)
     {
-        effectiveMaxHealth = Mathf.Max(1f, maxHealth + Mathf.Max(0f, bonus));
-        if (!initialized) return; // Start() will initialize using the new maximum.
+        effectiveMaxHealth = Mathf.Max(
+            1f,
+            maxHealth + Mathf.Max(0f, bonus)
+        );
+
+        if (!initialized)
+            return;
 
         // Increasing Max HP does not automatically heal current HP.
-        currentHealth = Mathf.Clamp(currentHealth, 0f, effectiveMaxHealth);
+        currentHealth = Mathf.Clamp(
+            currentHealth,
+            0f,
+            effectiveMaxHealth
+        );
+
         RefreshHealth();
     }
 
-    private void BeginDeath()
+    private void Die()
     {
-        if (isDead) return;
+        if (isDead)
+            return;
 
-        isDead = true;
+        deathCount++;
+
+        respawnSecondsRemaining =
+            secondsPenaltyPerDeath * deathCount;
 
         DeathCountChanged?.Invoke(deathCount);
         RespawnTimeChanged?.Invoke(respawnSecondsRemaining);
 
+        BeginDeath();
+    }
+
+    // Starts death without increasing deathCount.
+    // Used by RestoreState when loading a dead player.
+    private void BeginDeath()
+    {
+        if (isDead)
+            return;
+
+        isDead = true;
+
         if (playerMovement != null)
         {
             movementEnabledBeforeDeath = playerMovement.enabled;
+
             playerMovement.StopMovement();
             playerMovement.enabled = false;
         }
+
         if (playerCombat != null)
         {
             combatEnabledBeforeDeath = playerCombat.enabled;
             playerCombat.enabled = false;
         }
+
         if (playerInteraction != null)
         {
             interactionEnabledBeforeDeath = playerInteraction.enabled;
             playerInteraction.enabled = false;
         }
+
         if (bodyCollider != null)
         {
             colliderEnabledBeforeDeath = bodyCollider.enabled;
             bodyCollider.enabled = false;
         }
+
+        // Play death animation before hiding the character.
+        if (animator != null)
+        {
+            animator.ResetTrigger(dieTriggerName);
+            animator.SetTrigger(dieTriggerName);
+        }
+
+        Debug.Log(
+            $"Player died #{deathCount}. " +
+            $"Respawn after {respawnSecondsRemaining:0} seconds."
+        );
+
+        StartCoroutine(DeathSequence());
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        // Wait for death animation to finish.
+        yield return new WaitForSeconds(dieAnimationDuration);
+
+        // Hide sprites only after death animation.
         if (hideSpritesWhileDead)
         {
             for (int i = 0; i < spriteRenderers.Length; i++)
             {
-                spriteEnabledBeforeDeath[i] = spriteRenderers[i].enabled;
+                spriteEnabledBeforeDeath[i] =
+                    spriteRenderers[i].enabled;
+
                 spriteRenderers[i].enabled = false;
             }
         }
 
-        Debug.Log($"Player died #{deathCount}. Respawn after {respawnSecondsRemaining:0} seconds.");
-
-        // Keep Player GameObject active so its respawn coroutine can run.
-        StartCoroutine(RespawnAfterPenalty());
+        // Start respawn countdown after death animation.
+        yield return StartCoroutine(RespawnAfterPenalty());
     }
 
-    private void Die()
-    {
-        if (isDead) return;
-
-        deathCount++;
-        respawnSecondsRemaining = secondsPenaltyPerDeath * deathCount;
-
-        BeginDeath();
-    }
-
-    // Chỉ gọi sau Start(), trên Player trong scene mới.
+    // Called after Start() by save/load system.
     public void RestoreState(
         float savedHealth,
         int savedDeathCount,
         float savedRespawnSeconds)
     {
-        currentHealth = Mathf.Clamp(savedHealth, 0f, effectiveMaxHealth);
+        currentHealth = Mathf.Clamp(
+            savedHealth,
+            0f,
+            effectiveMaxHealth
+        );
+
         deathCount = Mathf.Max(0, savedDeathCount);
+
         respawnSecondsRemaining = currentHealth <= 0f
             ? Mathf.Max(0f, savedRespawnSeconds)
             : 0f;
@@ -173,7 +241,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0f)
         {
-            // Không tăng deathCount, không tính lại thời gian phạt.
+            // Do not increase deathCount or recalculate penalty.
             BeginDeath();
         }
         else
@@ -188,14 +256,19 @@ public class PlayerHealth : MonoBehaviour
         while (respawnSecondsRemaining > 0f)
         {
             respawnSecondsRemaining = Mathf.Max(
-                0f, respawnSecondsRemaining - Time.deltaTime);
+                0f,
+                respawnSecondsRemaining - Time.deltaTime
+            );
+
             RespawnTimeChanged?.Invoke(respawnSecondsRemaining);
+
             yield return null;
         }
 
-        Vector3 targetPosition = 
-            respawnPoint != null ? respawnPoint.position : initialPosition;
-            
+        Vector3 targetPosition = respawnPoint != null
+            ? respawnPoint.position
+            : initialPosition;
+
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
@@ -209,24 +282,43 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth = effectiveMaxHealth;
         isDead = false;
+
+        // Reset Animator to its default state.
+        if (animator != null)
+        {
+            animator.Rebind();
+            animator.Update(0f);
+        }
+
         RefreshHealth();
 
+        // Restore sprites.
         if (hideSpritesWhileDead)
         {
             for (int i = 0; i < spriteRenderers.Length; i++)
-                spriteRenderers[i].enabled = spriteEnabledBeforeDeath[i];
+            {
+                spriteRenderers[i].enabled =
+                    spriteEnabledBeforeDeath[i];
+            }
         }
 
+        // Restore component states.
         if (bodyCollider != null && colliderEnabledBeforeDeath.HasValue)
             bodyCollider.enabled = colliderEnabledBeforeDeath.Value;
+
         if (playerMovement != null && movementEnabledBeforeDeath.HasValue)
             playerMovement.enabled = movementEnabledBeforeDeath.Value;
+
         if (playerCombat != null && combatEnabledBeforeDeath.HasValue)
             playerCombat.enabled = combatEnabledBeforeDeath.Value;
+
         if (playerInteraction != null && interactionEnabledBeforeDeath.HasValue)
             playerInteraction.enabled = interactionEnabledBeforeDeath.Value;
 
-        Debug.Log($"Player respawned: HP {currentHealth}/{effectiveMaxHealth}, deaths: {deathCount}.");
+        Debug.Log(
+            $"Player respawned: HP {currentHealth}/{effectiveMaxHealth}, " +
+            $"deaths: {deathCount}."
+        );
     }
 
 #if UNITY_EDITOR
@@ -235,9 +327,7 @@ public class PlayerHealth : MonoBehaviour
     {
         TakeDamage(999f);
     }
-#endif
 
-#if UNITY_EDITOR
     [ContextMenu("DEBUG / Take 20 Damage")]
     private void DebugTakeDamage()
     {

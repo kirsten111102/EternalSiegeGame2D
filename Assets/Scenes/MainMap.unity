@@ -18799,6 +18799,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4028125195316910684, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
   m_PrefabInstance: {fileID: 189040160440035493}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1466273662 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5693147737705507095, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
+  m_PrefabInstance: {fileID: 189040160440035493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490613471
 GameObject:
   m_ObjectHideFlags: 0
@@ -20876,9 +20881,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4440243149828854421, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440243149828854421, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.65625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440243149828854421, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6175471141008642845, guid: 505ae0bff95467d46b241505c522b108, type: 3}
+    - target: {fileID: 4440243149828854421, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4778817432823214867, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
       propertyPath: m_Name
       value: Player
@@ -20891,6 +20908,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8159224329567687443, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1466273662}
     - target: {fileID: 9069293784654440768, guid: 8685725cf97ebe143a96bf65489032a0, type: 3}
       propertyPath: attackCooldown
       value: 1
