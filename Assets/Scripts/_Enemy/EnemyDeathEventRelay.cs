@@ -8,7 +8,6 @@ public class EnemyDeathEventRelay : MonoBehaviour
     private static readonly int DieHash =
         Animator.StringToHash("Die");
 
-
     public void TriggerEnemyDeath()
     {
         if (baseAnimator == null)

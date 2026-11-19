@@ -28,6 +28,7 @@ public class EnemyCombat : MonoBehaviour, IEnemyCombat
         enemyHealth = GetComponent<EnemyHealth>();
     }
 
+
     public void TryAttack(Transform target)
     {
         if (enemyHealth != null && enemyHealth.IsDead)
@@ -36,37 +37,66 @@ public class EnemyCombat : MonoBehaviour, IEnemyCombat
         if (target == null)
             return;
 
-        if (Time.time < nextAttackTime) return;
+        if (Time.time < nextAttackTime)
+            return;
 
-        // Check whether the target can be damaged before
-        // playing the attack animation.
-        if (target.TryGetComponent<TurretHealth>(
-            out var turretHealth))
+        bool successfullyAttacked = false;
+
+        // Attack Turret
+        if (target.TryGetComponent<TurretHealth>(out var turretHealth))
         {
-            if (turretHealth.IsDead) return;
+            if (turretHealth.IsDead)
+                return;
 
             turretHealth.TakeDamage(damage);
+            successfullyAttacked = true;
         }
+        // Attack Crystal Core
         else if (target.TryGetComponent<CrystalCoreHealth>(out var coreHealth))
         {
-            if (coreHealth.IsDead) return;
+            if (coreHealth.IsDead)
+                return;
 
             coreHealth.TakeDamage(damage);
+            successfullyAttacked = true;
         }
-        else
+        // Attack Player
+        else if (target.TryGetComponent<PlayerHealth>(out var playerHealth))
         {
-            return;
+            if (playerHealth.IsDead)
+                return;
+
+            // Deal damage to Player
+            playerHealth.TakeDamage(damage);
+            successfullyAttacked = true;
+
+            // Apply knockback to Player
+            Knockback2D playerKnockback =
+                target.GetComponent<Knockback2D>();
+
+            if (playerKnockback != null)
+            {
+                Vector2 direction =
+                    ((Vector2)target.position -
+                     (Vector2)transform.position).normalized;
+
+                playerKnockback.ApplyKnockback(direction);
+            }
         }
+
+        if (!successfullyAttacked)
+            return;
 
         nextAttackTime = Time.time + attackInterval;
 
-        // Play the enemy's attack animation.
+        // Play attack animation
         if (animator != null)
         {
             animator.SetBool("IsAttacking", true);
             animator.SetTrigger("Attack");
         }
     }
+
 
     // Animation Event: Called at the end of the attack animation.
     public void EndAttackAnimation()

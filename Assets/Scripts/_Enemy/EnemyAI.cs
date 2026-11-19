@@ -4,25 +4,30 @@ using UnityEngine;
 public enum EnemyState
 {
     MovingToCore,
+    ChasingPlayer,
     ChasingTurret,
     Attacking,
     NoTarget,
     Dead
 }
 
-[RequireComponent(
-    typeof(EnemyMovement),
-    typeof(EnemyHealth)
-)]
+[RequireComponent(typeof(EnemyMovement), typeof(EnemyHealth))]
 public class EnemyAI : MonoBehaviour
 {
+    [Header("References")]
     private EnemyMovement movement;
     private IEnemyCombat combat;
     private EnemyHealth health;
 
     private CrystalCoreHealth crystalCore;
     private TurretHealth aggroTurret;
+    private Transform aggroPlayer;
     private Transform currentTarget;
+
+    [Header("Player Aggro")]
+    [SerializeField, Min(0f)] private float extraAggroTime = 1f;
+
+    private float playerAggroTimer;
 
     public EnemyState CurrentState { get; private set; }
 
@@ -33,12 +38,8 @@ public class EnemyAI : MonoBehaviour
         movement = GetComponent<EnemyMovement>();
         health = GetComponent<EnemyHealth>();
 
-        // Detect which combat component this enemy uses.
-        RangedEnemyCombat rangedCombat =
-            GetComponent<RangedEnemyCombat>();
-
-        EnemyCombat normalCombat =
-            GetComponent<EnemyCombat>();
+        RangedEnemyCombat rangedCombat = GetComponent<RangedEnemyCombat>();
+        EnemyCombat normalCombat = GetComponent<EnemyCombat>();
 
         combat = rangedCombat != null
             ? (IEnemyCombat)rangedCombat
@@ -46,11 +47,6 @@ public class EnemyAI : MonoBehaviour
 
         if (combat == null)
         {
-            Debug.LogError(
-                $"{name} has no EnemyCombat or RangedEnemyCombat!",
-                this
-            );
-
             enabled = false;
         }
     }
@@ -66,6 +62,18 @@ public class EnemyAI : MonoBehaviour
         if (health.IsDead)
             return;
 
+        // Countdown Player aggro
+        if (playerAggroTimer > 0f)
+        {
+            playerAggroTimer -= Time.deltaTime;
+
+            if (playerAggroTimer <= 0f)
+            {
+                playerAggroTimer = 0f;
+                aggroPlayer = null;
+            }
+        }
+
         UpdateTarget();
 
         if (currentTarget == null)
@@ -80,10 +88,10 @@ public class EnemyAI : MonoBehaviour
             currentTarget.position
         );
 
+        // Attack when target is within range
         if (distance <= combat.AttackRange)
         {
             movement.SetMovementEnabled(false);
-
             CurrentState = EnemyState.Attacking;
 
             combat.TryAttack(currentTarget);
@@ -92,18 +100,26 @@ public class EnemyAI : MonoBehaviour
         {
             movement.SetMovementEnabled(true);
 
-            CurrentState = aggroTurret != null
-                ? EnemyState.ChasingTurret
-                : EnemyState.MovingToCore;
+            if (aggroTurret != null && !aggroTurret.IsDead)
+            {
+                CurrentState = EnemyState.ChasingTurret;
+            }
+            else if (aggroPlayer != null && playerAggroTimer > 0f)
+            {
+                CurrentState = EnemyState.ChasingPlayer;
+            }
+            else
+            {
+                CurrentState = EnemyState.MovingToCore;
+            }
         }
     }
 
-    // Update the current target.
     private void UpdateTarget()
     {
         Transform newTarget = null;
 
-        // Prioritize the turret that attacked this enemy.
+        // Priority 1: Turret
         if (aggroTurret != null && !aggroTurret.IsDead)
         {
             newTarget = aggroTurret.transform;
@@ -112,14 +128,37 @@ public class EnemyAI : MonoBehaviour
         {
             aggroTurret = null;
 
-            // Return to the Crystal Core if the turret is dead.
-            if (crystalCore != null && !crystalCore.IsDead)
+            // Priority 2: Player (temporary aggro)
+            if (aggroPlayer != null && playerAggroTimer > 0f)
+            {
+                PlayerHealth playerHealth =
+                    aggroPlayer.GetComponent<PlayerHealth>();
+
+                if (playerHealth != null && !playerHealth.IsDead)
+                {
+                    newTarget = aggroPlayer;
+                }
+                else
+                {
+                    aggroPlayer = null;
+                    playerAggroTimer = 0f;
+                }
+            }
+            else
+            {
+                aggroPlayer = null;
+            }
+
+            // Priority 3: Crystal Core
+            if (newTarget == null &&
+                crystalCore != null &&
+                !crystalCore.IsDead)
             {
                 newTarget = crystalCore.transform;
             }
         }
 
-        // Only update movement when the target changes.
+        // Update target only when it changes
         if (currentTarget != newTarget)
         {
             currentTarget = newTarget;
@@ -127,19 +166,39 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // Called when a turret attacks this enemy.
+    public void OnAttackedByPlayer(Transform player)
+    {
+        if (health.IsDead || player == null)
+            return;
+
+        // A living Turret has higher priority
+        if (aggroTurret != null && !aggroTurret.IsDead)
+            return;
+
+        aggroPlayer = player;
+
+        // Aggro duration = Player attack cooldown + extra time
+        PlayerCombat playerCombat = player.GetComponent<PlayerCombat>();
+
+        float playerAttackCooldown = playerCombat != null
+            ? playerCombat.CurrentAttackCooldown
+            : 1f;
+
+        playerAggroTimer = playerAttackCooldown + extraAggroTime;
+
+        UpdateTarget();
+    }
+
     public void OnAttackedByTurret(TurretHealth attacker)
     {
         if (health.IsDead || attacker == null || attacker.IsDead)
             return;
 
-        // Keep the first active turret as the aggro target.
-        if (aggroTurret != null && !aggroTurret.IsDead)
-            return;
-
         aggroTurret = attacker;
+        aggroPlayer = null;
+        playerAggroTimer = 0f;
 
-        Debug.Log($"{name} aggro: {attacker.name}");
+        UpdateTarget();
     }
 
     public void OnDead()
@@ -147,9 +206,11 @@ public class EnemyAI : MonoBehaviour
         CurrentState = EnemyState.Dead;
 
         currentTarget = null;
+        aggroPlayer = null;
+        aggroTurret = null;
+        playerAggroTimer = 0f;
 
         movement.Stop();
-
         enabled = false;
     }
 }

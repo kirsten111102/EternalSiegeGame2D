@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 696888251754413511}
   - component: {fileID: 7699275510944891238}
   - component: {fileID: 8354910379492116248}
+  - component: {fileID: 7383984027710348885}
   m_Layer: 7
   m_Name: TankEnemy
   m_TagString: Enemy
@@ -164,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d487b2e0760802469709273c0b30ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extraAggroTime: 1
 --- !u!114 &308969581128014439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   attackInterval: 1
-  attackRange: 1
-  animator: {fileID: 0}
+  attackRange: 1.2
+  animator: {fileID: 7699275510944891238}
 --- !u!50 &8298566448469034037
 Rigidbody2D:
   serializedVersion: 5
@@ -239,7 +241,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.6
-  animator: {fileID: 0}
+  animator: {fileID: 7699275510944891238}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  detectionDistance: 0.8
+  sidestepDuration: 1
+  sidestepSpeedMultiplier: 1
+  sideCheckDistance: 1
+  avoidanceCooldown: 0.3
 --- !u!70 &7845667998316211818
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -270,7 +280,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -366,7 +376,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc4044f425614c3384ca84807a90444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRoot: {fileID: 4932304715985080070}
+  baseAnimator: {fileID: 7699275510944891238}
+--- !u!114 &7383984027710348885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932304715985080070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecba7e93b5c343c4945c6c1ea135325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 3
 --- !u!1 &6806473880201043303
 GameObject:
   m_ObjectHideFlags: 0

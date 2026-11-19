@@ -20,6 +20,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private LineRenderer attackCircle;
     [SerializeField, Min(3)] private int circleSegments = 60;
 
+    [SerializeField] private EnemyAI enemyAI;
+
     private float nextAttackTime;
     private Vector2 lastMoveDirection = Vector2.right;
     private int levelBonus;
@@ -40,6 +42,8 @@ public class PlayerCombat : MonoBehaviour
             animator = GetComponent<Animator>();
         if (animator == null)
             animator = GetComponentInChildren<Animator>();
+        if (enemyAI == null)
+            enemyAI = GetComponent<EnemyAI>();
     }
 
     private void Update()
@@ -56,6 +60,7 @@ public class PlayerCombat : MonoBehaviour
         // Keep LineRenderer synced with AttackPoint and attackRange.
         DrawAttackCircle();
     }
+
 
     public void Attack()
     {
@@ -79,21 +84,50 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             attackPoint.position,
             CurrentAttackRange,
-            enemyLayer);
+            enemyLayer
+        );
 
         enemiesHit.Clear();
 
         foreach (Collider2D hit in hits)
         {
-            if (hit == null) continue;
+            if (hit == null)
+                continue;
 
-            EnemyHealth enemyHealth = hit.GetComponentInParent<EnemyHealth>();
-            if (enemyHealth != null && enemiesHit.Add(enemyHealth))
+            EnemyHealth enemyHealth =
+                hit.GetComponentInParent<EnemyHealth>();
+
+            if (enemyHealth == null || !enemiesHit.Add(enemyHealth))
+                continue;
+
+            // Apply damage
+            enemyHealth.TakeDamage(CurrentAttackDamage);
+
+            // Get the AI of the actual enemy hit
+            EnemyAI targetAI =
+                enemyHealth.GetComponent<EnemyAI>();
+
+            if (targetAI != null)
             {
-                enemyHealth.TakeDamage(CurrentAttackDamage);
+                // Player aggro (Turret aggro still takes priority)
+                targetAI.OnAttackedByPlayer(transform);
+            }
+
+            // Apply knockback to the enemy
+            Knockback2D enemyKnockback =
+                enemyHealth.GetComponent<Knockback2D>();
+
+            if (enemyKnockback != null)
+            {
+                Vector2 direction =
+                    ((Vector2)enemyHealth.transform.position -
+                     (Vector2)transform.position).normalized;
+
+                enemyKnockback.ApplyKnockback(direction);
             }
         }
     }
+
 
     // Called by PlayerLevelStats when the player levels up.
     public void ApplyLevelBonus(int bonus)
