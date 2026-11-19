@@ -2067,6 +2067,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 584583410865114769, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086285690733679814, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -2113,7 +2117,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
@@ -17894,6 +17906,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 584583410865114769, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086285690733679814, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -17940,7 +17956,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
@@ -19474,6 +19498,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 584583410865114769, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086285690733679814, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -19520,7 +19548,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
@@ -20718,6 +20754,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 584583410865114769, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2086285690733679814, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -20764,7 +20804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
