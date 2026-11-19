@@ -1,4 +1,4 @@
-
+using System;
 using UnityEngine;
 
 public class TurretHealth : MonoBehaviour
@@ -28,6 +28,10 @@ public class TurretHealth : MonoBehaviour
     private static readonly int DestroyedHash =
         Animator.StringToHash("Destroyed");
 
+    // Health Bar UI
+    public event Action<float, float> OnHealthChanged; // Show current HP and max HP
+    public event Action OnDied; // Turret Died >> Hide Health Bar UI
+
     private void Awake()
     {
         CurrentHealth = maxHealth;
@@ -53,14 +57,12 @@ public class TurretHealth : MonoBehaviour
         if (IsDead || damage <= 0f)
             return;
 
-        CurrentHealth = Mathf.Max(
-            0f,
-            CurrentHealth - damage
-        );
+        CurrentHealth = Mathf.Max(0f,CurrentHealth - damage);
 
-        Debug.Log(
-            $"{name} HP: {CurrentHealth}/{maxHealth}"
-        );
+        // Invoke: Health Bar UI cap nhat
+        OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
+
+        Debug.Log($"{name} HP: {CurrentHealth}/{maxHealth}");
 
         if (CurrentHealth <= 0f)
         {
@@ -68,7 +70,7 @@ public class TurretHealth : MonoBehaviour
         }
     }
 
-    // Hồi máu theo phần trăm Max HP
+    // Hoi mau theo phan tram maxHealth
     public void HealPercent(float percent)
     {
         if (IsDead || percent <= 0f)
@@ -76,10 +78,10 @@ public class TurretHealth : MonoBehaviour
 
         float healAmount = maxHealth * percent;
 
-        CurrentHealth = Mathf.Min(
-            maxHealth,
-            CurrentHealth + healAmount
-        );
+        CurrentHealth = Mathf.Min(maxHealth,CurrentHealth + healAmount);
+
+        // Invoke: Health Bar UI cap nhat
+        OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
 
         Debug.Log(
             $"{name} healed {healAmount} HP. " +
@@ -98,8 +100,10 @@ public class TurretHealth : MonoBehaviour
 
     private void Die()
     {
-        if (IsDead)
-            return;
+        if (IsDead) return;
+
+        // Invoke: Turret Destroyed >> Hide Health Bar UI
+        OnDied?.Invoke();
 
         // 1. Đánh dấu Turret đã chết
         IsDead = true;
