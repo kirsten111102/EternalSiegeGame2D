@@ -2112,6 +2112,7 @@ GameObject:
   - component: {fileID: 405312304}
   - component: {fileID: 405312305}
   - component: {fileID: 405312306}
+  - component: {fileID: 405312307}
   m_Layer: 8
   m_Name: CrystalCore
   m_TagString: Crystal Core
@@ -2249,6 +2250,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.125, y: 0.9609375}
   m_EdgeRadius: 0
+--- !u!95 &405312307
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405312302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d678dd1c34ba5b48b453c839ecdf9a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &484150701
 GameObject:
   m_ObjectHideFlags: 0
