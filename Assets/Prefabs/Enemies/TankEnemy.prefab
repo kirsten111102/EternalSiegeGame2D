@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   attackInterval: 1
-  attackRange: 1.2
+  attackRange: 1
   animator: {fileID: 7699275510944891238}
 --- !u!50 &8298566448469034037
 Rigidbody2D:
@@ -215,7 +215,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -250,6 +250,11 @@ MonoBehaviour:
   sidestepSpeedMultiplier: 1
   sideCheckDistance: 1
   avoidanceCooldown: 0.3
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  separationRadius: 0.8
+  separationStrength: 1.5
 --- !u!70 &7845667998316211818
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -280,12 +285,12 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.5, y: 0.25}
   m_Direction: 0
 --- !u!212 &696888251754413511
 SpriteRenderer:
