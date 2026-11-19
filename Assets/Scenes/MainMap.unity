@@ -406,6 +406,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 770533999158309139, guid: b91fb572fab435947a6d7682a96870c3, type: 3}
+      propertyPath: maxHealth
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 770533999158309139, guid: b91fb572fab435947a6d7682a96870c3, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1194704097}
@@ -2102,6 +2106,14 @@ PrefabInstance:
     - target: {fileID: 2086285690733679814, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: turretId
+      value: turret_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: maxHealth
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
@@ -16218,8 +16230,8 @@ MonoBehaviour:
   gameXP: {fileID: 2078025512}
   totalWaves: 70
   nextWaveNumber: 1
-  targetWaveDuration: 330
-  spawnPhaseDuration: 60
+  targetWaveDuration: 15
+  spawnPhaseDuration: 10
   timeBetweenWaves: 5
   enemyXPSharePercent: 65
 --- !u!1 &1113693807
@@ -17922,6 +17934,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: turretId
+      value: turret_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
       value: 
@@ -19494,6 +19514,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: turretId
+      value: turret_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
       value: 
@@ -19728,7 +19756,7 @@ MonoBehaviour:
   gameScore: {fileID: 1194704099}
   waveManager: {fileID: 1071547669}
   gameXP: {fileID: 2078025512}
-  crystalCore: {fileID: 0}
+  crystalCore: {fileID: 1921502679}
   levelUpPanelUI: {fileID: 713633994}
 --- !u!114 &1898227864
 MonoBehaviour:
@@ -20730,6 +20758,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: turretId
+      value: turret_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
       value: 
@@ -20918,3 +20954,4 @@ SceneRoots:
   - {fileID: 335372004}
   - {fileID: 2140838088}
   - {fileID: 138813113}
+  - {fileID: 1898227865}
