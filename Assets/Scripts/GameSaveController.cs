@@ -195,7 +195,10 @@ public class GameSaveController : MonoBehaviour
             return;
         }
         pendingLoadData = data;
-        SceneManager.LoadScene("MainMap");
+        SceneManager.LoadScene(
+            "MainMap",
+            LoadSceneMode.Single
+        );
     }
 
     private bool ApplySaveData(SaveData data)

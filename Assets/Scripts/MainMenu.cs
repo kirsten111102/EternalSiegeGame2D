@@ -8,30 +8,48 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button continueButton;
     public void StartGame()
     {
-        SceneManager.LoadScene("MainMap");
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(
+            "MainMap",
+            LoadSceneMode.Single
+        );
     }
 
     private void UpdateContinueButton()
     {
         if (continueButton == null)
-        {
-            Debug.LogWarning("ContinueButton is missing");
             return;
-        }
+
+        GameManager gameManager =
+            FindFirstObjectByType<GameManager>();
+
         continueButton.interactable =
-            saveSystem != null &&
-            saveSystem.HasSaveFile();
+            gameManager != null &&
+            gameManager.CanContinue;
     }
 
     public void ContinueGame()
     {
-        if (saveSystem == null || !saveSystem.HasSaveFile())
+        GameManager gameManager =
+            FindFirstObjectByType<GameManager>();
+
+        if (gameManager == null || !gameManager.CanContinue)
         {
-            Debug.LogWarning("No save file available.");
+            Debug.LogWarning("No paused game to continue.");
             UpdateContinueButton();
             return;
         }
+        gameManager.ResumeGame();
+    }
 
+    public void LoadGame()
+    {
+        if (saveSystem == null || !saveSystem.HasSaveFile())
+        {
+            Debug.LogWarning("No save file available.");
+            return;
+        }
         GameSaveController.RequestLoadGame(saveSystem);
     }
 

@@ -188,7 +188,7 @@ public class PlayerHealth : MonoBehaviour
         while (respawnSecondsRemaining > 0f)
         {
             respawnSecondsRemaining = Mathf.Max(
-                0f, respawnSecondsRemaining - Time.unscaledDeltaTime);
+                0f, respawnSecondsRemaining - Time.deltaTime);
             RespawnTimeChanged?.Invoke(respawnSecondsRemaining);
             yield return null;
         }

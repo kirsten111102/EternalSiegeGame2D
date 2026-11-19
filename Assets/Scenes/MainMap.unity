@@ -1706,7 +1706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
@@ -3123,7 +3123,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 770533999158309139, guid: b91fb572fab435947a6d7682a96870c3, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 770533999158309139, guid: b91fb572fab435947a6d7682a96870c3, type: 3}
       propertyPath: gameManager
@@ -19010,7 +19010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
@@ -19534,6 +19534,10 @@ PrefabInstance:
       propertyPath: turretId
       value: Turret_04
       objectReference: {fileID: 0}
+    - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore
       value: 
@@ -19601,7 +19605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5231552340416776083, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: crystalCore

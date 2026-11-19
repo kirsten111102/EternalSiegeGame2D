@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
@@ -9,6 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI finalScoreText;
     [SerializeField] private NetworkManager networkManager;
     [SerializeField] private GameObject player;
+    [Header("Disable while Main Menu is open")]
+    [SerializeField] private Behaviour[] gameplayComponents;
+    private readonly List<Behaviour> disabledForMenu = new();
+    private bool isChangingMenu;
+
+    public bool CanContinue => isPaused && !isGameOver;
     private bool isPaused;
     private bool isGameOver;
     // comment
@@ -44,11 +52,11 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        // if (GameSession.Instance != null)
-        // {
-        //     GameSession.Instance.ResetSession();
-        // }
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        SceneManager.LoadScene(
+            "MainMap",
+            LoadSceneMode.Single
+        );
     }
 
     public void PauseGame()
@@ -61,37 +69,156 @@ public class GameManager : MonoBehaviour
         if (pausePanel != null) pausePanel.SetActive(true);
     }
 
+    //Resume o MainMap
     public void ResumeGame()
     {
-        if (isGameOver || !isPaused) return;
+        if (!CanContinue || isChangingMenu)
+            return;
 
+        if (SceneManager.GetSceneByName("Main Menu").isLoaded)
+        {
+            StartCoroutine(CloseMainMenuAndResume());
+            return;
+        }
+
+        FinishResume();
+    }
+
+    private IEnumerator CloseMainMenuAndResume()
+    {
+        isChangingMenu = true;
+        // GameManager vẫn thuộc scene MainMap.
+        SceneManager.SetActiveScene(gameObject.scene);
+        yield return SceneManager.UnloadSceneAsync("Main Menu");
+        RestoreGameplayComponents();
+        isChangingMenu = false;
+        FinishResume();
+    }
+
+    private void FinishResume()
+    {
         isPaused = false;
-        Time.timeScale = 1f;
 
-        if (pausePanel != null) pausePanel.SetActive(false);
+        if (pausePanel != null)
+            pausePanel.SetActive(false);
+
+        Time.timeScale = 1f;
+    }
+
+    //Continue o mainmenu
+    private void DisableGameplayComponents()
+    {
+        disabledForMenu.Clear();
+        foreach (GameObject root in gameObject.scene.GetRootGameObjects())
+        {
+            Behaviour[] components =
+                root.GetComponentsInChildren<Behaviour>(true);
+
+            foreach (Behaviour component in components)
+            {
+                if (component is Camera ||
+                    component is AudioListener ||
+                    component is Canvas ||
+                    component is UnityEngine.UI.GraphicRaycaster ||
+                    component is EventSystem ||
+                    component is BaseInputModule)
+                {
+                    DisableForMenu(component);
+                }
+            }
+        }
+
+        if (gameplayComponents != null)
+        {
+            foreach (Behaviour component in gameplayComponents)
+                DisableForMenu(component);
+        }
+    }
+
+    private void DisableForMenu(Behaviour component)
+    {
+        if (component == null ||
+            component == this ||
+            !component.enabled ||
+            disabledForMenu.Contains(component))
+        {
+            return;
+        }
+
+        disabledForMenu.Add(component);
+        component.enabled = false;
+    }
+
+    private void RestoreGameplayComponents()
+    {
+        foreach (Behaviour component in disabledForMenu)
+        {
+            if (component != null)
+                component.enabled = true;
+        }
+
+        disabledForMenu.Clear();
+    }
+
+    private IEnumerator OpenMainMenu()
+    {
+        isChangingMenu = true;
+        isPaused = true;
+        Time.timeScale = 0f;
+
+        if (pausePanel != null)
+            pausePanel.SetActive(false);
+
+        DisableGameplayComponents();
+        Time.timeScale = 0f;
+
+        yield return SceneManager.LoadSceneAsync(
+            "Main Menu",
+            LoadSceneMode.Additive
+        );
+
+        Scene menuScene = SceneManager.GetSceneByName("Main Menu");
+
+        if (menuScene.IsValid() && menuScene.isLoaded)
+            SceneManager.SetActiveScene(menuScene);
+        Time.timeScale = 0f;
+        isChangingMenu = false;
     }
 
     public void ReturnToMainMenu()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Main Menu");
+        if (isChangingMenu)
+            return;
+
+        if (SceneManager.GetSceneByName("Main Menu").isLoaded)
+            return;
+
+        StartCoroutine(OpenMainMenu());
     }
 
     private void Update()
     {
-        if (isGameOver) return;
+        if (isGameOver ||
+            isChangingMenu ||
+            SceneManager.GetSceneByName("Main Menu").isLoaded)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
-            {
                 ResumeGame();
-            }
             else
-            {
                 PauseGame();
-            }
         }
     }
 
-
+    private void LateUpdate()
+    {
+        if (isPaused || isGameOver || isChangingMenu)
+        {
+            Time.timeScale = 0f;
+        }
+    }
 }
