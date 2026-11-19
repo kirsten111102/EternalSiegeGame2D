@@ -13,6 +13,7 @@ public class LevelUpPanelUI : MonoBehaviour
 
     private int pendingChoices;
     private float previousTimeScale = 1f;
+    public event System.Action OnAllChoicesCompleted;
 
     private void Awake()
     {
@@ -104,6 +105,9 @@ public class LevelUpPanelUI : MonoBehaviour
         {
             panelRoot.SetActive(false);
             IsOpen = false;
+            //sau khi đã chọn buff
+            OnAllChoicesCompleted?.Invoke();
+
             Time.timeScale = previousTimeScale;
         }
     }

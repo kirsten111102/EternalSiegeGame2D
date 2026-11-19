@@ -31,12 +31,13 @@ public class MainMenu : MonoBehaviour
             UpdateContinueButton();
             return;
         }
-        if (saveLoadUI == null)
-        {
-            Debug.LogWarning("SaveLoadUI is missing");
-            return;
-        }
-        saveLoadUI.LoadGame();
+
+        GameSaveController.RequestLoadGame(saveSystem);
+    }
+
+    private void Start()
+    {
+        UpdateContinueButton();
     }
 
     public void QuitGame()

@@ -88,7 +88,6 @@ public class WaveManager : MonoBehaviour
         tankSpawner.Initialize(crystalCore);
 
         nextWaveNumber = Mathf.Clamp(nextWaveNumber, 1, totalWaves + 1);
-        StartCoroutine(WaveRoutine());
     }
 
     // Goi khi Load JSON, truoc Start() de WaveManager tiep tuc dung Wave.
@@ -171,7 +170,28 @@ public class WaveManager : MonoBehaviour
     /// So Enemy tang vua phai de co the rai spawn trong 300s.
     /// Wave 1: 19 Melee / 7 Ranged / 1 Tank (voi cong thuc nay).
     /// Wave 70: 88 Melee / 48 Ranged / 12 Tank.
-    
+    /// 
+    public void StartWaves()
+    {
+        if (IsWaveActive)
+            return;
+
+        if (crystalCore == null ||
+            crystalCore.IsDead ||
+            gameXP == null ||
+            meleeSpawner == null ||
+            rangedSpawner == null ||
+            tankSpawner == null ||
+            !meleeSpawner.IsConfigured ||
+            !rangedSpawner.IsConfigured ||
+            !tankSpawner.IsConfigured)
+        {
+            Debug.LogError("Cannot start waves: Invalid references.");
+            return;
+        }
+        StartCoroutine(WaveRoutine());
+    }
+
     private void GetWaveComposition(int wave, out int melee, out int ranged, out int tank)
     {
         melee = 18 + wave;

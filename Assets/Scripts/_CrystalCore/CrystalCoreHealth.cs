@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CrystalCoreHealth : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 200f;
+    [SerializeField] private float maxHealth = 2000f;
     [SerializeField] private GameManager gameManager;
 
     public float CurrentHealth { get; private set; }
@@ -28,6 +28,11 @@ public class CrystalCoreHealth : MonoBehaviour
         Debug.Log($"Crystal Core HP: {CurrentHealth}");
 
         if (CurrentHealth <= 0f) Die();
+    }
+
+    public void RestoreHealth(float savedHealth)
+    {
+        CurrentHealth = Mathf.Clamp(savedHealth, 0f, maxHealth);
     }
 
     private void Die()

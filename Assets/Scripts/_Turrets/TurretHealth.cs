@@ -4,8 +4,12 @@ using UnityEngine;
 public class TurretHealth : MonoBehaviour
 {
     [Header("Health Stats")]
-    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float maxHealth = 1000f;
 
+    [Header("Save Identity")]
+    [SerializeField] private string turretId;
+
+    public string TurretId => turretId;
     public float MaxHealth => maxHealth;
     public float CurrentHealth { get; private set; }
     public bool IsDead { get; private set; }
@@ -81,6 +85,15 @@ public class TurretHealth : MonoBehaviour
             $"{name} healed {healAmount} HP. " +
             $"HP: {CurrentHealth}/{maxHealth}"
         );
+    }
+
+    // Gọi trên Turret vừa được khởi tạo trong scene mới.
+    public void RestoreHealth(float savedHealth)
+    {
+        CurrentHealth = Mathf.Clamp(savedHealth, 0f, maxHealth);
+
+        if (CurrentHealth <= 0f)
+            Die();
     }
 
     private void Die()

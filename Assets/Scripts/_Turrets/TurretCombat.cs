@@ -154,6 +154,19 @@ public class TurretCombat : MonoBehaviour
         attackSpeedPoints += points;
     }
 
+    public void RestoreStats(
+    float savedDamage,
+    float savedRange,
+    float savedAttackSpeedPoints)
+    {
+        damagePerTick = Mathf.Max(0f, savedDamage);
+        attackRange = Mathf.Max(0.1f, savedRange);
+        attackSpeedPoints = Mathf.Max(0f, savedAttackSpeedPoints);
+
+        nextAttackTime = 0f;
+        ReleaseTarget();
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;

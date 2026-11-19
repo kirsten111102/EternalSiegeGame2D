@@ -7,61 +7,27 @@ public class SaveLoadUI : MonoBehaviour
     // [SerializeField] private PlayerHealth playerHealth;
     // [SerializeField] private GameScore gameScore;
     [SerializeField] private GameManager gameManager;
-    // [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private GameSaveController gameSaveController;
     public void SaveGame()
     {
-        // if (saveSystem == null ||
-        // player == null || playerHealth == null ||
-        // gameScore == null || playerInventory == null)
-        // {
-        //     Debug.LogWarning("Missing Save references");
-        //     return;
-        // }
-
-        SaveData data = new()
+        if (gameSaveController == null)
         {
-            playerX = player.position.x,
-            playerY = player.position.y,
-            // health = playerHealth.CurrentHealth,
-            // score = gameScore.Score,
-            // coinCount = playerInventory.CoinCount,
-            // items = playerInventory.ExportItems()
-        };
+            Debug.LogWarning("GameSaveController is missing.");
+            return;
+        }
 
-        saveSystem.SaveGame(data);
+        gameSaveController.SaveGame();
     }
 
     public void LoadGame()
     {
-        // if (saveSystem == null || player == null ||
-        // playerHealth == null || gameScore == null)
-        // {
-        //     Debug.LogWarning("Missing Load references");
-        //     return;
-        // }
-
-        SaveData data = saveSystem.LoadGame();
-        if (data == null)
+        if (gameSaveController == null)
         {
-            Debug.LogWarning("No save file found");
+            Debug.LogWarning("GameSaveController is missing.");
             return;
         }
 
-        player.position = new Vector3(data.playerX,
-        data.playerY, 0
-        );
-
-        // playerHealth.SetHealth(data.health);
-        // gameScore.SetScore(data.score);
-        // playerInventory.SetCoinCount(data.coinCount);
-        // playerInventory.ImportItems(data.items);
-
-        if (data.health > 0 && gameManager != null)
-        {
-            // gameManager.ResumeGame();
-        }
-
-        Debug.Log("Game loaded successfully");
+        gameSaveController.LoadGame();
     }
 
 }

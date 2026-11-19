@@ -102,15 +102,13 @@ public class PlayerHealth : MonoBehaviour
         RefreshHealth();
     }
 
-    private void Die()
+    private void BeginDeath()
     {
         if (isDead) return;
-        isDead = true;
-        deathCount++;
-        DeathCountChanged?.Invoke(deathCount);
 
-        // First death: 10 s, second death: 20 s, third death: 30 s.
-        respawnSecondsRemaining = secondsPenaltyPerDeath * deathCount;
+        isDead = true;
+
+        DeathCountChanged?.Invoke(deathCount);
         RespawnTimeChanged?.Invoke(respawnSecondsRemaining);
 
         if (playerMovement != null)
@@ -147,6 +145,42 @@ public class PlayerHealth : MonoBehaviour
 
         // Keep Player GameObject active so its respawn coroutine can run.
         StartCoroutine(RespawnAfterPenalty());
+    }
+
+    private void Die()
+    {
+        if (isDead) return;
+
+        deathCount++;
+        respawnSecondsRemaining = secondsPenaltyPerDeath * deathCount;
+
+        BeginDeath();
+    }
+
+    // Chỉ gọi sau Start(), trên Player trong scene mới.
+    public void RestoreState(
+        float savedHealth,
+        int savedDeathCount,
+        float savedRespawnSeconds)
+    {
+        currentHealth = Mathf.Clamp(savedHealth, 0f, effectiveMaxHealth);
+        deathCount = Mathf.Max(0, savedDeathCount);
+        respawnSecondsRemaining = currentHealth <= 0f
+            ? Mathf.Max(0f, savedRespawnSeconds)
+            : 0f;
+
+        RefreshHealth();
+
+        if (currentHealth <= 0f)
+        {
+            // Không tăng deathCount, không tính lại thời gian phạt.
+            BeginDeath();
+        }
+        else
+        {
+            DeathCountChanged?.Invoke(deathCount);
+            RespawnTimeChanged?.Invoke(respawnSecondsRemaining);
+        }
     }
 
     private IEnumerator RespawnAfterPenalty()
