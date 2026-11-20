@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 04d51718b3e572e4985a66cee54f3e6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1464880974767813010
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_0
+  - first:
+      213: 6648813741837381511
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_1
+  - first:
+      213: -1774637876591563929
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_2
+  - first:
+      213: 3987332982089750358
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_3
+  - first:
+      213: 208063911472287280
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_4
+  - first:
+      213: -261781784738319526
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_5
+  - first:
+      213: 8238708326267131863
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_6
+  - first:
+      213: 1745221478031668665
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_7
+  - first:
+      213: -8516006305106867274
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_8
+  - first:
+      213: -7967190865367334020
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_9
+  - first:
+      213: 4948710770189035925
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_10
+  - first:
+      213: 8442753831697641877
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_11
+  - first:
+      213: -5665700120326266678
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_12
+  - first:
+      213: -5494563087576742647
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_13
+  - first:
+      213: 5679455429360030550
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_14
+  - first:
+      213: 6981572556771690261
+    second: CrystalCore_Idle_Pulse_16Frames_1536x96_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e8cb4c382bbabe0800000000000000
+      internalID: -1464880974767813010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fe3fb0fd4554c50800000000000000
+      internalID: 6648813741837381511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b6ec0f0483f57e0800000000000000
+      internalID: -1774637876591563929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65798aea83ad55730800000000000000
+      internalID: 3987332982089750358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e42ed660133e200800000000000000
+      internalID: 208063911472287280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5331009ad6fd5cf0800000000000000
+      internalID: -261781784738319526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7943b7295c55270800000000000000
+      internalID: 8238708326267131863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5b57c00b5483810800000000000000
+      internalID: 1745221478031668665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb4e1f926111d980800000000000000
+      internalID: -8516006305106867274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c730b04be1ade6190800000000000000
+      internalID: -7967190865367334020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5996441e93a5da440800000000000000
+      internalID: 4948710770189035925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591f768d0efaa2570800000000000000
+      internalID: 8442753831697641877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0a01c32c36f51b0800000000000000
+      internalID: -5665700120326266678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905c309bbf36fb3b0800000000000000
+      internalID: -5494563087576742647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6531ba83f9a71de40800000000000000
+      internalID: 5679455429360030550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrystalCore_Idle_Pulse_16Frames_1536x96_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5170efb104783e060800000000000000
+      internalID: 6981572556771690261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1ddf95dbcb68bdc419cb26264d598255
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CrystalCore_Idle_Pulse_16Frames_1536x96_0: -1464880974767813010
+      CrystalCore_Idle_Pulse_16Frames_1536x96_1: 6648813741837381511
+      CrystalCore_Idle_Pulse_16Frames_1536x96_10: 4948710770189035925
+      CrystalCore_Idle_Pulse_16Frames_1536x96_11: 8442753831697641877
+      CrystalCore_Idle_Pulse_16Frames_1536x96_12: -5665700120326266678
+      CrystalCore_Idle_Pulse_16Frames_1536x96_13: -5494563087576742647
+      CrystalCore_Idle_Pulse_16Frames_1536x96_14: 5679455429360030550
+      CrystalCore_Idle_Pulse_16Frames_1536x96_15: 6981572556771690261
+      CrystalCore_Idle_Pulse_16Frames_1536x96_2: -1774637876591563929
+      CrystalCore_Idle_Pulse_16Frames_1536x96_3: 3987332982089750358
+      CrystalCore_Idle_Pulse_16Frames_1536x96_4: 208063911472287280
+      CrystalCore_Idle_Pulse_16Frames_1536x96_5: -261781784738319526
+      CrystalCore_Idle_Pulse_16Frames_1536x96_6: 8238708326267131863
+      CrystalCore_Idle_Pulse_16Frames_1536x96_7: 1745221478031668665
+      CrystalCore_Idle_Pulse_16Frames_1536x96_8: -8516006305106867274
+      CrystalCore_Idle_Pulse_16Frames_1536x96_9: -7967190865367334020
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
