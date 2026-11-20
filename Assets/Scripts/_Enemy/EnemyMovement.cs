@@ -16,11 +16,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float sideCheckDistance = 0.7f;
     [SerializeField] private float avoidanceCooldown = 0.3f;
 
-    [Header("Enemy Separation")]
-    [SerializeField] private LayerMask enemyLayer;
-    [SerializeField] private float separationRadius = 0.8f;
-    [SerializeField] private float separationStrength = 1.5f;
-
     private Rigidbody2D rb;
     private Transform target;
     private bool canMove;
@@ -224,48 +219,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void Move(Vector2 direction)
     {
-        direction = ApplyEnemySeparation(direction);
-
-        rb.linearVelocity = direction * moveSpeed;
-
+        rb.linearVelocity = direction.normalized * moveSpeed;
         UpdateAnimation(direction);
-    }
-
-    private Vector2 ApplyEnemySeparation(Vector2 movementDirection)
-    {
-        Collider2D[] nearbyEnemies = Physics2D.OverlapCircleAll(
-            rb.position,
-            separationRadius,
-            enemyLayer
-        );
-
-        Vector2 separation = Vector2.zero;
-
-        foreach (Collider2D enemyCollider in nearbyEnemies)
-        {
-            if (enemyCollider.gameObject == gameObject)
-                continue;
-
-            Vector2 awayDirection =
-                rb.position - (Vector2)enemyCollider.transform.position;
-
-            float distance = awayDirection.magnitude;
-
-            if (distance > 0.001f)
-            {
-                // Nearby enemies create a stronger repulsion
-                float weight = 1f - (distance / separationRadius);
-
-                separation += awayDirection.normalized * weight;
-            }
-        }
-
-        if (separation.sqrMagnitude > 0.001f)
-        {
-            movementDirection += separation.normalized * separationStrength;
-        }
-
-        return movementDirection.normalized;
     }
 
     public void Stop()

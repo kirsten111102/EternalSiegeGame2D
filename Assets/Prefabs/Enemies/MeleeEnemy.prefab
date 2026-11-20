@@ -279,6 +279,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   gameScore: {fileID: 0}
   animator: {fileID: -400084406870342772}
+  dieTriggerName: Die
+  dieAnimationDuration: 1
+  hideSpritesAfterDeathAnimation: 1
 --- !u!114 &7459586423387744909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,11 +320,6 @@ MonoBehaviour:
   sidestepSpeedMultiplier: 1
   sideCheckDistance: 1
   avoidanceCooldown: 0.3
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  separationRadius: 0.8
-  separationStrength: 1.5
 --- !u!50 &8298566448469034037
 Rigidbody2D:
   serializedVersion: 5
@@ -470,7 +468,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4932304715985080070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebc4044f425614c3384ca84807a90444, type: 3}
   m_Name: 
