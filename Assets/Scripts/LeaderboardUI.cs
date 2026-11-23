@@ -54,7 +54,7 @@ public class LeaderboardUI : MonoBehaviour
             return;
         }
 
-        int count = Mathf.Min(response.attempts.Length, 5);
+        int count = Mathf.Min(response.attempts.Length, 10);
 
         for (int i = 0; i < count; i++)
         {
@@ -63,7 +63,10 @@ public class LeaderboardUI : MonoBehaviour
             rowsContainer
             );
 
-            row.SetData(i + 1, response.attempts[i]);
+            row.SetData(
+                response.attempts[i].rank,
+                response.attempts[i]
+            );
         }
 
         if (statusText != null)
@@ -89,7 +92,6 @@ public class LeaderboardUI : MonoBehaviour
         {
             statusText.text = "Unable to load leaderboard.";
         }
-
         Debug.LogWarning(error);
     }
 }

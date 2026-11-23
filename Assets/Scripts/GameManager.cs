@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [Header("Disable while Main Menu is open")]
     [SerializeField] private Behaviour[] gameplayComponents;
+    [Header("Leaderboard submission")]
+    [SerializeField] private GameXP gameXP;
+    [SerializeField] private long playerId;
+
+    private string runId;
     private readonly List<Behaviour> disabledForMenu = new();
     private bool isChangingMenu;
 
@@ -22,6 +27,7 @@ public class GameManager : MonoBehaviour
     // comment
     private void Start()
     {
+        runId = System.Guid.NewGuid().ToString("D");
         Time.timeScale = 1f;
         isGameOver = false;
         isPaused = false;
@@ -34,18 +40,38 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         if (isGameOver) return;
+
         isGameOver = true;
         isPaused = false;
 
-        if (gameScore != null &&
-            finalScoreText != null &&
-            player != null)
-        {
+        if (gameScore != null && finalScoreText != null)
             finalScoreText.SetText("Final Score: {0:0}", gameScore.Score);
-            //networkManager.SendScore(player.name, gameScore.Score);
+
+        if (networkManager != null &&
+            gameXP != null &&
+            gameScore != null &&
+            playerId > 0)
+        {
+            networkManager.SendScore(
+                playerId,
+                runId,
+                gameXP.CurrentLevel,
+                gameScore.Score
+            );
         }
-        if (gameOverPanel != null) gameOverPanel.SetActive(true);
-        if (pausePanel != null) pausePanel.SetActive(false);
+        else
+        {
+            Debug.LogWarning(
+                "Cannot submit score: check NetworkManager, GameXP, GameScore and PlayerId."
+            );
+        }
+
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+
+        if (pausePanel != null)
+            pausePanel.SetActive(false);
+
         Time.timeScale = 0f;
     }
 
