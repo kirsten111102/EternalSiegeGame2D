@@ -111,23 +111,42 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Called by PlayerLevelStats.
-    // +1 Maximum HP per level.
+    // +2 Maximum HP per level.
     public void ApplyLevelBonus(float bonus)
     {
+        float oldMaxHealth = effectiveMaxHealth;
+
         effectiveMaxHealth = Mathf.Max(
             1f,
-            maxHealth + Mathf.Max(0f, bonus)
+            maxHealth + Mathf.Max(0f, bonus) * 2f
         );
 
         if (!initialized)
             return;
 
-        // Increasing Max HP does not automatically heal current HP.
-        currentHealth = Mathf.Clamp(
-            currentHealth,
+        // Keep the same missing-HP amount when Max HP increases.
+        // Do not heal a dead player.
+        float maxHealthIncrease = Mathf.Max(
             0f,
-            effectiveMaxHealth
+            effectiveMaxHealth - oldMaxHealth
         );
+
+        if (!isDead)
+        {
+            currentHealth = Mathf.Clamp(
+                currentHealth + maxHealthIncrease,
+                0f,
+                effectiveMaxHealth
+            );
+        }
+        else
+        {
+            currentHealth = Mathf.Clamp(
+                currentHealth,
+                0f,
+                effectiveMaxHealth
+            );
+        }
 
         RefreshHealth();
     }

@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b99918396e48f140985b2df92b05e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  maxHealth: 160
   xpReward: 8
   scoreValue: 20
   gameXP: {fileID: 0}
@@ -200,8 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6259370f02a993b498f8a1dd60e76ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  attackInterval: 1
+  damage: 15
+  attackInterval: 2
   attackRange: 1
   animator: {fileID: 7699275510944891238}
 --- !u!50 &8298566448469034037

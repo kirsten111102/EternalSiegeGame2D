@@ -564,7 +564,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   attackRange: 1
   attackDamage: 20
-  attackCooldown: 2
+  attackCooldown: 1.2
   attackCircle: {fileID: 2160775727703906446}
   circleSegments: 60
   enemyAI: {fileID: 0}
