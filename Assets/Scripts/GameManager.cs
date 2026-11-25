@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Behaviour[] gameplayComponents;
     [Header("Leaderboard submission")]
     [SerializeField] private GameXP gameXP;
+
+    [Header("Music")]
+    [SerializeField] private GameplayMusic gameplayMusic;
+
     [SerializeField] private long playerId;
 
     private string runId;
@@ -113,10 +117,18 @@ public class GameManager : MonoBehaviour
     private IEnumerator CloseMainMenuAndResume()
     {
         isChangingMenu = true;
+
         // GameManager vẫn thuộc scene MainMap.
         SceneManager.SetActiveScene(gameObject.scene);
+
         yield return SceneManager.UnloadSceneAsync("Main Menu");
+
         RestoreGameplayComponents();
+
+        //Restore Gameplay Music
+        if (gameplayMusic != null)
+            gameplayMusic.UnmuteMusic();
+            
         isChangingMenu = false;
         FinishResume();
     }
@@ -195,7 +207,12 @@ public class GameManager : MonoBehaviour
         if (pausePanel != null)
             pausePanel.SetActive(false);
 
+        // Pause gameplay Music
+        if (gameplayMusic != null)
+            gameplayMusic.MuteMusic();
+
         DisableGameplayComponents();
+
         Time.timeScale = 0f;
 
         yield return SceneManager.LoadSceneAsync(
@@ -207,6 +224,7 @@ public class GameManager : MonoBehaviour
 
         if (menuScene.IsValid() && menuScene.isLoaded)
             SceneManager.SetActiveScene(menuScene);
+
         Time.timeScale = 0f;
         isChangingMenu = false;
     }
