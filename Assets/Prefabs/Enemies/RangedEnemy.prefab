@@ -364,7 +364,6 @@ GameObject:
   - component: {fileID: 7845667998316211818}
   - component: {fileID: 696888251754413511}
   - component: {fileID: -8697971302732324242}
-  - component: {fileID: -3962809828483893637}
   - component: {fileID: 3689486823982467548}
   m_Layer: 7
   m_Name: RangedEnemy
@@ -423,7 +422,7 @@ MonoBehaviour:
   gameScore: {fileID: 0}
   animator: {fileID: -8697971302732324242}
   dieTriggerName: Die
-  dieAnimationDuration: 1
+  dieAnimationDuration: 0
   hideSpritesAfterDeathAnimation: 1
 --- !u!114 &2109849077223222711
 MonoBehaviour:
@@ -606,19 +605,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3962809828483893637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4932304715985080070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc4044f425614c3384ca84807a90444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseAnimator: {fileID: -8697971302732324242}
 --- !u!114 &3689486823982467548
 MonoBehaviour:
   m_ObjectHideFlags: 0

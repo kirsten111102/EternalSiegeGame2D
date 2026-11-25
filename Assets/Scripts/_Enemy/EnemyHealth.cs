@@ -22,6 +22,7 @@ public class EnemyHealth : MonoBehaviour
 
 
     private EnemyAI enemyAI;
+    private EnemyMovement enemyMovement;
     private EnemyCombat enemyCombat;
     private SpriteRenderer[] spriteRenderers;
     private Collider2D[] colliders;
@@ -37,6 +38,7 @@ public class EnemyHealth : MonoBehaviour
     {
         CurrentHealth = maxHealth;
         enemyAI = GetComponent<EnemyAI>();
+        enemyMovement = GetComponent<EnemyMovement>();
         enemyCombat = GetComponent<EnemyCombat>();
 
         if (gameXP == null)
@@ -93,7 +95,20 @@ public class EnemyHealth : MonoBehaviour
 
         // Keep existing enemy death, score, and XP logic.
         if (enemyAI != null)
+        {
             enemyAI.OnDead();
+            enemyAI.enabled = false;
+        }
+
+        if (enemyMovement != null)
+        {
+            enemyMovement.enabled = false;
+        }
+
+        if (enemyCombat != null)
+        {
+            enemyCombat.enabled = false;
+        }
 
         if (gameScore != null)
             gameScore.AddScore(scoreValue);

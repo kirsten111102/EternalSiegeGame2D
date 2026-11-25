@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 7845667998316211818}
   - component: {fileID: 696888251754413511}
   - component: {fileID: -400084406870342772}
-  - component: {fileID: -231285151304860052}
   - component: {fileID: -1467110199224818753}
   m_Layer: 7
   m_Name: MeleeEnemy
@@ -280,7 +279,7 @@ MonoBehaviour:
   gameScore: {fileID: 0}
   animator: {fileID: -400084406870342772}
   dieTriggerName: Die
-  dieAnimationDuration: 1
+  dieAnimationDuration: 0
   hideSpritesAfterDeathAnimation: 1
 --- !u!114 &7459586423387744909
 MonoBehaviour:
@@ -461,19 +460,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-231285151304860052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4932304715985080070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebc4044f425614c3384ca84807a90444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseAnimator: {fileID: -400084406870342772}
 --- !u!114 &-1467110199224818753
 MonoBehaviour:
   m_ObjectHideFlags: 0
