@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -887,14 +887,14 @@ MonoBehaviour:
     - {fileID: 622335178632392632, guid: 9d678dd1c34ba5b48b453c839ecdf9a6, type: 2}
     - {fileID: -6839678743562614637, guid: 5d010e19b94253c42a6b7b1b3240c2ff, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.4666737
+    - e00: 0.36184096
       e01: 0
       e02: 0
-      e03: 333.9815
+      e03: -259.2413
       e10: 0
-      e11: 0.4666737
+      e11: 0.36184096
       e12: 0
-      e13: 45.637707
+      e13: -288.5885
       e20: 0
       e21: 0
       e22: 1
@@ -903,14 +903,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
+    - e00: 0.20736197
       e01: 0
       e02: 0
-      e03: 0
+      e03: 139.41718
       e10: 0
-      e11: 1
+      e11: 0.20736197
       e12: 0
-      e13: 0
+      e13: 84.636505
       e20: 0
       e21: 0
       e22: 1
@@ -1034,11 +1034,11 @@ MonoBehaviour:
       displayed: 0
       id: unity-grid-and-snap-toolbar
       index: 3
-      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-437.0,"y":-431.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":3,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":-437.0,"y":-431.0},"m_SnapOffsetDelta":{"x":0.0,"y":1.0},"m_FloatingSnapCorner":3,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
       floating: 0
       collapsed: 0
       snapOffset: {x: -437, y: -431}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 1}
       snapCorner: 3
       layout: 4
       size: {x: 0, y: 0}

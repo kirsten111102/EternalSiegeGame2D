@@ -2257,7 +2257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: turretId
-      value: turret_03
+      value: turret_3
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
@@ -18238,7 +18238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: turretId
-      value: turret_02
+      value: turret_2
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
@@ -21300,7 +21300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: turretId
-      value: turret_04
+      value: turret_4
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: maxHealth
