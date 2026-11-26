@@ -30,8 +30,17 @@ public class PlayerCombat : MonoBehaviour
 
     public int CurrentAttackDamage => attackDamage + levelBonus;
     public float CurrentAttackRange => attackRange;
-    public float CurrentAttackCooldown =>
-        1f / (1f / Mathf.Max(0.01f, attackCooldown) + levelBonus);
+    public float CurrentAttackCooldown
+    {
+        get
+        {
+            // +1% Attack Speed per level, capped at +50%.
+            float bonusPercent = Mathf.Min(levelBonus, 50);
+
+            return attackCooldown / (1f + bonusPercent / 100f);
+        }
+    }
+
 
     private void Awake()
     {

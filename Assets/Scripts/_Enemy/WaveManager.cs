@@ -59,8 +59,8 @@ public class WaveManager : MonoBehaviour
 
     private void Start()
     {
-        if (crystalCore == null || meleeSpawner == null || 
-            rangedSpawner == null || tankSpawner == null || 
+        if (crystalCore == null || meleeSpawner == null ||
+            rangedSpawner == null || tankSpawner == null ||
             gameXP == null || !meleeSpawner.IsConfigured ||
             !rangedSpawner.IsConfigured || !tankSpawner.IsConfigured)
         {
@@ -104,7 +104,7 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator WaveRoutine()
     {
-        while ( nextWaveNumber <= totalWaves && 
+        while (nextWaveNumber <= totalWaves &&
                 crystalCore != null && !crystalCore.IsDead)
         {
             int waveNumber = nextWaveNumber;
@@ -192,11 +192,33 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(WaveRoutine());
     }
 
-    private void GetWaveComposition(int wave, out int melee, out int ranged, out int tank)
+    private void GetWaveComposition(
+        int wave,
+        out int melee,
+        out int ranged,
+        out int tank)
     {
-        melee = 18 + wave;
-        ranged = 6 + Mathf.RoundToInt(0.6f * wave);
-        tank = 1 + (wave - 1) / 6;
+        switch (wave)
+        {
+            case 1: melee = 19; ranged = 7; tank = 1; return;
+            case 2: melee = 20; ranged = 8; tank = 1; return;
+            case 3: melee = 28; ranged = 12; tank = 2; return;
+            case 4: melee = 32; ranged = 14; tank = 2; return;
+            case 5: melee = 35; ranged = 16; tank = 2; return;
+            case 6: melee = 38; ranged = 18; tank = 3; return;
+            case 7: melee = 41; ranged = 20; tank = 3; return;
+            case 8: melee = 44; ranged = 22; tank = 3; return;
+            case 9: melee = 47; ranged = 24; tank = 4; return;
+            case 10: melee = 50; ranged = 26; tank = 4; return;
+
+            default:
+                int extraWaves = Mathf.Max(0, wave - 10);
+
+                melee = 50 + extraWaves * 7 / 10;
+                ranged = 26 + extraWaves * 7 / 20;
+                tank = 4 + extraWaves / 8;
+                return;
+        }
     }
 
     private static bool HasLivingEnemies()
