@@ -16512,8 +16512,8 @@ MonoBehaviour:
   waveText: {fileID: 1115447154}
   totalWaves: 70
   nextWaveNumber: 1
-  targetWaveDuration: 190
-  spawnPhaseDuration: 180
+  targetWaveDuration: 60
+  spawnPhaseDuration: 15
   timeBetweenWaves: 5
   enemyXPSharePercent: 65
 --- !u!1 &1113693807
