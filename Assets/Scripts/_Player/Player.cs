@@ -4,9 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private PlayerLevelStats levelStats;
-
     public int Level => levelStats != null ? levelStats.CurrentLevel : 1;
-
     private void Awake()
     {
         levelStats = GetComponent<PlayerLevelStats>();

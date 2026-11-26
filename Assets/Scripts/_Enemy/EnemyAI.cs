@@ -26,9 +26,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Player Aggro")]
     [SerializeField, Min(0f)] private float extraAggroTime = 1f;
-
     private float playerAggroTimer;
-
     public EnemyState CurrentState { get; private set; }
 
     public bool IsDead => health != null && health.IsDead;

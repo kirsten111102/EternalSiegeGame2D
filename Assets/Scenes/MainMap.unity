@@ -19897,7 +19897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069328418624813111, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: turretId
-      value: turret_1
+      value: turret_01
       objectReference: {fileID: 0}
     - target: {fileID: 4889118749919542383, guid: 5f5807c0d6eaca84dbe952b713bc6b44, type: 3}
       propertyPath: m_AnchorMax.x

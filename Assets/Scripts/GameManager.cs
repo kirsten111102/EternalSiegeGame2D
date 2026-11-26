@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameScore gameScore;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private TMPro.TextMeshProUGUI finalScoreText;
-    [SerializeField] private NetworkManager networkManager;
     [SerializeField] private GameObject player;
     [Header("Disable while Main Menu is open")]
     [SerializeField] private Behaviour[] gameplayComponents;
@@ -19,19 +18,16 @@ public class GameManager : MonoBehaviour
     [Header("Music")]
     [SerializeField] private GameplayMusic gameplayMusic;
 
-    [SerializeField] private long playerId;
-
-    private string runId;
     private readonly List<Behaviour> disabledForMenu = new();
     private bool isChangingMenu;
 
     public bool CanContinue => isPaused && !isGameOver;
+    public bool IsGameOver => isGameOver;
     private bool isPaused;
     private bool isGameOver;
     // comment
     private void Start()
     {
-        runId = System.Guid.NewGuid().ToString("D");
         Time.timeScale = 1f;
         isGameOver = false;
         isPaused = false;
@@ -41,46 +37,35 @@ public class GameManager : MonoBehaviour
             pausePanel.SetActive(false);
     }
 
-    public void GameOver()
+    public void GameOver() => EndRun(false);
+    public void CampaignCompleted() => EndRun(true);
+
+    private void EndRun(bool victory)
     {
         if (isGameOver) return;
-
         isGameOver = true;
         isPaused = false;
 
         if (gameScore != null && finalScoreText != null)
-            finalScoreText.SetText("Final Score: {0:0}", gameScore.Score);
+            finalScoreText.text = (victory ? "Victory! Score: " : "Final Score: ") + gameScore.Score;
 
-        if (networkManager != null &&
-            gameXP != null &&
-            gameScore != null &&
-            playerId > 0)
-        {
-            networkManager.SendScore(
-                playerId,
-                runId,
-                gameXP.CurrentLevel,
-                gameScore.Score
-            );
-        }
+        if (gameXP != null && gameScore != null)
+            CloudSaveClient.Instance.SubmitResult(gameXP.CurrentLevel, gameScore.Score);
         else
-        {
-            Debug.LogWarning(
-                "Cannot submit score: check NetworkManager, GameXP, GameScore and PlayerId."
-            );
-        }
+            Debug.LogError("Cannot submit result: assign GameXP and GameScore.");
 
-        if (gameOverPanel != null)
-            gameOverPanel.SetActive(true);
-
-        if (pausePanel != null)
-            pausePanel.SetActive(false);
-
+        if (gameOverPanel != null) gameOverPanel.SetActive(true);
+        if (pausePanel != null) pausePanel.SetActive(false);
         Time.timeScale = 0f;
     }
 
     public void RestartGame()
     {
+        if (!CloudSaveClient.Instance.CanChangeScene)
+        {
+            Debug.LogWarning("Wait for server requests / retry the pending score before restarting.");
+            return;
+        }
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(
@@ -128,7 +113,7 @@ public class GameManager : MonoBehaviour
         //Restore Gameplay Music
         if (gameplayMusic != null)
             gameplayMusic.UnmuteMusic();
-            
+
         isChangingMenu = false;
         FinishResume();
     }

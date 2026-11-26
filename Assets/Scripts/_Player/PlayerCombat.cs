@@ -19,7 +19,6 @@ public class PlayerCombat : MonoBehaviour
     [Header("Optional range display")]
     [SerializeField] private LineRenderer attackCircle;
     [SerializeField, Min(3)] private int circleSegments = 60;
-
     [SerializeField] private EnemyAI enemyAI;
 
     private float nextAttackTime;
@@ -69,7 +68,6 @@ public class PlayerCombat : MonoBehaviour
         // Keep LineRenderer synced with AttackPoint and attackRange.
         DrawAttackCircle();
     }
-
 
     public void Attack()
     {
@@ -136,7 +134,6 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-
 
     // Called by PlayerLevelStats when the player levels up.
     public void ApplyLevelBonus(int bonus)
