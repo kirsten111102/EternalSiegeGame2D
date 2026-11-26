@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// Chien dich 70 Wave. Moi Wave muc tieu 330 giay (5 phut 30 giay).
 /// Thoi gian thuc te co the dai hon neu Enemy chua bi diet het.
@@ -14,6 +15,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private TypeSpawner rangedSpawner;
     [SerializeField] private TypeSpawner tankSpawner;
     [SerializeField] private GameXP gameXP;
+    [SerializeField] private TextMeshProUGUI waveText;
 
     [Header("Campaign Settings")]
     [SerializeField, Min(1)] private int totalWaves = 70;
@@ -154,6 +156,11 @@ public class WaveManager : MonoBehaviour
 
             Debug.Log($"--- Wave {waveNumber}/{totalWaves} Complete --- " +
                 $"Enemy base XP: {currentWaveBaseEnemyXP}, Wave XP: {waveReward}");
+
+            if (waveText != null)
+            {
+                waveText.text = $"Wave {waveNumber}/{totalWaves}";
+            }
 
             // Chuyen sang Wave ke tiep truoc khi bao Save System de khong lap thuong.
             nextWaveNumber = waveNumber + 1;
