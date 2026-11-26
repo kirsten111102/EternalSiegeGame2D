@@ -15,8 +15,18 @@ public class GameSaveController : MonoBehaviour
 
     private bool pendingAutoSave;
     private static SaveData pendingLoadData;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void ResetPendingLoad() { pendingLoadData = null; }
+
     public void SaveGame()
     {
+        var cloud = CloudSaveClient.Instance;
+        if (!cloud.IsReady || cloud.RunEnded)
+        {
+            Debug.LogWarning("Cannot save: cloud run is not ready or is completed.");
+            return;
+        }
         if (saveSystem == null ||
             playerTransform == null ||
             playerHealth == null ||
@@ -94,6 +104,7 @@ public class GameSaveController : MonoBehaviour
 
         SaveData data = new SaveData
         {
+            runId = cloud.RunId,
             playerX = playerTransform.position.x,
             playerY = playerTransform.position.y,
             health = playerHealth.CurrentHealth,
@@ -163,6 +174,14 @@ public class GameSaveController : MonoBehaviour
             return;
 
         pendingAutoSave = false;
+        // Final result is captured after the last upgrade choice has completed.
+        if (waveManager.NextWaveNumber > waveManager.TotalWaves)
+        {
+            GameManager manager = FindFirstObjectByType<GameManager>();
+            if (manager != null) manager.CampaignCompleted();
+            else Debug.LogError("GameManager is missing; cannot submit victory result.");
+            return;
+        }
         SaveGame();
     }
 
@@ -178,25 +197,18 @@ public class GameSaveController : MonoBehaviour
             Debug.LogWarning("Cannot load: SaveSystem is missing.");
             return;
         }
-        SaveData data = saveSystem.LoadGame();
-        if (data == null)
+        saveSystem.LoadGame(data =>
         {
-            Debug.LogWarning("Cannot load: No readable save data.");
-            return;
-        }
-        // Kiểm tra cấu trúc checkpoint cơ bản trước khi đổi scene.
-        if (data.turrets == null ||
-            data.coreHealth <= 0f ||
-            data.nextWaveNumber < 1)
-        {
-            Debug.LogError("Cannot load: Invalid checkpoint data.");
-            return;
-        }
-        pendingLoadData = data;
-        SceneManager.LoadScene(
-            "MainMap",
-            LoadSceneMode.Single
-        );
+            if (data == null) return; // The client already reports no save / HTTP errors.
+            if (data.turrets == null || data.coreHealth <= 0f || data.nextWaveNumber < 1 ||
+                !System.Guid.TryParse(data.runId, out System.Guid parsed) || parsed == System.Guid.Empty)
+            {
+                Debug.LogError("Cannot load: Invalid server checkpoint.");
+                return;
+            }
+            pendingLoadData = data;
+            SceneManager.LoadScene("MainMap", LoadSceneMode.Single);
+        });
     }
 
     private bool ApplySaveData(SaveData data)
@@ -365,6 +377,31 @@ public class GameSaveController : MonoBehaviour
             }
 
             Debug.Log("Game loaded successfully.");
+        }
+
+        else
+        {
+            // Wait without WaitForSeconds: HTTP must work even when timeScale is zero.
+            Time.timeScale = 0f;
+            var cloud = CloudSaveClient.Instance;
+            while (cloud.Busy) yield return null;
+            bool ready = false;
+            bool finished = false;
+            cloud.BeginNewRun(ok => { ready = ok; finished = true; });
+            while (!finished) yield return null;
+            if (!ready)
+            {
+                Debug.LogError("Server initialization failed. Fix the error and choose New Game again.");
+                yield break;
+            }
+            SaveGame(); // Initial checkpoint replaces the previous slot only after explicit New Game.
+        }
+
+        if (waveManager.NextWaveNumber > waveManager.TotalWaves)
+        {
+            GameManager manager = FindFirstObjectByType<GameManager>();
+            if (manager != null) manager.CampaignCompleted();
+            yield break;
         }
 
         Time.timeScale = 1f;

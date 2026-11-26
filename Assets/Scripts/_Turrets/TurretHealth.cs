@@ -57,7 +57,7 @@ public class TurretHealth : MonoBehaviour
         if (IsDead || damage <= 0f)
             return;
 
-        CurrentHealth = Mathf.Max(0f,CurrentHealth - damage);
+        CurrentHealth = Mathf.Max(0f, CurrentHealth - damage);
 
         // Invoke: Health Bar UI cap nhat
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
@@ -78,7 +78,7 @@ public class TurretHealth : MonoBehaviour
 
         float healAmount = maxHealth * percent;
 
-        CurrentHealth = Mathf.Min(maxHealth,CurrentHealth + healAmount);
+        CurrentHealth = Mathf.Min(maxHealth, CurrentHealth + healAmount);
 
         // Invoke: Health Bar UI cap nhat
         OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
@@ -93,6 +93,7 @@ public class TurretHealth : MonoBehaviour
     public void RestoreHealth(float savedHealth)
     {
         CurrentHealth = Mathf.Clamp(savedHealth, 0f, maxHealth);
+        OnHealthChanged?.Invoke(CurrentHealth, maxHealth);
 
         if (CurrentHealth <= 0f)
             Die();

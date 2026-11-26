@@ -6,8 +6,7 @@ using UnityEngine.Networking;
 
 public class NetworkManager : MonoBehaviour
 {
-    [SerializeField]
-    private string apiBaseUrl = "http://localhost:9999/api";
+    private string apiBaseUrl => ServerConfig.ApiBaseUrl;
 
     public event Action<LeaderboardResponse> LeaderboardLoaded;
     public event Action<string> LeaderboardFailed;

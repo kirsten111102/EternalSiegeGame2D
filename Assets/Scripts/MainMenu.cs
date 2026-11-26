@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button continueButton;
     public void StartGame()
     {
+        if (!CloudSaveClient.Instance.CanChangeScene)
+        {
+            Debug.LogWarning("Wait for server requests / retry the pending score before New Game.");
+            return;
+        }
         Time.timeScale = 1f;
 
         SceneManager.LoadScene(
@@ -45,11 +50,6 @@ public class MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        if (saveSystem == null || !saveSystem.HasSaveFile())
-        {
-            Debug.LogWarning("No save file available.");
-            return;
-        }
         GameSaveController.RequestLoadGame(saveSystem);
     }
 

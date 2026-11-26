@@ -3,6 +3,9 @@ using System;
 [Serializable]
 public class SaveData
 {
+    // New Game creates a new ID; loading a checkpoint preserves it.
+    public string runId;
+
     // Player data
     public float playerX;
     public float playerY;
