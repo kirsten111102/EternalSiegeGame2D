@@ -242,7 +242,13 @@ public class CloudSaveClient : MonoBehaviour
 
     private void ReportError(UnityWebRequest request)
     {
-        Report("HTTP " + request.responseCode + ": " + request.error + " " + request.downloadHandler.text);
+        Report(
+            "\nMethod: " + request.method +
+            "\nURL: " + request.url +
+            "\nHTTP Code: " + request.responseCode +
+            "\nError: " + request.error +
+            "\nResponse: " + request.downloadHandler?.text
+        );
     }
 
     private void Report(string message)
