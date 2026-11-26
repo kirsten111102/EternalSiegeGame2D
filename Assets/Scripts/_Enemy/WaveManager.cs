@@ -89,13 +89,24 @@ public class WaveManager : MonoBehaviour
         rangedSpawner.Initialize(crystalCore);
         tankSpawner.Initialize(crystalCore);
 
-        nextWaveNumber = Mathf.Clamp(nextWaveNumber, 1, totalWaves + 1);
+        RestoreNextWaveNumber(nextWaveNumber);
     }
 
     // Goi khi Load JSON, truoc Start() de WaveManager tiep tuc dung Wave.
     public void RestoreNextWaveNumber(int savedNextWaveNumber)
     {
-        nextWaveNumber = Mathf.Clamp(savedNextWaveNumber, 1, totalWaves + 1);
+        nextWaveNumber = Mathf.Clamp(
+            savedNextWaveNumber,
+            1,
+            totalWaves + 1
+        );
+
+        if (waveText == null)
+            return;
+
+        waveText.text = nextWaveNumber > totalWaves
+            ? $"Completed: {totalWaves}/{totalWaves}"
+            : $"Next: Wave {nextWaveNumber}/{totalWaves}";
     }
 
     private void HandleEnemyBaseXPGranted(int amount)
@@ -113,6 +124,12 @@ public class WaveManager : MonoBehaviour
             float waveStartTime = Time.time;
             IsWaveActive = true;
             currentWaveBaseEnemyXP = 0;
+
+            if (waveText != null)
+            {
+                waveText.text = $"Wave {waveNumber}/{totalWaves}";
+            }
+
 
             int meleeCount, rangedCount, tankCount;
             GetWaveComposition(waveNumber, out meleeCount, out rangedCount, out tankCount);
@@ -162,8 +179,8 @@ public class WaveManager : MonoBehaviour
                 waveText.text = $"Wave {waveNumber}/{totalWaves}";
             }
 
-            // Chuyen sang Wave ke tiep truoc khi bao Save System de khong lap thuong.
-            nextWaveNumber = waveNumber + 1;
+            // Cập nhật wave tiếp theo trước khi thông báo cho hệ thống lưu.
+            RestoreNextWaveNumber(waveNumber + 1);
             OnWaveCompleted?.Invoke(waveNumber, waveReward);
 
             if (nextWaveNumber <= totalWaves)
