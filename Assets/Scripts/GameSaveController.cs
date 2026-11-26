@@ -105,9 +105,7 @@ public class GameSaveController : MonoBehaviour
             nextWaveNumber = waveManager.NextWaveNumber,
             totalXPHundredths = gameXP.TotalXPHundredths,
             bonusXPPercent = gameXP.BonusXPPercent,
-
             coreHealth = crystalCore.CurrentHealth,
-
             turrets = turretData
         };
 

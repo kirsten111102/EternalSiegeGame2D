@@ -3,7 +3,8 @@ using System;
 [Serializable]
 public class LeaderboardEntry
 {
-    public string achievedAt;
+    public int rank;
+    public string name;
     public int level;
     public int score;
 }

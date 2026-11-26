@@ -5845,7 +5845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damagePerTick: 10
   attackInterval: 0.2
-  attackRange: 2.7
+  attackRange: 2.4
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128

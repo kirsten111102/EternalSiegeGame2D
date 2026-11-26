@@ -27,7 +27,7 @@ public class TurretUpgradeManager : MonoBehaviour
                 return;
         }
 
-        // Chỉ quét khi chọn thẻ, không quét mỗi frame.
+        // Chi quet khi chon the, ko quet moi frame
         TurretCombat[] turrets = FindObjectsByType<TurretCombat>(
             FindObjectsSortMode.None);
 
@@ -39,11 +39,11 @@ public class TurretUpgradeManager : MonoBehaviour
             switch (type)
             {
                 case UpgradeType.SharpBullet:
-                    turret.AddDamage(5f);
+                    turret.AddDamage(0.5f);
                     break;
 
                 case UpgradeType.RapidFire:
-                    turret.AddAttackSpeed(5f);
+                    turret.AddAttackSpeed(15f);
                     break;
 
                 case UpgradeType.LongRange:

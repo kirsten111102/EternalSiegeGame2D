@@ -1,40 +1,31 @@
 using TMPro;
 using UnityEngine;
-using System;
-using System.Globalization;
+using UnityEngine.Serialization;
 
 public class LeaderboardRow : MonoBehaviour
 {
     [Header("Leaderboard UI")]
     [SerializeField] private TMP_Text rankText;
-    [SerializeField] private TMP_Text achievedAtText;
-    [SerializeField] private TMP_Text scoreText;
+    [FormerlySerializedAs("achievedAtText")]
+    [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text levelText;
+     [SerializeField] private TMP_Text scoreText;
 
     public void SetData(int rank, LeaderboardEntry entry)
     {
-        // Rank
-        rankText.text = rank.ToString();
+        if (entry == null)
+            return;
 
-        // Achieved Date
-        if (DateTime.TryParse(
-            entry.achievedAt,
-            CultureInfo.InvariantCulture,
-            DateTimeStyles.RoundtripKind,
-            out DateTime achievedAt))
-        {
-            achievedAtText.text = achievedAt.ToLocalTime()
-                .ToString("dd/MM/yyyy HH:mm");
-        }
-        else
-        {
-            achievedAtText.text = entry.achievedAt;
-        }
+        if (rankText != null)
+            rankText.text = rank.ToString("00");
 
-        // Score
-        scoreText.text = entry.score.ToString("N0");
+        if (nameText != null)
+            nameText.text = entry.name;
 
-        // Level
-        levelText.text = "Lv. " + entry.level.ToString();
+        if (scoreText != null)
+            scoreText.text = entry.score.ToString("N0");
+
+        if (levelText != null)
+            levelText.text = "Lv. " + entry.level;
     }
 }

@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 targetPosition =
             rb.position + direction * CurrentMoveSpeed * Time.fixedDeltaTime;
-        
+
         rb.MovePosition(targetPosition);
     }
 
@@ -52,32 +52,39 @@ public class PlayerMovement : MonoBehaviour
         if (animator == null) return;
 
         if (direction.sqrMagnitude > 0.01f)
-    {
-        bool isDiagonal = Mathf.Abs(direction.x) > 0.1f && Mathf.Abs(direction.y) > 0.1f;
+        {
+            bool isDiagonal = Mathf.Abs(direction.x) > 0.1f && Mathf.Abs(direction.y) > 0.1f;
 
-        if (isDiagonal)
-        {
-            lastDirection = direction;
-            lastDiagonalTime = Time.time;
+            if (isDiagonal)
+            {
+                lastDirection = direction;
+                lastDiagonalTime = Time.time;
+            }
+            else if (Time.time - lastDiagonalTime > DiagonalGraceTime)
+            {
+                // Chỉ chuyển sang hướng thẳng nếu không vừa mới đi chéo xong
+                lastDirection = direction;
+            }
         }
-        else if (Time.time - lastDiagonalTime > DiagonalGraceTime)
-        {
-            // Chỉ chuyển sang hướng thẳng nếu không vừa mới đi chéo xong
-            lastDirection = direction;
-        }
-    }
 
         animator.SetFloat("DirectionX", lastDirection.x);
         animator.SetFloat("DirectionY", lastDirection.y);
         animator.SetFloat("Speed", direction.magnitude);
     }
 
-    // A level adds exactly +1 to Movement Speed.
+    // Player vẫn di chuyển nhanh hơn khi lên Level nhưng không tăng vô hạn:
     public void ApplyLevelBonus(int bonus)
     {
-        currentMoveSpeed = moveSpeed + Mathf.Max(0, bonus);
+        // +1% Movement Speed per level.
+        // Maximum bonus: +50%.
+        float bonusPercent = Mathf.Clamp(bonus, 0, 50);
+
+        currentMoveSpeed =
+            moveSpeed * (1f + bonusPercent / 100f);
+
         statsApplied = true;
     }
+
 
     public void StopMovement()
     {
@@ -91,5 +98,5 @@ public class PlayerMovement : MonoBehaviour
         StopMovement();
     }
 
-    
+
 }
