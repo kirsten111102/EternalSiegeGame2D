@@ -22,9 +22,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField, Min(1)] private int nextWaveNumber = 1;
 
     [Header("Wave Timing (seconds)")]
-    [SerializeField, Min(60f)] private float targetWaveDuration = 330f; // 5m30s
-    [SerializeField, Min(1f)] private float spawnPhaseDuration = 300f; // 5m
-    [SerializeField, Min(0f)] private float timeBetweenWaves = 10f;
+    [SerializeField, Min(60f)] private float targetWaveDuration = 100f; // 5m30s
+    [SerializeField, Min(1f)] private float spawnPhaseDuration = 90f; // 5m
+    [SerializeField, Min(0f)] private float timeBetweenWaves = 5f;
 
     [Header("EXP Distribution (before Bonus XP)")]
     [SerializeField, Range(60, 70)] private int enemyXPSharePercent = 65;
@@ -32,6 +32,36 @@ public class WaveManager : MonoBehaviour
     public int NextWaveNumber => nextWaveNumber;
     public int TotalWaves => totalWaves;
     public bool IsWaveActive { get; private set; }
+    public bool IsBetweenWaves { get; private set; }
+
+    private float waveStartTime;
+    private float nextWaveStartTime;
+
+    // Hien Thi TimeLeft trong current wave
+    public float WaveSecondsRemaining
+    {
+        get
+        {
+            if (!IsWaveActive)
+                return 0f;
+
+            float elapsed = Time.time - waveStartTime;
+
+            return Mathf.Max(0f, targetWaveDuration - elapsed);
+        }
+    }
+
+    // Hien thi TimeLeft trong TimeBetweenWaves
+    public float BetweenWaveSecondsRemaining
+    {
+        get
+        {
+            if (!IsBetweenWaves)
+                return 0f;
+
+            return Mathf.Max(0f, nextWaveStartTime - Time.time);
+        }
+    }
 
     // The wave that just completed and its wave XP reward (excluding Bonus XP).
     public event Action<int, int> OnWaveCompleted;
@@ -137,15 +167,17 @@ public class WaveManager : MonoBehaviour
         while (nextWaveNumber <= totalWaves &&
                crystalCore != null && !crystalCore.IsDead)
         {
+
             int waveNumber = nextWaveNumber;
 
+            IsBetweenWaves = false;
             IsWaveActive = true;
             currentWaveBaseEnemyXP = 0;
 
-            // Display the wave as soon as it starts.
             UpdateWaveText();
 
-            float waveStartTime = Time.time;
+            // Record wave start time
+            waveStartTime = Time.time;
 
             int meleeCount, rangedCount, tankCount;
             GetWaveComposition(
@@ -217,7 +249,12 @@ public class WaveManager : MonoBehaviour
             OnWaveCompleted?.Invoke(waveNumber, waveReward);
 
             if (nextWaveNumber <= totalWaves)
+            {
+                IsBetweenWaves = true;
+                nextWaveStartTime = Time.time + timeBetweenWaves;
                 yield return new WaitForSeconds(timeBetweenWaves);
+                IsBetweenWaves = false;
+            }
         }
 
         IsWaveActive = false;
@@ -228,6 +265,10 @@ public class WaveManager : MonoBehaviour
             Debug.Log($"Campaign finished: all {totalWaves} waves completed.");
         }
 
+        // Dam bao trang thai dc reset
+        IsWaveActive = false;
+        IsBetweenWaves = false;
+        
         waveCoroutine = null;
     }
 

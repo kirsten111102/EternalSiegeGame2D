@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 160
   xpReward: 8
-  scoreValue: 20
+  scoreValue: 25
   gameXP: {fileID: 0}
   healthBar: {fileID: 0}
   gameScore: {fileID: 0}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea98e7cdf348b549b97b88fe6be3a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.6
+  moveSpeed: 1
   animator: {fileID: 7699275510944891238}
   playerLayer:
     serializedVersion: 2

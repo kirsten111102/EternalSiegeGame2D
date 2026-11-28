@@ -7,14 +7,14 @@ public class PlayerCombat : MonoBehaviour
 {
     [Header("Attack Point")]
     [SerializeField] private Transform attackPoint;
-    [SerializeField, Min(0f)] private float attackPointDistance = 0.7f;
+    [SerializeField, Min(0f)] private float attackPointDistance = 1f;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private Animator animator;
 
     [Header("Base combat stats (Level 1)")]
-    [SerializeField, Min(0f)] private float attackRange = 1f;
+    [SerializeField, Min(0f)] private float attackRange = 1.2f;
     [SerializeField, Min(1)] private int attackDamage = 20;
-    [SerializeField, Min(0.01f)] private float attackCooldown = 0.5f;
+    [SerializeField, Min(0.01f)] private float attackCooldown = 0.7f;
 
     [Header("Optional range display")]
     [SerializeField] private LineRenderer attackCircle;
@@ -41,6 +41,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    private PlayerMovement playerMovement;
 
     private void Awake()
     {
@@ -52,6 +53,9 @@ public class PlayerCombat : MonoBehaviour
             animator = GetComponentInChildren<Animator>();
         if (enemyAI == null)
             enemyAI = GetComponent<EnemyAI>();
+        if (playerMovement == null)
+            playerMovement = GetComponent<PlayerMovement>();
+        UpdateAttackDirection();
     }
 
     private void Update()
@@ -61,7 +65,8 @@ public class PlayerCombat : MonoBehaviour
         {
             UpdateAttackDirection();
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            // Cho phep giu Space de tan cong lien tuc
+            if (Input.GetKey(KeyCode.Space))
                 Attack();
         }
 
@@ -152,15 +157,13 @@ public class PlayerCombat : MonoBehaviour
     {
         if (attackPoint == null) return;
 
-        Vector2 moveDirection = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical"));
-
-        if (moveDirection != Vector2.zero)
-            lastMoveDirection = moveDirection.normalized;
+        Vector2 facingDirection = playerMovement != null
+            ? playerMovement.FacingDirection
+            : Vector2.down;
 
         attackPoint.localPosition = (Vector3)(
-            lastMoveDirection * attackPointDistance);
+            facingDirection.normalized * attackPointDistance
+        );
     }
 
     private void DrawAttackCircle()

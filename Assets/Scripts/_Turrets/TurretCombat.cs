@@ -7,7 +7,7 @@ public class TurretCombat : MonoBehaviour
     [Header("Combat Stats")]
     [SerializeField] private float damagePerTick = 2f;
     [SerializeField, Min(0.05f)] private float attackInterval = 0.2f;
-    [SerializeField, Min(0.1f)] private float attackRange = 5f;
+    [SerializeField, Min(0.1f)] private float attackRange = 2.4f;
 
     [Header("Target Detection")]
     [SerializeField] private LayerMask enemyLayer;

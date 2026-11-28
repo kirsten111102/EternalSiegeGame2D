@@ -5824,7 +5824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ffd6c8954a93449b28c84ae87aba1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 150
   turretId: 
   crystalAnimator: {fileID: 7521421482646212289}
   crystalRenderer: {fileID: 9151802673914776424}

@@ -11,7 +11,8 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Respawn")]
     [SerializeField] private Transform respawnPoint;
-    [SerializeField, Min(0f)] private float secondsPenaltyPerDeath = 10f;
+    [SerializeField, Min(0f)] private float secondsPenaltyPerDeath = 5f;
+    [SerializeField, Min(0f)] private float maxDeathPenalty = 50f;
     [SerializeField] private Collider2D bodyCollider;
     [SerializeField] private bool hideSpritesWhileDead = true;
 
@@ -153,18 +154,19 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        if (isDead)
-            return;
+        if (isDead) return;
 
         deathCount++;
 
-        respawnSecondsRemaining =
-            secondsPenaltyPerDeath * deathCount;
+        respawnSecondsRemaining = Mathf.Min(
+            secondsPenaltyPerDeath * deathCount,
+            maxDeathPenalty
+        );
+
+        BeginDeath();
 
         DeathCountChanged?.Invoke(deathCount);
         RespawnTimeChanged?.Invoke(respawnSecondsRemaining);
-
-        BeginDeath();
     }
 
     // Starts death without increasing deathCount.

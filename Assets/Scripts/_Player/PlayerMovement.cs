@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Uu tien cap nhat movement truoc khi combat
+[DefaultExecutionOrder(-10)]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Base movement stat (Level 1)")]
@@ -11,10 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 lastDirection = Vector2.down;
     private float currentMoveSpeed;
     private bool statsApplied;
-    private float lastDiagonalTime;
-    private const float DiagonalGraceTime = 0.08f;
-
+    private float lastDiagonalTime = float.NegativeInfinity; private const float DiagonalGraceTime = 0.08f;
     public float CurrentMoveSpeed => statsApplied ? currentMoveSpeed : moveSpeed;
+
+    public Vector2 FacingDirection => lastDirection;
 
     private void Awake()
     {
@@ -75,9 +77,9 @@ public class PlayerMovement : MonoBehaviour
     // Player vẫn di chuyển nhanh hơn khi lên Level nhưng không tăng vô hạn:
     public void ApplyLevelBonus(int bonus)
     {
-        // +1% Movement Speed per level.
-        // Maximum bonus: +50%.
-        float bonusPercent = Mathf.Clamp(bonus, 0, 50);
+        // +0.5% Movement Speed per level.
+        // Maximum bonus: +25%.
+        float bonusPercent = Mathf.Clamp(bonus * 0.5f, 0, 25);
 
         currentMoveSpeed =
             moveSpeed * (1f + bonusPercent / 100f);

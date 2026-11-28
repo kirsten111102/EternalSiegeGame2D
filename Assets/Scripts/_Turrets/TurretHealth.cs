@@ -4,7 +4,7 @@ using UnityEngine;
 public class TurretHealth : MonoBehaviour
 {
     [Header("Health Stats")]
-    [SerializeField] private float maxHealth = 1000f;
+    [SerializeField] private float maxHealth = 150f;
 
     [Header("Save Identity")]
     [SerializeField] private string turretId;

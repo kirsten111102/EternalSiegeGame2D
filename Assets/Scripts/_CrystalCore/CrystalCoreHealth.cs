@@ -4,7 +4,7 @@ using UnityEngine;
 public class CrystalCoreHealth : MonoBehaviour
 {
     [Header("Core Stats")]
-    [SerializeField] private float maxHealth = 2000f;
+    [SerializeField] private float maxHealth = 750f;
     [SerializeField] private GameManager gameManager;
 
     public float CurrentHealth { get; private set; }
